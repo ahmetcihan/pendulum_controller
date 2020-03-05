@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = multiplex
+TARGET = bilkon_multiplex
 QT += core gui network concurrent
 CONFIG += qt
 
