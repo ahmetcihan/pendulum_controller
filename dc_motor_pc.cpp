@@ -881,3 +881,22 @@ void DC_Motor_PC::closeEvent(QCloseEvent *ev){
     ev->accept();
     //fuzzy_screen->close();
 }
+void DC_Motor_PC::main_screen_signalmapper_handler(int i){
+    if(prevent_double_click()) return;
+
+    ui.tabWidget->setCurrentIndex(i);
+//    if(i < 5){
+//        ui.tabWidget->setCurrentIndex(i);
+//    }
+//    else{
+//        if(admin_authorization == false){
+//            pass = new password(this);
+//            pass->setGeometry(200,90,400,200);
+//            connect(pass,SIGNAL(emit_text_value(QString)),this,SLOT(admin_authorization_handler(QString)));
+//            pass->exec();
+//        }
+//        else{
+//            ui.tabWidget->setCurrentIndex(i);
+//        }
+//    }
+}

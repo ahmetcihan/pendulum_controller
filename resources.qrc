@@ -23,5 +23,11 @@
         <file>cylinder.jpg</file>
         <file>briquette_narrow.jpg</file>
         <file>qss/qmc2-black-fast/ok-new.png</file>
+        <file>admin_button.jpg</file>
+        <file>calibration_button.jpg</file>
+        <file>parameters_button.jpg</file>
+        <file>results_button.jpg</file>
+        <file>settings_button.jpg</file>
+        <file>test_button.jpg</file>
     </qresource>
 </RCC>

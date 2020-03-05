@@ -56,7 +56,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QTabBar::tab { height: 60px;}
+     <string notr="true">QTabBar::tab { height: 0px;}
 </string>
     </property>
     <property name="currentIndex">
@@ -73,12 +73,288 @@
     </property>
     <widget class="QWidget" name="tab_main">
      <attribute name="title">
-      <string>Page</string>
+      <string/>
      </attribute>
+     <widget class="QPushButton" name="pushButton_go_results">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>70</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_main_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>148</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Results</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_main_4">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>390</y>
+        <width>168</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_main">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>200</y>
+        <width>148</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_main_calibration">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>390</y>
+        <width>148</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Calibration</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_main_admin">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>390</y>
+        <width>148</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Admin</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_go_parameters">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>70</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_go_test">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>70</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_go_settings">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>260</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_main_2">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>200</y>
+        <width>148</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Parameters</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_go_calibration">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>260</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_go_admin">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>260</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_main_test">
      <attribute name="title">
-      <string>    TEST    </string>
+      <string/>
      </attribute>
      <widget class="QGroupBox" name="groupBox_main_load">
       <property name="geometry">
@@ -848,7 +1124,7 @@
     </widget>
     <widget class="QWidget" name="tab_main_parameters">
      <attribute name="title">
-      <string>PARAMETERS</string>
+      <string/>
      </attribute>
      <widget class="QTabWidget" name="tabWidget_parameters">
       <property name="geometry">
@@ -7591,7 +7867,7 @@ QTabWidget::pane { border: none; }</string>
     </widget>
     <widget class="QWidget" name="tab_main_results">
      <attribute name="title">
-      <string> RESULTS </string>
+      <string/>
      </attribute>
      <widget class="QLabel" name="label_results_name_test_no_">
       <property name="geometry">
@@ -9001,7 +9277,7 @@ QTabWidget::pane { border: none; }</string>
     </widget>
     <widget class="QWidget" name="tab_main_settings">
      <attribute name="title">
-      <string>SETTINGS</string>
+      <string/>
      </attribute>
      <widget class="QListWidget" name="listWidget_settings">
       <property name="geometry">
@@ -9801,7 +10077,7 @@ QTabWidget::pane { border: none; }</string>
     </widget>
     <widget class="QWidget" name="tab_main_calibration">
      <attribute name="title">
-      <string>CALIBRATION</string>
+      <string/>
      </attribute>
      <widget class="QGroupBox" name="groupBox_29">
       <property name="geometry">
@@ -10801,7 +11077,7 @@ TO MEMORY</string>
     </widget>
     <widget class="QWidget" name="tab_main_admin">
      <attribute name="title">
-      <string> ADMIN  </string>
+      <string/>
      </attribute>
      <widget class="QTabWidget" name="tabWidget_admin">
       <property name="geometry">
@@ -13901,7 +14177,7 @@ from USB</string>
     </widget>
     <widget class="QWidget" name="tab_main_reserve">
      <attribute name="title">
-      <string>Reserve</string>
+      <string/>
      </attribute>
      <widget class="QPushButton" name="pushButton_start">
       <property name="geometry">

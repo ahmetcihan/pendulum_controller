@@ -140,6 +140,49 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
                                                 "border-image: url(:sari_down.png);"
                                                 "border-width: 0px ;");
 
+    ui.pushButton_go_test->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:test_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_parameters->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:parameters_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_results->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:results_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_settings->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:settings_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_calibration->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:calibration_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_admin->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:admin_button.jpg);"
+                                                "border-width: 0px ;");
+
+
+    signalMapper_main_screen = new QSignalMapper(this);
+//    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen,  0);
+//    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_3,  0);
+//    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_5,  0);
+//    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_7,  0);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_test,         1);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_parameters,   2);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_results,      3);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_settings,     4);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_calibration,  5);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_admin,        6);
+//    connect(this->ui.pushButton_go_main_screen,     SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+//    connect(this->ui.pushButton_go_main_screen_3,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+//    connect(this->ui.pushButton_go_main_screen_5,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+//    connect(this->ui.pushButton_go_main_screen_7,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_test,            SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_parameters,      SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_results,         SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_settings,        SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_calibration,     SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_admin,           SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(signalMapper_main_screen, SIGNAL(mapped(int)),this,SLOT(main_screen_signalmapper_handler(int)));
+
 }
 void DC_Motor_PC::init_CALIBRATIONs(void){
     ui.comboBox_channel_no->addItem(QStringLiteral("LOAD_1"));

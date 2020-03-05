@@ -253,6 +253,9 @@ public:
     QTime   block_double_click;
     QSignalMapper *signalMapper_cal;
     QSignalMapper *signalMapper_usart;
+
+    QSignalMapper *signalMapper_main_screen;
+
     QTranslator *translator;
     QList<QLabel*> label_gain;
     QList<QLabel*> label_point;
@@ -456,6 +459,7 @@ private slots:
     void copy_settings_to_usb(void);
 
     void usart_signalmapper_handler(int i);
+    void main_screen_signalmapper_handler(int i);
 
 };
 
