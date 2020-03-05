@@ -277,7 +277,6 @@ public:
     u8 usart_signalmapper_no;
     u8 return_home_tmp;
     u8 go_load_tmp;
-    u8 theme_index;
     u8 current_tab_index;
     u8 zoom_radiobutton_no;
     u8 v_axis_radiobutton_no;
@@ -302,7 +301,6 @@ private:
     void init_CHANNEL_SELECTIONs(void);
     void init_RADIOBUTTONs(void);
     void init_PUSHBUTTONs(void);
-    void init_THEME(void);
     void init_CALIBRATIONs(void);
     void init_SPECIMENs(void);
     void init_PIDs(void);
@@ -419,7 +417,7 @@ private slots:
                         double *xval, double *yval);
     void plot_prepare_load(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *cCos, QwtPlotCurve *cTan,QwtPlotCurve *cCot, QString str_y, QString str_x);
     void plot_prepare_pace(QwtPlot *plot, QwtPlotCurve *cSin, QString str_y, QString str_x);
-    void set_gradient(int val);
+    void set_gradient(void);
     void set_plotter(void);
     void EOL(char *base_array, u8 i);
     void motor_go_test_direction(void);

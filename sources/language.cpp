@@ -110,14 +110,14 @@ void DC_Motor_PC::language_load(void){
         QApplication::setFont(system_font);
         QString styleSheet = QString("font-family:%1;").arg(system_font.family());
         this->setStyleSheet(styleSheet);
-        set_gradient(theme_index);
+        set_gradient();
     }
     else{
         if(((old_language < 4)&&(language_index == 4))||((old_language == 4)&&(language_index < 4))){
             QApplication::setFont(system_font);
             QString styleSheet = QString("font-family:%1;").arg(system_font.family());
             this->setStyleSheet(styleSheet);
-            set_gradient(theme_index);
+            set_gradient();
         }
     }
 #endif

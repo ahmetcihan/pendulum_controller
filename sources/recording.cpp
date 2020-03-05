@@ -92,7 +92,6 @@ void DC_Motor_PC::writeAppSettings(){
 
     settings.beginGroup(QStringLiteral("common"));
     settings.setValue(QStringLiteral("check"),"viva zapata");
-    settings.setValue(QStringLiteral("theme_index"),theme_index);
     settings.setValue(QStringLiteral("zoom_radiobutton_no"),zoom_radiobutton_no);
     settings.setValue(QStringLiteral("v_axis_radiobutton_no"),v_axis_radiobutton_no);
     settings.setValue(QStringLiteral("h_axis_radiobutton_no"),h_axis_radiobutton_no);
@@ -229,7 +228,6 @@ void DC_Motor_PC::load_backup_file(){
     qDebug(__FUNCTION__);
 }
 void DC_Motor_PC::load_temporary_settings(void){
-    theme_index             = 0;
     zoom_radiobutton_no 	= 1;
     ui.spinBox_zoom_val_neg_x->setValue(0);
     ui.spinBox_zoom_val_pos_x->setValue(1);
@@ -301,7 +299,6 @@ void DC_Motor_PC::readAppSettings(){
         return;
     }
     //commons
-    theme_index             = settings.value("common/theme_index").toInt();
     zoom_radiobutton_no 	= settings.value("common/zoom_radiobutton_no").toInt();
     v_axis_radiobutton_no 	= settings.value("common/v_axis_radiobutton_no").toInt();
     h_axis_radiobutton_no 	= settings.value("common/h_axis_radiobutton_no").toInt();

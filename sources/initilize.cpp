@@ -141,17 +141,6 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
                                                 "border-width: 0px ;");
 
 }
-void DC_Motor_PC::init_THEME(void){
-    ui.comboBox_theme->addItem(QStringLiteral("DEFAULT"));
-    ui.comboBox_theme->addItem(QStringLiteral("SANDY"));
-    ui.comboBox_theme->addItem(QStringLiteral("METAL"));
-    ui.comboBox_theme->addItem(QStringLiteral("FIRE"));
-    ui.comboBox_theme->addItem(QStringLiteral("BLACK"));
-    ui.comboBox_theme->addItem(QStringLiteral("BLACK-FAST"));
-    ui.comboBox_theme->setCurrentIndex(theme_index);
-    set_gradient(theme_index);
-
-}
 void DC_Motor_PC::init_CALIBRATIONs(void){
     ui.comboBox_channel_no->addItem(QStringLiteral("LOAD_1"));
     ui.comboBox_channel_no->addItem(QStringLiteral("LOAD_2"));
@@ -257,6 +246,11 @@ void DC_Motor_PC::init_DIAMETERs(void){
 
 }
 void DC_Motor_PC::init_GUI(void){
+
+#ifdef CONFIG_x86
+    set_gradient();
+#endif
+
     current_tab_index = TAB_MAIN;
     fuzpid->from_gui.current_tab_index = TAB_MAIN;
 

@@ -1,13 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>qss/qmc-metal/ok.png</file>
-        <file>qss/qmc-metal/qmc.qss</file>
-        <file>qss/qmc-sandy/ok.png</file>
-        <file>qss/qmc-sandy/qmc.qss</file>
-        <file>qss/qmc2-black-0.10/ok.png</file>
-        <file>qss/qmc2-black-0.10/qmc2-black-0.10.qss</file>
-        <file>qss/qmc2-fire-0.8/ok.png</file>
-        <file>qss/qmc2-fire-0.8/qmc2-fire-0.8.qss</file>
         <file>sari_down.png</file>
         <file>sari_home.png</file>
         <file>sari_jog.png</file>
@@ -16,7 +8,6 @@
         <file>sari_up.png</file>
         <file>sari_pause.png</file>
         <file>sari_to_load.png</file>
-        <file>qss/qmc2-black-0.10/ok-2.png</file>
         <file>sari_start-silver.png</file>
         <file>sari_stop-silver.png</file>
         <file>sari_pause-silver.png</file>

@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>5</number>
     </property>
     <property name="iconSize">
      <size>
@@ -13811,41 +13811,6 @@ from USB</string>
          </property>
          <property name="text">
           <string>GW</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_41">
-        <property name="geometry">
-         <rect>
-          <x>260</x>
-          <y>10</y>
-          <width>345</width>
-          <height>95</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="title">
-         <string>THEME</string>
-        </property>
-        <widget class="QComboBox" name="comboBox_theme">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>35</y>
-           <width>270</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>27</pointsize>
-          </font>
          </property>
         </widget>
        </widget>

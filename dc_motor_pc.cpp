@@ -50,7 +50,6 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     assign_type_parameters();
 
     init_SPECIMENs();
-    init_THEME();
     init_PIDs();
     init_DIAMETERs();
     init_TIMERs();
@@ -856,35 +855,15 @@ void DC_Motor_PC::tab_admin_change_handler(int i){
         }
     }
 }
-void DC_Motor_PC::set_gradient(int val){
+void DC_Motor_PC::set_gradient(void){
     QFile file;
 
-    switch(val){
-    case 0:
-        break;
-    case 1:
-        file.setFileName(":/qss/qmc-sandy/qmc.qss");
-        break;
-    case 2:
-        file.setFileName(":/qss/qmc-metal/qmc.qss");
-        break;
-    case 3:
-        file.setFileName(":/qss/qmc2-fire-0.8/qmc2-fire-0.8.qss");
-        break;
-    case 4:
-        file.setFileName(":/qss/qmc2-black-0.10/qmc2-black-0.10.qss");
-        break;
-    case 5:
-        file.setFileName(":/qss/qmc2-black-fast/qmc2-black-0.10.qss");
-        break;
-    }
+    file.setFileName(":/qss/qmc2-black-fast/qmc2-black-0.10.qss");
+
     file.open(QFile::ReadOnly);
     QString styleSheet = QLatin1String(file.readAll());
     setStyleSheet(styleSheet);
     currentStyleSheet = styleSheet;
-
-    theme_index = val;
-    connect(this->ui.comboBox_theme,SIGNAL(currentIndexChanged(int)),this,SLOT(set_gradient(int)));
 }
 DC_Motor_PC::~DC_Motor_PC(){
 #ifdef CONFIG_x86
