@@ -178,7 +178,7 @@ void DC_Motor_PC::show_jog_widget(void){
 
     ui.pushButton_jog->setDisabled(1);
 
-    QWidget *mywidget = new QWidget(this->ui.tab_main);
+    QWidget *mywidget = new QWidget(this->ui.tab_main_test);
     mywidget->setGeometry(250,247,540,95);
     mywidget->show();
 
@@ -327,13 +327,13 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_par_1->hide();
         disconnect(ui.checkBox_ch3,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         disconnect(ui.checkBox_ch4,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
-        ui.groupBox_main_par_cbr->setParent(ui.tab_main);
+        ui.groupBox_main_par_cbr->setParent(ui.tab_main_test);
         ui.groupBox_main_par_cbr->setGeometry(5,209,240,201);
         ui.groupBox_main_par_cbr->setVisible(1);
         ui.groupBox_stress->setHidden(0);
         ui.groupBox_main_load->move(5,73);
         ui.groupBox_main_displacement->move(5,141);
-        ui.groupBox_main_par_marshall->setParent(ui.tab_19);
+        ui.groupBox_main_par_marshall->setParent(ui.tab_main_reserve);
         ui.groupBox_main_par_marshall->setGeometry(5,215,240,201);
         ui.groupBox_main_par_marshall->setVisible(1);
     }
@@ -350,10 +350,10 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_stress->setHidden(1);
         ui.groupBox_main_load->move(5,5);
         ui.groupBox_main_displacement->move(5,73);
-        ui.groupBox_main_par_cbr->setParent(ui.tab_19);
+        ui.groupBox_main_par_cbr->setParent(ui.tab_main_reserve);
         ui.groupBox_main_par_cbr->setGeometry(5,5,240,201);
         ui.groupBox_main_par_cbr->setVisible(1);
-        ui.groupBox_main_par_marshall->setParent(ui.tab_main);
+        ui.groupBox_main_par_marshall->setParent(ui.tab_main_test);
         ui.groupBox_main_par_marshall->setGeometry(5,141,240,201);
         ui.groupBox_main_par_marshall->setVisible(1);
     }
@@ -371,10 +371,10 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_par_1->show();
         connect(ui.checkBox_ch3,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         connect(ui.checkBox_ch4,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
-        ui.groupBox_main_par_cbr->setParent(ui.tab_19);
+        ui.groupBox_main_par_cbr->setParent(ui.tab_main_reserve);
         ui.groupBox_main_par_cbr->setGeometry(5,5,240,201);
         ui.groupBox_main_par_cbr->setVisible(1);
-        ui.groupBox_main_par_marshall->setParent(ui.tab_19);
+        ui.groupBox_main_par_marshall->setParent(ui.tab_main_reserve);
         ui.groupBox_main_par_marshall->setGeometry(5,215,240,201);
         ui.groupBox_main_par_marshall->setVisible(1);
         channel_activations_handler();
@@ -396,7 +396,7 @@ void DC_Motor_PC::main_screen_arrangements(void){
     }
     else{
         ui.groupBox_speed_displacement->show();
-        ui.groupBox_speed_load->setParent(ui.tab_19);
+        ui.groupBox_speed_load->setParent(ui.tab_main_reserve);
         ui.label_main_speed->setText(QString(trUtf8("Pace : %1 %2/min")).arg(ui.doubleSpinBox_displacement_rate->value()).arg(unit_system.length_label));
         ui.label_autotuning_base_unit->setText(trUtf8("Base (%1/min)").arg(unit_system.length_label));
         ui.label_autotuning_step_unit->setText(trUtf8("Step (%1/min)").arg(unit_system.length_label));

@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>6</number>
     </property>
     <property name="iconSize">
      <size>
@@ -71,7 +71,7 @@
     <property name="movable">
      <bool>false</bool>
     </property>
-    <widget class="QWidget" name="tab_main">
+    <widget class="QWidget" name="tab_main_test">
      <attribute name="title">
       <string>    TEST    </string>
      </attribute>
@@ -841,7 +841,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_21">
+    <widget class="QWidget" name="tab_main_parameters">
      <attribute name="title">
       <string>PARAMETERS</string>
      </attribute>
@@ -7584,7 +7584,7 @@ QTabWidget::pane { border: none; }</string>
       </item>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
+    <widget class="QWidget" name="tab_main_results">
      <attribute name="title">
       <string> RESULTS </string>
      </attribute>
@@ -8994,7 +8994,7 @@ QTabWidget::pane { border: none; }</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="tab_main_settings">
      <attribute name="title">
       <string>SETTINGS</string>
      </attribute>
@@ -9794,7 +9794,7 @@ QTabWidget::pane { border: none; }</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_27">
+    <widget class="QWidget" name="tab_main_calibration">
      <attribute name="title">
       <string>CALIBRATION</string>
      </attribute>
@@ -10794,7 +10794,7 @@ TO MEMORY</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_26">
+    <widget class="QWidget" name="tab_main_admin">
      <attribute name="title">
       <string> ADMIN  </string>
      </attribute>
@@ -13929,7 +13929,7 @@ from USB</string>
       </item>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_19">
+    <widget class="QWidget" name="tab_main_reserve">
      <attribute name="title">
       <string>Reserve</string>
      </attribute>
