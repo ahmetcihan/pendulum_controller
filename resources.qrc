@@ -13,8 +13,6 @@
         <file>sari_pause-silver.png</file>
         <file>sari_refresh.png</file>
         <file>sari_home-silver.png</file>
-        <file>qss/qmc2-black-fast/ok-2.png</file>
-        <file>qss/qmc2-black-fast/ok.png</file>
         <file>qss/qmc2-black-fast/qmc2-black-0.10.qss</file>
         <file>red_home.png</file>
         <file>red_to_load.png</file>
@@ -24,5 +22,6 @@
         <file>device_to_usb.jpg</file>
         <file>cylinder.jpg</file>
         <file>briquette_narrow.jpg</file>
+        <file>qss/qmc2-black-fast/ok-new.png</file>
     </qresource>
 </RCC>

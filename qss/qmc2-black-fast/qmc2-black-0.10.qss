@@ -1,35 +1,88 @@
 QTabWidget,
 QGroupBox,
 QDialog,
-QWebView,
 QMainWindow,
-Options,
-QSplitter,
-QScrollArea,
-QScrollArea *,
-Preview,
-Flyer,
-Cabinet,
 Title,
-Marquee,
-Controller,
-QwtScaleWidget,
-.QWidget {
-  color: rgb(255,255,0);
-  background-color: black;
-  border: 1px solid white;
-  background: rgb(0,0,0);
+QLabel,
+QFrame,
+QWidget {
+    color: rgb(0,0,139);
+    background-color: black;
+    border: 1px solid rgb(169,169,169);
+    background: rgb(175,238,238);
 }
+
 QTabBar::tab{
-  color: rgb(255,255,0);
-  background-color: black;
-  background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 255, 40%), stop:1 rgba(0, 0, 0, 100%));
+    color: rgb(0,0,139);
+    background-color: black;
+    background: qlineargradient(x1:0, y1:1, x2:1, y2:1, stop:0 rgba(255, 255, 255, 100%), stop:1 rgba(0, 206, 209, 100%));
 }
+
 QTabBar::tab:selected {
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 100%), stop:1 rgba(255, 0, 0, 100%));
+    background: rgb(0,206,209);
 }
+
 QTabBar::tab:disabled {
-color: rgb(176,176,176);
+    color: rgb(128,128,128);
+}
+
+QLineEdit,
+QPlainTextEdit,
+QSpinBox,
+QDoubleSpinBox,
+QMenu {
+    color: rgb(0,0,0);
+    selection-color: black;
+    selection-background-color: rgb(255,255,0);
+    background: rgb(175,238,238);
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+QComboBox,
+QListView {
+   color: rgb(0,0,139);
+   selection-color: black;
+   selection-background-color: rgb(255,255,0);
+   background: rgb(64,224,208);
+   border: 1px solid gray;
+   padding: 2px;
+}
+
+QPushButton {
+   color: rgb(0,0,139);
+   background: rgb(0,206,209);
+   border: 1px solid black;
+}
+
+QPushButton:pressed,
+QPushButton:on {
+    color: rgb(255,0,0);
+    background: white;
+}
+
+QSpinBox:disabled,QDoubleSpinBox:disabled,QPushButton:disabled {
+    color: rgb(128,128,128);
+}
+
+QCheckBox,QRadioButton {
+    color: rgb(0,0,139);
+    background: rgb(175,238,238);
+}
+
+QCheckBox::indicator,
+QRadioButton::indicator {
+    background: rgb(64,224,208);
+    width: 26px;
+    height: 26px;
+}
+
+QCheckBox::indicator:checked,
+QRadioButton::indicator:checked {
+    background: rgb(64,224,208);
+    width: 30px;
+    height: 30px;
+    image: url(:qss/qmc2-black-fast/ok-new.png);
 }
 
 QSpinBox::up-button,
@@ -37,95 +90,7 @@ QSpinBox::down-button,
 QDoubleSpinBox::up-button,
 QDoubleSpinBox::down-button
 {
-	width: 0px;
+    width: 0px;
 }
 
-About,
-ROMStatusExporter,
-DemoModeDialog,
-QGroupBox#groupBoxAvailableDetails,
-QGroupBox#groupBoxActiveDetails,
-DetailSetup,
-QGroupBox#groupBoxIconsAndCabinetArt,
-QGroupBox#groupBoxPreviewsAndTitles,
-MawsQuickDownloadSetup {
-  color: rgb(255,255,0);
-	background-color: black;
-	background: black;
-}
 
-QLabel#labelProjectInfo {
-  color: rgb(255,255,0);
-	background-color: black;
-	background-position: center;
-	background-repeat: repeat-x;
-	background-origin: content;
-	background-attachment: fixed;
-}
-
-QLabel, QCheckBox, QRadioButton {
-  color: rgb(255,255,0);
-  background: rgb(30,30,40);
-}
-
-QTreeView,
-QListView,
-QTableWidget,
-QLineEdit,
-QTextBrowser,
-QPlainTextEdit,
-QSpinBox,
-QDoubleSpinBox,
-QComboBox,
-QMenu {
-   color: rgb(255,255,0);
-	selection-color: black;
-	selection-background-color: rgb(255,255,0);
-	background: rgb(60,40,40);
-	border: 1px solid gray;
-	padding: 2px;
-}
-QScrollBar:vertical {
-	background-color: rgb(176,176,0);
-	width: 50px;
-	height: 50px;
-}
-
-QPushButton {
-   color: rgb(255,255,0);
-	background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 black, stop: 1 rgb(128, 128, 128));
-	border: 1px solid gray;
-}
-
-QPushButton:pressed,
-QPushButton:on {
-  color: rgb(0,0,255);
-  background: white;
-}
-QSpinBox:disabled,QDoubleSpinBox:disabled,QPushButton:disabled {
-color: rgb(176,176,176);
-}
-
-QCheckBox::indicator {
-	background: rgb(100,100,100);
-	width: 26px;
-	height: 26px;
-}
-
-QCheckBox::indicator:checked {
-	width: 30px;
-	height: 30px;
-	image: url(:qss/qmc2-black-0.10/ok-2.png);
-}
-
-QRadioButton::indicator {
-	background: rgb(100,100,100);
-	width: 25px;
-	height: 25px;
-}
-
-QRadioButton::indicator:checked {
-	width: 30px;
-	height: 30px;
-	image: url(:qss/qmc2-black-0.10/ok-2.png);
-}
