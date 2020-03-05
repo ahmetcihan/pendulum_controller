@@ -71,6 +71,11 @@
     <property name="movable">
      <bool>false</bool>
     </property>
+    <widget class="QWidget" name="tab_main">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
     <widget class="QWidget" name="tab_main_test">
      <attribute name="title">
       <string>    TEST    </string>

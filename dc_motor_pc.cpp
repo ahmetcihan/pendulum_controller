@@ -658,7 +658,7 @@ void DC_Motor_PC::update_gui(){
         ui.label_adc_channel_raw_data->setText(QString::number(current_channel_data));
     }
 
-    if(current_tab_index == TAB_MAIN){
+    if(current_tab_index == TAB_TEST){
         if(fuzpid->test_status == TEST_JUST_FINISHED){
             switch (load_calibration_channel) {
             case LOAD_1:

@@ -61,13 +61,14 @@ typedef signed int s32;
 #define PAUSE                   0
 #define STOP                    1
 
-#define TAB_MAIN                0
-#define TAB_PARAMETERS          1
-#define TAB_TEST_RESULTS        2
-#define TAB_SETTINGS            3
-#define TAB_CALIBRATION         4
-#define TAB_ADMIN               5
-#define TAB_RESERVED            6
+#define TAB_MAINSCREEN          0
+#define TAB_TEST                1
+#define TAB_PARAMETERS          2
+#define TAB_TEST_RESULTS        3
+#define TAB_SETTINGS            4
+#define TAB_CALIBRATION         5
+#define TAB_ADMIN               6
+#define TAB_RESERVED            7
 
 #define QStringLiteral QString::fromUtf8
 

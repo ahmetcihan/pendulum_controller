@@ -251,8 +251,8 @@ void DC_Motor_PC::init_GUI(void){
     set_gradient();
 #endif
 
-    current_tab_index = TAB_MAIN;
-    fuzpid->from_gui.current_tab_index = TAB_MAIN;
+    current_tab_index = TAB_TEST;
+    fuzpid->from_gui.current_tab_index = TAB_TEST;
 
     control_mode = AUTO;
     ui.label_auto_man->setText(QStringLiteral("AUTO"));
