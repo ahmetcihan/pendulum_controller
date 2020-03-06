@@ -255,6 +255,7 @@ public:
     QSignalMapper *signalMapper_usart;
 
     QSignalMapper *signalMapper_main_screen;
+    QSignalMapper *signalMapper_settings_screen;
 
     QTranslator *translator;
     QList<QLabel*> label_gain;
@@ -460,6 +461,7 @@ private slots:
 
     void usart_signalmapper_handler(int i);
     void main_screen_signalmapper_handler(int i);
+    void settings_screen_signalmapper_handler(int i);
 
 };
 

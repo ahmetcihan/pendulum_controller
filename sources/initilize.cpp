@@ -159,6 +159,21 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
                                                 "border-image: url(:admin_button.jpg);"
                                                 "border-width: 0px ;");
 
+    ui.pushButton_settings_company->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:company_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_settings_date_time->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:date_time_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_settings_usb_storage->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:usb_storage_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_settings_unit_system->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:unit_systems_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_settings_language->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:language_button.jpg);"
+                                                "border-width: 0px ;");
 
     signalMapper_main_screen = new QSignalMapper(this);
 //    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen,  0);
@@ -182,6 +197,21 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     connect(this->ui.pushButton_go_calibration,     SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
     connect(this->ui.pushButton_go_admin,           SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
     connect(signalMapper_main_screen, SIGNAL(mapped(int)),this,SLOT(main_screen_signalmapper_handler(int)));
+
+    signalMapper_settings_screen = new QSignalMapper(this);
+    signalMapper_settings_screen->setMapping(this->ui.pushButton_go_settings_screen,  0);
+    signalMapper_settings_screen->setMapping(this->ui.pushButton_settings_company,  1);
+    signalMapper_settings_screen->setMapping(this->ui.pushButton_settings_date_time,  2);
+    signalMapper_settings_screen->setMapping(this->ui.pushButton_settings_usb_storage,  3);
+    signalMapper_settings_screen->setMapping(this->ui.pushButton_settings_unit_system,  4);
+    signalMapper_settings_screen->setMapping(this->ui.pushButton_settings_language,  5);
+    connect(this->ui.pushButton_go_settings_screen,     SIGNAL(pressed()),signalMapper_settings_screen, SLOT (map()));
+    connect(this->ui.pushButton_settings_company,       SIGNAL(pressed()),signalMapper_settings_screen, SLOT (map()));
+    connect(this->ui.pushButton_settings_date_time,     SIGNAL(pressed()),signalMapper_settings_screen, SLOT (map()));
+    connect(this->ui.pushButton_settings_usb_storage,   SIGNAL(pressed()),signalMapper_settings_screen, SLOT (map()));
+    connect(this->ui.pushButton_settings_unit_system,   SIGNAL(pressed()),signalMapper_settings_screen, SLOT (map()));
+    connect(this->ui.pushButton_settings_language,      SIGNAL(pressed()),signalMapper_settings_screen, SLOT (map()));
+    connect(signalMapper_settings_screen, SIGNAL(mapped(int)),this,SLOT(settings_screen_signalmapper_handler(int)));
 
 }
 void DC_Motor_PC::init_CALIBRATIONs(void){

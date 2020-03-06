@@ -29,5 +29,10 @@
         <file>results_button.jpg</file>
         <file>settings_button.jpg</file>
         <file>test_button.jpg</file>
+        <file>company_button.jpg</file>
+        <file>date_time_button.jpg</file>
+        <file>language_button.jpg</file>
+        <file>unit_systems_button.jpg</file>
+        <file>usb_storage_button.jpg</file>
     </qresource>
 </RCC>

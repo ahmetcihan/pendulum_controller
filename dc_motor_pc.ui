@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <property name="iconSize">
      <size>
@@ -9279,64 +9279,13 @@ QTabWidget::pane { border: none; }</string>
      <attribute name="title">
       <string/>
      </attribute>
-     <widget class="QListWidget" name="listWidget_settings">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>10</y>
-        <width>170</width>
-        <height>400</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="gridSize">
-       <size>
-        <width>0</width>
-        <height>50</height>
-       </size>
-      </property>
-      <item>
-       <property name="text">
-        <string>COMPANY</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>DATE/TIME</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>STORAGE</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>UNIT SYSTEM</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>LANGUAGE</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>PASSWORD</string>
-       </property>
-      </item>
-     </widget>
      <widget class="QTabWidget" name="tabWidget_settings">
       <property name="geometry">
        <rect>
-        <x>175</x>
-        <y>10</y>
-        <width>615</width>
-        <height>400</height>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>480</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -9346,6 +9295,269 @@ QTabWidget::pane { border: none; }</string>
       <property name="tabPosition">
        <enum>QTabWidget::West</enum>
       </property>
+      <widget class="QWidget" name="tab_settings_main">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_settings_date_time">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>70</y>
+          <width>128</width>
+          <height>128</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_main_8">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>200</y>
+          <width>148</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>Date-Time</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_main_11">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>390</y>
+          <width>148</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>Language</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_main_10">
+        <property name="geometry">
+         <rect>
+          <x>225</x>
+          <y>390</y>
+          <width>178</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>Unit Systems</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_settings_unit_system">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>260</y>
+          <width>128</width>
+          <height>128</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_main_7">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>200</y>
+          <width>148</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>Company</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_main_9">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>200</y>
+          <width>188</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>USB Storage</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_settings_language">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>260</y>
+          <width>128</width>
+          <height>128</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_settings_company">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>70</y>
+          <width>128</width>
+          <height>128</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_settings_usb_storage">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>70</y>
+          <width>128</width>
+          <height>128</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_main_24">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>0</y>
+          <width>300</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>SETTINGS</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
       <widget class="QWidget" name="tab_company">
        <attribute name="title">
         <string>Tab 1</string>
@@ -9353,8 +9565,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QLabel" name="label_utest_address_logo">
         <property name="geometry">
          <rect>
-          <x>7</x>
-          <y>54</y>
+          <x>100</x>
+          <y>80</y>
           <width>600</width>
           <height>291</height>
          </rect>
@@ -9371,119 +9583,11 @@ QTabWidget::pane { border: none; }</string>
        <attribute name="title">
         <string>Page</string>
        </attribute>
-       <widget class="QSpinBox" name="spinBox_year">
-        <property name="geometry">
-         <rect>
-          <x>500</x>
-          <y>10</y>
-          <width>100</width>
-          <height>46</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="minimum">
-         <number>2000</number>
-        </property>
-        <property name="maximum">
-         <number>2100</number>
-        </property>
-        <property name="value">
-         <number>2015</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>10</y>
-          <width>100</width>
-          <height>46</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Year</string>
-        </property>
-       </widget>
-       <widget class="QSpinBox" name="spinBox_month">
-        <property name="geometry">
-         <rect>
-          <x>500</x>
-          <y>60</y>
-          <width>100</width>
-          <height>46</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="minimum">
-         <number>1</number>
-        </property>
-        <property name="maximum">
-         <number>12</number>
-        </property>
-        <property name="value">
-         <number>1</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_10">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>60</y>
-          <width>100</width>
-          <height>46</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Month</string>
-        </property>
-       </widget>
-       <widget class="QSpinBox" name="spinBox_day">
-        <property name="geometry">
-         <rect>
-          <x>500</x>
-          <y>110</y>
-          <width>100</width>
-          <height>46</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="minimum">
-         <number>1</number>
-        </property>
-        <property name="maximum">
-         <number>31</number>
-        </property>
-        <property name="value">
-         <number>1</number>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_11">
         <property name="geometry">
          <rect>
-          <x>400</x>
-          <y>110</y>
+          <x>20</x>
+          <y>20</y>
           <width>100</width>
           <height>46</height>
          </rect>
@@ -9496,36 +9600,15 @@ QTabWidget::pane { border: none; }</string>
         <property name="text">
          <string>Day</string>
         </property>
-       </widget>
-       <widget class="QSpinBox" name="spinBox_hour">
-        <property name="geometry">
-         <rect>
-          <x>500</x>
-          <y>160</y>
-          <width>100</width>
-          <height>46</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="minimum">
-         <number>0</number>
-        </property>
-        <property name="maximum">
-         <number>23</number>
-        </property>
-        <property name="value">
-         <number>0</number>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLabel" name="label_12">
+       <widget class="QLabel" name="label_10">
         <property name="geometry">
          <rect>
-          <x>400</x>
-          <y>160</y>
+          <x>130</x>
+          <y>20</y>
           <width>100</width>
           <height>46</height>
          </rect>
@@ -9536,14 +9619,17 @@ QTabWidget::pane { border: none; }</string>
          </font>
         </property>
         <property name="text">
-         <string>Hour</string>
+         <string>Month</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QSpinBox" name="spinBox_min">
+       <widget class="QSpinBox" name="spinBox_month">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>210</y>
+          <x>130</x>
+          <y>70</y>
           <width>100</width>
           <height>46</height>
          </rect>
@@ -9552,6 +9638,63 @@ QTabWidget::pane { border: none; }</string>
          <font>
           <pointsize>20</pointsize>
          </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>12</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_min">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>190</y>
+          <width>100</width>
+          <height>46</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>59</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_secs">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>190</y>
+          <width>100</width>
+          <height>46</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
         <property name="minimum">
          <number>0</number>
@@ -9566,8 +9709,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QLabel" name="label_13">
         <property name="geometry">
          <rect>
-          <x>400</x>
-          <y>210</y>
+          <x>130</x>
+          <y>140</y>
           <width>100</width>
           <height>46</height>
          </rect>
@@ -9580,12 +9723,15 @@ QTabWidget::pane { border: none; }</string>
         <property name="text">
          <string>Min</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
-       <widget class="QSpinBox" name="spinBox_secs">
+       <widget class="QLabel" name="label_12">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>260</y>
+          <x>20</x>
+          <y>140</y>
           <width>100</width>
           <height>46</height>
          </rect>
@@ -9595,21 +9741,60 @@ QTabWidget::pane { border: none; }</string>
           <pointsize>20</pointsize>
          </font>
         </property>
-        <property name="minimum">
-         <number>0</number>
+        <property name="text">
+         <string>Hour</string>
         </property>
-        <property name="maximum">
-         <number>59</number>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
-        <property name="value">
-         <number>0</number>
+       </widget>
+       <widget class="QLabel" name="label_current_date">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>70</y>
+          <width>281</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>28</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string notr="true">----------------------------------</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_current_time">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>130</y>
+          <width>181</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>28</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string notr="true">----------------------------------</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
        <widget class="QLabel" name="label_14">
         <property name="geometry">
          <rect>
-          <x>400</x>
-          <y>260</y>
+          <x>240</x>
+          <y>140</y>
           <width>100</width>
           <height>46</height>
          </rect>
@@ -9622,12 +9807,96 @@ QTabWidget::pane { border: none; }</string>
         <property name="text">
          <string>Secs</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_day">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>100</width>
+          <height>46</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>31</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_year">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>70</y>
+          <width>100</width>
+          <height>46</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="minimum">
+         <number>2000</number>
+        </property>
+        <property name="maximum">
+         <number>2100</number>
+        </property>
+        <property name="value">
+         <number>2015</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_hour">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>100</width>
+          <height>46</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>23</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
        </widget>
        <widget class="QPushButton" name="pushButton_set_datetime">
         <property name="geometry">
          <rect>
-          <x>400</x>
-          <y>320</y>
+          <x>70</x>
+          <y>270</y>
           <width>201</width>
           <height>61</height>
          </rect>
@@ -9641,43 +9910,22 @@ QTabWidget::pane { border: none; }</string>
          <string>SET</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_current_time">
+       <widget class="QLabel" name="label_9">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>160</y>
-          <width>181</width>
-          <height>50</height>
+          <x>240</x>
+          <y>20</y>
+          <width>100</width>
+          <height>46</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>28</pointsize>
+          <pointsize>20</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>----------------------------------</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_current_date">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>100</y>
-          <width>281</width>
-          <height>51</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>28</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>----------------------------------</string>
+         <string>Year</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -9691,8 +9939,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QGroupBox" name="groupBox_9">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>40</y>
+          <x>270</x>
+          <y>60</y>
           <width>251</width>
           <height>321</height>
          </rect>
@@ -9802,8 +10050,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_unit_kN">
         <property name="geometry">
          <rect>
-          <x>167</x>
-          <y>110</y>
+          <x>240</x>
+          <y>130</y>
           <width>280</width>
           <height>40</height>
          </rect>
@@ -9832,8 +10080,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_unit_kgf">
         <property name="geometry">
          <rect>
-          <x>167</x>
-          <y>230</y>
+          <x>240</x>
+          <y>250</y>
           <width>280</width>
           <height>40</height>
          </rect>
@@ -9862,8 +10110,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_unit_lbf">
         <property name="geometry">
          <rect>
-          <x>167</x>
-          <y>170</y>
+          <x>240</x>
+          <y>190</y>
           <width>280</width>
           <height>40</height>
          </rect>
@@ -9897,8 +10145,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_french">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>180</y>
+          <x>270</x>
+          <y>190</y>
           <width>250</width>
           <height>40</height>
          </rect>
@@ -9930,8 +10178,8 @@ QTabWidget::pane { border: none; }</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>300</y>
+          <x>270</x>
+          <y>310</y>
           <width>250</width>
           <height>40</height>
          </rect>
@@ -9960,8 +10208,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_turkish">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>120</y>
+          <x>270</x>
+          <y>130</y>
           <width>250</width>
           <height>40</height>
          </rect>
@@ -9990,8 +10238,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_spanish">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>240</y>
+          <x>270</x>
+          <y>250</y>
           <width>250</width>
           <height>40</height>
          </rect>
@@ -10020,8 +10268,8 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QRadioButton" name="radioButton_english">
         <property name="geometry">
          <rect>
-          <x>180</x>
-          <y>60</y>
+          <x>270</x>
+          <y>70</y>
           <width>250</width>
           <height>40</height>
          </rect>
@@ -10048,31 +10296,24 @@ QTabWidget::pane { border: none; }</string>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_password">
-       <attribute name="title">
-        <string>Tab 2</string>
-       </attribute>
-       <widget class="QLineEdit" name="lineEdit_admin_password">
-        <property name="geometry">
-         <rect>
-          <x>170</x>
-          <y>160</y>
-          <width>260</width>
-          <height>80</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>55</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_go_settings_screen">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>400</y>
+        <width>65</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_main_calibration">
@@ -14662,6 +14903,26 @@ from USB</string>
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_admin_password">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>380</y>
+        <width>260</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>55</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </widget>
    </widget>
