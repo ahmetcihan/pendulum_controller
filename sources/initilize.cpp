@@ -177,7 +177,7 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
 
     signalMapper_main_screen = new QSignalMapper(this);
 //    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen,  0);
-//    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_3,  0);
+    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_3,  0);
     signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_5,  0);
 //    signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen_7,  0);
     signalMapper_main_screen->setMapping(this->ui.pushButton_go_test,         1);
@@ -187,7 +187,7 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     signalMapper_main_screen->setMapping(this->ui.pushButton_go_calibration,  5);
     signalMapper_main_screen->setMapping(this->ui.pushButton_go_admin,        6);
 //    connect(this->ui.pushButton_go_main_screen,     SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
-//    connect(this->ui.pushButton_go_main_screen_3,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
+    connect(this->ui.pushButton_go_main_screen_3,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
     connect(this->ui.pushButton_go_main_screen_5,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
 //    connect(this->ui.pushButton_go_main_screen_7,   SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
     connect(this->ui.pushButton_go_test,            SIGNAL(pressed()),signalMapper_main_screen, SLOT (map()));
