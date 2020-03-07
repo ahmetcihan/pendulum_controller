@@ -97,9 +97,7 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     ui.tabWidget->setTabEnabled(TAB_ADMIN,1);
 #endif
     connect(ui.listWidget_parameters,SIGNAL(currentRowChanged(int)),ui.tabWidget_parameters,SLOT(setCurrentIndex(int)));
-    connect(ui.listWidget_admin,SIGNAL(currentRowChanged(int)),ui.tabWidget_admin,SLOT(setCurrentIndex(int)));
     ui.listWidget_parameters->setCurrentRow(0);
-    ui.listWidget_admin->setCurrentRow(0);
     ui.tabWidget_parameters->setCurrentIndex(0);
     ui.tabWidget_settings->setCurrentIndex(0);
     ui.tabWidget_admin->setCurrentIndex(0);
@@ -911,5 +909,20 @@ void DC_Motor_PC::settings_screen_signalmapper_handler(int i){
     }
     else{
         ui.tabWidget_settings->setCurrentIndex(i);
+    }
+}
+void DC_Motor_PC::admin_screen_signalmapper_handler(int i){
+    if(prevent_double_click()) return;
+
+    if(i == 0){
+        if(ui.tabWidget_admin->currentIndex() == 0){
+            ui.tabWidget->setCurrentIndex(0);
+        }
+        else{
+            ui.tabWidget_admin->setCurrentIndex(0);
+        }
+    }
+    else{
+        ui.tabWidget_admin->setCurrentIndex(i);
     }
 }

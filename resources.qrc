@@ -34,5 +34,11 @@
         <file>language_button.jpg</file>
         <file>unit_systems_button.jpg</file>
         <file>usb_storage_button.jpg</file>
+        <file>gains_button.jpg</file>
+        <file>channels_button.jpg</file>
+        <file>pid_button.jpg</file>
+        <file>files_button.jpg</file>
+        <file>device_button.jpg</file>
+        <file>speed_tune_button.jpg</file>
     </qresource>
 </RCC>
