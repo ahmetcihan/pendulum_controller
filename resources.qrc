@@ -18,8 +18,6 @@
         <file>red_to_load.png</file>
         <file>sari_dene.png</file>
         <file>sari_close.png</file>
-        <file>usb_to_device.jpg</file>
-        <file>device_to_usb.jpg</file>
         <file>cylinder.jpg</file>
         <file>briquette_narrow.jpg</file>
         <file>qss/qmc2-black-fast/ok-new.png</file>
@@ -40,5 +38,7 @@
         <file>files_button.jpg</file>
         <file>device_button.jpg</file>
         <file>speed_tune_button.jpg</file>
+        <file>device_to_usb.jpg</file>
+        <file>usb_to_device.jpg</file>
     </qresource>
 </RCC>
