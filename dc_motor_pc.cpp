@@ -96,8 +96,6 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     ui.tabWidget->setTabEnabled(TAB_CALIBRATION,1);
     ui.tabWidget->setTabEnabled(TAB_ADMIN,1);
 #endif
-    connect(ui.listWidget_parameters,SIGNAL(currentRowChanged(int)),ui.tabWidget_parameters,SLOT(setCurrentIndex(int)));
-    ui.listWidget_parameters->setCurrentRow(0);
     ui.tabWidget_parameters->setCurrentIndex(0);
     ui.tabWidget_settings->setCurrentIndex(0);
     ui.tabWidget_admin->setCurrentIndex(0);
@@ -313,9 +311,6 @@ void DC_Motor_PC::admin_authorization_handler(){
 }
 void DC_Motor_PC::main_screen_arrangements(void){
     if(test_type == CBR){
-        ui.listWidget_parameters->item(8)->setHidden(1);    //marshall  - OFF
-        ui.listWidget_parameters->item(7)->setHidden(0);    //cbr       - ON
-        ui.listWidget_parameters->item(1)->setHidden(1);    //specimen  - OFF
         ui.groupBox_main_ch3->hide();
         ui.groupBox_main_ch4->hide();
         ui.groupBox_main_par_0->hide();
@@ -333,9 +328,6 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_par_marshall->setVisible(1);
     }
     else if(test_type == MARSHALL){
-        ui.listWidget_parameters->item(8)->setHidden(0);    //marshall  - ON
-        ui.listWidget_parameters->item(7)->setHidden(1);    //cbr       - OFF
-        ui.listWidget_parameters->item(1)->setHidden(1);    //specimen  - OFF
         ui.groupBox_main_ch3->hide();
         ui.groupBox_main_ch4->hide();
         ui.groupBox_main_par_0->hide();
@@ -353,9 +345,6 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_par_marshall->setVisible(1);
     }
     else{
-        ui.listWidget_parameters->item(8)->setHidden(1);    //marshall  - OFF
-        ui.listWidget_parameters->item(7)->setHidden(1);    //cbr       - OFF
-        ui.listWidget_parameters->item(1)->setHidden(0);    //specimen  - ON
         ui.groupBox_stress->show();
         ui.groupBox_main_load->move(5,73);
         ui.groupBox_main_displacement->move(5,141);
@@ -924,5 +913,20 @@ void DC_Motor_PC::admin_screen_signalmapper_handler(int i){
     }
     else{
         ui.tabWidget_admin->setCurrentIndex(i);
+    }
+}
+void DC_Motor_PC::parameters_screen_signalmapper_handler(int i){
+    if(prevent_double_click()) return;
+
+    if(i == 0){
+        if(ui.tabWidget_parameters->currentIndex() == 0){
+            ui.tabWidget->setCurrentIndex(0);
+        }
+        else{
+            ui.tabWidget_parameters->setCurrentIndex(0);
+        }
+    }
+    else{
+        ui.tabWidget_parameters->setCurrentIndex(i);
     }
 }
