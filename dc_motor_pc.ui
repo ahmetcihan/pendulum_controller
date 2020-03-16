@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>6</number>
     </property>
     <property name="iconSize">
      <size>
@@ -2353,772 +2353,13 @@ Parameters</string>
        <attribute name="title">
         <string>Page</string>
        </attribute>
-       <widget class="QLabel" name="label_dac_value_81">
+       <widget class="QTabWidget" name="tabWidget_3">
         <property name="geometry">
          <rect>
-          <x>335</x>
-          <y>320</y>
-          <width>31</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">%</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_test_start_speed">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>5</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>1.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QSpinBox" name="spinBox_break_percentage">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>320</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="maximum">
-         <number>100</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_36">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>320</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Break Percentage</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_max_displacement">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>140</y>
-          <width>51</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">mm</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_failure_threshold">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>230</y>
-          <width>31</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">kN</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_return_home_speed">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>50</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>1.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_34">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>230</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Failure Threshold</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_max_load">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>185</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>500.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_max_load">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>185</y>
-          <width>31</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">kN</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_return_home_speed">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>50</y>
-          <width>85</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>mm/min</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_zero_suppression">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>275</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>500.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_24">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>5</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Test Start Speed</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_zero_suppression">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>275</y>
-          <width>31</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">kN</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_load_threshold">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>230</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>500.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_25">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>50</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Return Home Speed</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_max_displacement">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>140</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>500.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_22">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>185</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Max. Load</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_23">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>140</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Max. Displacement</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_29">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>275</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Zero Suppression</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_test_start_speed">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>5</y>
-          <width>85</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>mm/min</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_unit_go_to_load_speed">
-        <property name="geometry">
-         <rect>
-          <x>335</x>
-          <y>95</y>
-          <width>85</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>mm/min</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_dac_value_26">
-        <property name="geometry">
-         <rect>
-          <x>5</x>
-          <y>95</y>
-          <width>220</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Go to Load Speed</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_go_to_load_speed">
-        <property name="geometry">
-         <rect>
-          <x>225</x>
-          <y>95</y>
-          <width>105</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-        <property name="decimals">
-         <number>3</number>
-        </property>
-        <property name="minimum">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>999999.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.001000000000000</double>
-        </property>
-        <property name="value">
-         <double>1.000000000000000</double>
-        </property>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_14">
-        <property name="geometry">
-         <rect>
-          <x>490</x>
-          <y>175</y>
-          <width>292</width>
-          <height>220</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-         </font>
-        </property>
-        <property name="title">
-         <string>RECORDING</string>
-        </property>
-        <widget class="QRadioButton" name="radioButton_record_raw_data_on">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>45</y>
-           <width>250</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>ON</string>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>64</width>
-           <height>64</height>
-          </size>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-        </widget>
-        <widget class="QRadioButton" name="radioButton_record_raw_data_off">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>100</y>
-           <width>250</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>OFF</string>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>64</width>
-           <height>64</height>
-          </size>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_dac_value_38">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>160</y>
-           <width>105</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Interval</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_record_interval">
-         <property name="geometry">
-          <rect>
-           <x>130</x>
-           <y>160</y>
-           <width>81</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="decimals">
-          <number>1</number>
-         </property>
-         <property name="minimum">
-          <double>0.100000000000000</double>
-         </property>
-         <property name="maximum">
-          <double>100001.000000000000000</double>
-         </property>
-         <property name="singleStep">
-          <double>0.001000000000000</double>
-         </property>
-         <property name="value">
-          <double>500.000000000000000</double>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_dac_value_101">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>160</y>
-           <width>20</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>18</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string notr="true">s</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_control_mode">
-        <property name="geometry">
-         <rect>
-          <x>490</x>
-          <y>10</y>
-          <width>292</width>
-          <height>155</height>
+          <x>0</x>
+          <y>0</y>
+          <width>790</width>
+          <height>390</height>
          </rect>
         </property>
         <property name="font">
@@ -3127,58 +2368,1156 @@ Parameters</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">QTabBar::tab { height: 194px; width: 60px}</string>
         </property>
-        <property name="title">
-         <string>MODE</string>
+        <property name="tabPosition">
+         <enum>QTabWidget::West</enum>
         </property>
-        <widget class="QRadioButton" name="radioButton_man">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>100</y>
-           <width>250</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>MANUAL</string>
-         </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_4">
+         <attribute name="title">
+          <string>PARAMETERS</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_14">
+          <property name="geometry">
+           <rect>
+            <x>440</x>
+            <y>170</y>
+            <width>292</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>RECORDING</string>
+          </property>
+          <widget class="QRadioButton" name="radioButton_record_raw_data_on">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>45</y>
+             <width>250</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>ON</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>64</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_record_raw_data_off">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>100</y>
+             <width>250</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>OFF</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>64</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_38">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>160</y>
+             <width>105</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Interval</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_record_interval">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>160</y>
+             <width>81</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="decimals">
+            <number>1</number>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>100001.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value">
+            <double>500.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_101">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>160</y>
+             <width>20</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string notr="true">s</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_control_mode">
+          <property name="geometry">
+           <rect>
+            <x>440</x>
+            <y>5</y>
+            <width>292</width>
+            <height>155</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="title">
+           <string>MODE</string>
+          </property>
+          <widget class="QRadioButton" name="radioButton_man">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>100</y>
+             <width>250</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>MANUAL</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_auto">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>45</y>
+             <width>250</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>AUTO</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>64</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_break_percentage">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>320</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_go_to_load_speed">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>95</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_zero_suppression">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>275</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>500.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_max_load">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>185</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>500.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_81">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>320</y>
+            <width>31</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string notr="true">%</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_max_load">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>185</y>
+            <width>31</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string notr="true">kN</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_return_home_speed">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>50</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_26">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>95</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Go to Load Speed</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_load_threshold">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>230</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>500.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_25">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Return Home Speed</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_test_start_speed">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>5</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_36">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>320</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Break Percentage</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_23">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Max. Displacement</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_go_to_load_speed">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>95</y>
+            <width>85</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>mm/min</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_max_displacement">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>140</y>
+            <width>51</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string notr="true">mm</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_max_displacement">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>140</y>
+            <width>105</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>999999.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.001000000000000</double>
+          </property>
+          <property name="value">
+           <double>500.000000000000000</double>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_test_start_speed">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>5</y>
+            <width>85</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>mm/min</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_29">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>275</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Zero Suppression</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_failure_threshold">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>230</y>
+            <width>31</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string notr="true">kN</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_24">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>5</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Test Start Speed</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_34">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>230</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Failure Threshold</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_return_home_speed">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>50</y>
+            <width>85</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>mm/min</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_dac_value_22">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>185</y>
+            <width>220</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Max. Load</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_unit_zero_suppression">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>275</y>
+            <width>31</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string notr="true">kN</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
         </widget>
-        <widget class="QRadioButton" name="radioButton_auto">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>45</y>
-           <width>250</width>
-           <height>40</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>AUTO</string>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>64</width>
-           <height>64</height>
-          </size>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
+        <widget class="QWidget" name="tab_8">
+         <attribute name="title">
+          <string>DP</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>601</width>
+            <height>300</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>DECIMAL POINT</string>
+          </property>
+          <widget class="QLabel" name="label_dac_value_92">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>LOAD 1</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_94">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>90</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>CHANNEL 3</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_load_1">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>40</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_ch3">
+           <property name="geometry">
+            <rect>
+             <x>510</x>
+             <y>90</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_102">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>140</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>CHANNEL 4</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_ch4">
+           <property name="geometry">
+            <rect>
+             <x>510</x>
+             <y>140</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_100">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>190</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>STRESS</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_stress">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>190</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_displacement">
+           <property name="geometry">
+            <rect>
+             <x>510</x>
+             <y>40</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_124">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>40</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>DISPLACEMENT</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_93">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>90</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>LOAD 2</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_load_2">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>90</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_dac_value_95">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>140</y>
+             <width>180</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>LOAD 3</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBox_dp_load_3">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>140</y>
+             <width>71</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+          </widget>
+         </widget>
         </widget>
        </widget>
       </widget>
@@ -4052,8 +4391,8 @@ MID</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>614</width>
-          <height>400</height>
+          <width>790</width>
+          <height>390</height>
          </rect>
         </property>
         <property name="font">
@@ -4062,10 +4401,13 @@ MID</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">QTabBar::tab { width: 202px; height: 50px}</string>
+         <string notr="true">QTabBar::tab { width: 60px; height: 194px}</string>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::West</enum>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_34">
          <attribute name="title">
@@ -4543,316 +4885,6 @@ MID</string>
           </widget>
          </widget>
         </widget>
-        <widget class="QWidget" name="tab_3">
-         <attribute name="title">
-          <string>DP</string>
-         </attribute>
-         <widget class="QGroupBox" name="groupBox_10">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>20</y>
-            <width>601</width>
-            <height>300</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-           </font>
-          </property>
-          <property name="title">
-           <string>DECIMAL POINT</string>
-          </property>
-          <widget class="QLabel" name="label_dac_value_92">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>40</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>LOAD 1</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_dac_value_94">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>90</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>CHANNEL 3</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_load_1">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>40</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_ch3">
-           <property name="geometry">
-            <rect>
-             <x>510</x>
-             <y>90</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_dac_value_102">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>140</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>CHANNEL 4</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_ch4">
-           <property name="geometry">
-            <rect>
-             <x>510</x>
-             <y>140</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_dac_value_100">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>190</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>STRESS</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_stress">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>190</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_displacement">
-           <property name="geometry">
-            <rect>
-             <x>510</x>
-             <y>40</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_dac_value_124">
-           <property name="geometry">
-            <rect>
-             <x>320</x>
-             <y>40</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>DISPLACEMENT</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_dac_value_93">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>90</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>LOAD 2</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_load_2">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>90</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_dac_value_95">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>140</y>
-             <width>180</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>LOAD 3</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QSpinBox" name="spinBox_dp_load_3">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>140</y>
-             <width>71</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>18</pointsize>
-            </font>
-           </property>
-           <property name="maximum">
-            <number>4</number>
-           </property>
-          </widget>
-         </widget>
-        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_cbr">
@@ -4864,7 +4896,7 @@ MID</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>613</width>
+          <width>790</width>
           <height>400</height>
          </rect>
         </property>
@@ -4881,7 +4913,7 @@ QTabWidget::pane { border: none; }</string>
          <enum>QTabWidget::West</enum>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_7">
          <attribute name="title">
@@ -7777,8 +7809,8 @@ QTabWidget::pane { border: none; }</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>613</width>
-          <height>400</height>
+          <width>790</width>
+          <height>390</height>
          </rect>
         </property>
         <property name="font">
@@ -7787,14 +7819,14 @@ QTabWidget::pane { border: none; }</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">QTabBar::tab { width: 60px;height: 198px;}
-QTabWidget::pane { border: none; }</string>
+         <string notr="true">QTabBar::tab { width: 60px;height: 194px;}
+</string>
         </property>
         <property name="tabPosition">
          <enum>QTabWidget::West</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
@@ -13460,32 +13492,35 @@ QTabBar::tab { width: 152px;}</string>
        <widget class="QTabWidget" name="tabWidget_pid">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>30</y>
-          <width>611</width>
-          <height>400</height>
+          <x>0</x>
+          <y>0</y>
+          <width>790</width>
+          <height>390</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>20</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">QTabBar::tab {width:300px; height: 50px;}
+         <string notr="true">QTabBar::tab {width:60px; height: 194px;}
 </string>
         </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::West</enum>
+        </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_23">
          <attribute name="title">
-          <string>Coefficients</string>
+          <string>CEOEFFICIENTS</string>
          </attribute>
          <widget class="QGroupBox" name="groupBox_13">
           <property name="geometry">
            <rect>
-            <x>157</x>
+            <x>10</x>
             <y>10</y>
             <width>300</width>
             <height>271</height>
@@ -13864,7 +13899,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QWidget" name="widget_pace_graphic" native="true">
           <property name="geometry">
            <rect>
-            <x>310</x>
+            <x>410</x>
             <y>10</y>
             <width>291</width>
             <height>221</height>

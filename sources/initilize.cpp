@@ -128,16 +128,16 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     ui.pushButton_refresh->hide();
 
     ui.pushButton_speed_up->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_up.png);"
+                                                "border-image: url(:up_button.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_speed_down->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_down.png);"
+                                                "border-image: url(:down_button.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_speed_up_2->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_up.png);"
+                                                "border-image: url(:up_button.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_speed_down_2->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_down.png);"
+                                                "border-image: url(:down_button.jpg);"
                                                 "border-width: 0px ;");
 
     ui.pushButton_go_test->setStyleSheet("min-width: 50px; min-height: 50px;"

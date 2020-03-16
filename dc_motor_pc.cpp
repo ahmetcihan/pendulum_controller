@@ -476,7 +476,7 @@ void DC_Motor_PC::test_finishing(){
                                                     "border-image: url(:pause_button_passive.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_stop-silver.png);"
+                                                    "border-image: url(:stop_button_passive.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_stop_motor->setDisabled(1);
         ui.pushButton_pause_test->setDisabled(1);
