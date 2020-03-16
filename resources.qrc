@@ -3,7 +3,6 @@
         <file>sari_down.png</file>
         <file>sari_home.png</file>
         <file>sari_jog.png</file>
-        <file>sari_start.png</file>
         <file>sari_stop.png</file>
         <file>sari_up.png</file>
         <file>sari_pause.png</file>
@@ -47,5 +46,19 @@
         <file>jog_button.jpg</file>
         <file>cbr_parameters_button.jpg</file>
         <file>marshall_parameters_button.jpg</file>
+        <file>go_main_screen_button.jpg</file>
+        <file>start_button.jpg</file>
+        <file>start_button_passive.jpg</file>
+        <file>stop_button.jpg</file>
+        <file>stop_button_passive.jpg</file>
+        <file>refresh_button.jpg</file>
+        <file>pause_button.jpg</file>
+        <file>pause_button_passive.jpg</file>
+        <file>jog_little_button.jpg</file>
+        <file>up_button.jpg</file>
+        <file>down_button.jpg</file>
+        <file>home_button.jpg</file>
+        <file>go_load_button.jpg</file>
+        <file>close_button.jpg</file>
     </qresource>
 </RCC>

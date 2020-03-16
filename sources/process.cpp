@@ -28,10 +28,10 @@ void DC_Motor_PC::go_load(void){
     ui.pushButton_stop_motor->setEnabled(1);
 
     ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_start-silver.png);"
+                                                "border-image: url(:start_button_passive.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_stop.png);"
+                                                "border-image: url(:stop_button.jpg);"
                                                 "border-width: 0px ;");
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
@@ -60,10 +60,10 @@ void DC_Motor_PC::go_load_operation(void){
                 ui.pushButton_start_test->setEnabled(1);
                 ui.pushButton_stop_motor->setDisabled(1);
                 ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_start.png);"
+                                                            "border-image: url(:start_button.jpg);"
                                                             "border-width: 0px ;");
                 ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_stop-silver.png);"
+                                                            "border-image: url(:stop_button_passive.jpg);"
                                                             "border-width: 0px ;");
             }
             break;
@@ -78,10 +78,10 @@ void DC_Motor_PC::return_home(void){
     ui.pushButton_start_test->setDisabled(1);
     ui.pushButton_stop_motor->setEnabled(1);
     ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_start-silver.png);"
+                                                "border-image: url(:start_button_passive.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_stop.png);"
+                                                "border-image: url(:stop_button.jpg);"
                                                 "border-width: 0px ;");
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
@@ -99,10 +99,10 @@ void DC_Motor_PC::return_home_operation(void){
                 ui.pushButton_start_test->setEnabled(1);
                 ui.pushButton_stop_motor->setDisabled(1);
                 ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_start.png);"
+                                                            "border-image: url(:start_button.jpg);"
                                                             "border-width: 0px ;");
                 ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_stop-silver.png);"
+                                                            "border-image: url(:stop_button_passive.jpg);"
                                                             "border-width: 0px ;");
             }
             else{
@@ -132,10 +132,10 @@ void DC_Motor_PC::return_home_operation(void){
                 ui.pushButton_start_test->setEnabled(1);
                 ui.pushButton_stop_motor->setDisabled(1);
                 ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_start.png);"
+                                                            "border-image: url(:start_button.jpg);"
                                                             "border-width: 0px ;");
                 ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_stop-silver.png);"
+                                                            "border-image: url(:stop_button_passive.jpg);"
                                                             "border-width: 0px ;");
             }
             if(fuzpid->load_value > initial_load + 0.2){    //load error
@@ -145,10 +145,10 @@ void DC_Motor_PC::return_home_operation(void){
                 ui.pushButton_start_test->setEnabled(1);
                 ui.pushButton_stop_motor->setDisabled(1);
                 ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_start.png);"
+                                                            "border-image: url(:start_button.jpg);"
                                                             "border-width: 0px ;");
                 ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                            "border-image: url(:sari_stop-silver.png);"
+                                                            "border-image: url(:stop_button_passive.jpg);"
                                                             "border-width: 0px ;");
                 fuzpid->error.go_home_load = true;
                 ui.label_alert_status->setText(trUtf8("GO HOME Load Error!"));

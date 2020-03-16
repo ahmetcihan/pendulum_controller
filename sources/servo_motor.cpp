@@ -69,13 +69,13 @@ void DC_Motor_PC::motor_go_test_direction(void){
         ui.tabWidget->setTabEnabled(TAB_ADMIN,0);
 
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_start-silver.png);"
+                                                    "border-image: url(:start_button_passive.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_pause_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_pause.png);"
+                                                    "border-image: url(:pause_button.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_stop.png);"
+                                                    "border-image: url(:stop_button.jpg);"
                                                     "border-width: 0px ;");
         servo.down = 1;
         break;
@@ -125,7 +125,7 @@ void DC_Motor_PC::pause_test(void){
         fuzpid->test_status = TEST_PAUSED;
         ui.pushButton_start_test->setEnabled(1);
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_start.png);"
+                                                    "border-image: url(:start_button.jpg);"
                                                     "border-width: 0px ;");
         ui.label_test_status->setText(trUtf8("TEST is PAUSED"));
         ui.label_test_status_cbr->setText(trUtf8("TEST is PAUSED"));
@@ -144,10 +144,10 @@ void DC_Motor_PC::motor_stop(void){
             ui.pushButton_start_test->setEnabled(1);
             ui.pushButton_stop_motor->setDisabled(1);
             ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                        "border-image: url(:sari_start.png);"
+                                                        "border-image: url(:start_button.jpg);"
                                                         "border-width: 0px ;");
             ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                        "border-image: url(:sari_stop-silver.png);"
+                                                        "border-image: url(:stop_button_passive.jpg);"
                                                         "border-width: 0px ;");
         }
     }
@@ -158,10 +158,10 @@ void DC_Motor_PC::motor_stop(void){
         ui.pushButton_start_test->setEnabled(1);
         ui.pushButton_stop_motor->setDisabled(1);
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_start.png);"
+                                                    "border-image: url(:start_button.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_stop-silver.png);"
+                                                    "border-image: url(:stop_button_passive.jpg);"
                                                     "border-width: 0px ;");
     }
     fuzpid->run_cbr = false;

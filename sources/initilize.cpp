@@ -111,19 +111,19 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     connect(this->ui.pushButton_result_right,SIGNAL(pressed()),this,SLOT(result_no_right()));
 
     ui.pushButton_jog->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_dene.png);"
+                                                "border-image: url(:jog_little_button.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_start.png);"
+                                                "border-image: url(:start_button.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_pause_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_pause-silver.png);"
+                                                "border-image: url(:pause_button_passive.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_stop-silver.png);"
+                                                "border-image: url(:stop_button_passive.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_refresh->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_refresh.png);"
+                                                "border-image: url(:refresh_button.jpg);"
                                                 "border-width: 0px ;");
     ui.pushButton_refresh->hide();
 
@@ -215,6 +215,26 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     ui.pushButton_parameters_marshall_parameters->setStyleSheet("min-width: 50px; min-height: 50px;"
                                                 "border-image: url(:marshall_parameters_button.jpg);"
                                                 "border-width: 0px ;");
+
+    ui.pushButton_go_main_screen->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:go_main_screen_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_main_screen_3->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:go_main_screen_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_main_screen_5->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:go_main_screen_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_parameters_screen->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:go_main_screen_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_settings_screen->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:go_main_screen_button.jpg);"
+                                                "border-width: 0px ;");
+    ui.pushButton_go_admin_screen->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                "border-image: url(:go_main_screen_button.jpg);"
+                                                "border-width: 0px ;");
+
 
     signalMapper_main_screen = new QSignalMapper(this);
     signalMapper_main_screen->setMapping(this->ui.pushButton_go_main_screen,    0);
@@ -395,7 +415,7 @@ void DC_Motor_PC::init_DIAMETERs(void){
 void DC_Motor_PC::init_GUI(void){
 
 #ifdef CONFIG_x86
-    set_gradient();
+   set_gradient();
 #endif
 
     current_tab_index = TAB_TEST;

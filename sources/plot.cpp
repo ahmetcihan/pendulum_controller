@@ -87,19 +87,21 @@ void DC_Motor_PC::set_plotter(void){
 }
 void DC_Motor_PC::plot_prepare_load(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *cCos,QwtPlotCurve *cTan,QwtPlotCurve *cCot, QString str_y, QString str_x){
 
-    plot->setGeometry(0,0,540,337);
+    plot->setGeometry(0,0,540,380);
     plot->setAxisTitle(plot->xBottom, str_x );
     plot->setAxisScale(plot->xBottom, 0.0, 1.0);
     plot->setAxisTitle(plot->yLeft, str_y);
     plot->setAxisScale(plot->yLeft, 0, 1.0);
 
-    plot->setAutoFillBackground(false);
-    plot->setPalette(QPalette(QColor(165,193,228)));
-
     plot->canvas()->setLineWidth(0);
     plot->canvas()->setBorderRadius(0);
     plot->canvas()->setFrameStyle( QFrame::Box | QFrame::Plain );
-    plot->setCanvasBackground(Qt::white);
+
+    QString eSheet("background: white;");
+    plot->canvas()->setStyleSheet(eSheet);
+
+    QString bSheet("background: rgb(0,206,209);");
+    plot->setStyleSheet(bSheet);
 
     zoom_out_button = new QPushButton(plot->canvas());
     zoom_out_button->setGeometry(370,10,100,70);

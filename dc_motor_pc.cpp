@@ -113,7 +113,6 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     connect(this->ui.radioButton_unit_kgf,SIGNAL(clicked()),this,SLOT(unit_system_handler()));
 
     QTimer::singleShot(20000,this,SLOT(check_the_storage()));
-
 }
 void DC_Motor_PC::check_the_storage(void){
     QProcess p;
@@ -172,7 +171,7 @@ void DC_Motor_PC::show_jog_widget(void){
     ui.pushButton_jog->setDisabled(1);
 
     QWidget *mywidget = new QWidget(this->ui.tab_main_test);
-    mywidget->setGeometry(250,247,540,95);
+    mywidget->setGeometry(250,300,540,95);
     mywidget->show();
 
     QPushButton *close_button = new QPushButton(mywidget);
@@ -183,7 +182,7 @@ void DC_Motor_PC::show_jog_widget(void){
 //    close_button->setText("CLOSE");
 //    close_button->setFont(QFont("Ubuntu",16,QFont::Normal,false));
     close_button->setStyleSheet("min-width: 50px; min-height: 50px;"
-                            "border-image: url(:sari_close.png);"
+                            "border-image: url(:close_button.jpg);"
                             "border-width: 0px ;");
     close_button->show();
 
@@ -191,12 +190,12 @@ void DC_Motor_PC::show_jog_widget(void){
     QPushButton *down_button = new QPushButton(mywidget);
     up_button->setGeometry(25,10,75,75);
     up_button->setStyleSheet("min-width: 50px; min-height: 50px;"
-                            "border-image: url(:sari_up.png);"
+                            "border-image: url(:up_button.jpg);"
                             "border-width: 0px ;");
     up_button->show();
     down_button->setGeometry(128,10,75,75);
     down_button->setStyleSheet("min-width: 50px; min-height: 50px;"
-                            "border-image: url(:sari_down.png);"
+                            "border-image: url(:down_button.jpg);"
                             "border-width: 0px ;");
     down_button->show();
     connect(up_button, SIGNAL(pressed()), this, SLOT(handle_JOG_up_button()));
@@ -207,7 +206,7 @@ void DC_Motor_PC::show_jog_widget(void){
     QPushButton *return_home_button = new QPushButton(mywidget);
     return_home_button->setGeometry(231,10,75,75);
     return_home_button->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_home.png);"
+                                                "border-image: url(:home_button.jpg);"
                                                 "border-width: 0px ;");
     return_home_button->show();
     connect(return_home_button,SIGNAL(pressed()),this,SLOT(return_home()));
@@ -215,7 +214,7 @@ void DC_Motor_PC::show_jog_widget(void){
     QPushButton *go_load_button = new QPushButton(mywidget);
     go_load_button->setGeometry(334,10,75,75);
     go_load_button->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                "border-image: url(:sari_to_load.png);"
+                                                "border-image: url(:go_load_button.jpg);"
                                                 "border-width: 0px ;");
     go_load_button->show();
     connect(go_load_button,SIGNAL(pressed()),this,SLOT(go_load()));
@@ -229,7 +228,7 @@ void DC_Motor_PC::refresh_button_handler(void){
     if(return_home_bit){
         ui.pushButton_start_test->setDisabled(1);
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_start-silver.png);"
+                                                    "border-image: url(:start_button_passive.jpg);"
                                                     "border-width: 0px ;");
     }
     ui.pushButton_start_test->show();
@@ -314,7 +313,6 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_ch3->hide();
         ui.groupBox_main_ch4->hide();
         ui.groupBox_main_par_0->hide();
-        ui.groupBox_main_par_1->hide();
         disconnect(ui.checkBox_ch3,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         disconnect(ui.checkBox_ch4,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         ui.groupBox_main_par_cbr->setParent(ui.tab_main_test);
@@ -331,7 +329,6 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_ch3->hide();
         ui.groupBox_main_ch4->hide();
         ui.groupBox_main_par_0->hide();
-        ui.groupBox_main_par_1->hide();
         disconnect(ui.checkBox_ch3,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         disconnect(ui.checkBox_ch4,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         ui.groupBox_stress->setHidden(1);
@@ -352,7 +349,6 @@ void DC_Motor_PC::main_screen_arrangements(void){
         ui.groupBox_main_ch3->show();
         ui.groupBox_main_ch4->show();
         ui.groupBox_main_par_0->show();
-        ui.groupBox_main_par_1->show();
         connect(ui.checkBox_ch3,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         connect(ui.checkBox_ch4,SIGNAL(stateChanged(int)),this,SLOT(channel_activations_handler()));
         ui.groupBox_main_par_cbr->setParent(ui.tab_main_reserve);
@@ -474,10 +470,10 @@ void DC_Motor_PC::test_finishing(){
         excel_file.close();
 
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_start.png);"
+                                                    "border-image: url(:start_button.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_pause_test->setStyleSheet("min-width: 50px; min-height: 50px;"
-                                                    "border-image: url(:sari_pause-silver.png);"
+                                                    "border-image: url(:pause_button_passive.jpg);"
                                                     "border-width: 0px ;");
         ui.pushButton_stop_motor->setStyleSheet("min-width: 50px; min-height: 50px;"
                                                     "border-image: url(:sari_stop-silver.png);"

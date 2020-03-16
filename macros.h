@@ -76,7 +76,6 @@ typedef signed int s32;
 #define SCREEN_POS_2            5,209
 #define SCREEN_POS_3            5,277
 #define SCREEN_POS_4            5,345
-#define SCREEN_POS_5            250,345
 
 #define DOUBLE_CLICK_BLOCK_TIME 400
 

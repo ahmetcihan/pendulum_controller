@@ -83,13 +83,11 @@ void DC_Motor_PC::channel_activations_handler(){
             ui.groupBox_main_ch3->move(SCREEN_POS_2);
             ui.groupBox_main_ch4->move(SCREEN_POS_3);
             ui.groupBox_main_par_0->move(SCREEN_POS_4);
-            ui.groupBox_main_par_1->move(SCREEN_POS_5);
         }
         else{                                       // ch4
             ui.groupBox_main_ch4->hide();
             ui.groupBox_main_ch3->move(SCREEN_POS_2);
             ui.groupBox_main_par_0->move(SCREEN_POS_3);
-            ui.groupBox_main_par_1->move(SCREEN_POS_4);
         }
     }
     else {
@@ -98,12 +96,10 @@ void DC_Motor_PC::channel_activations_handler(){
             ui.groupBox_main_ch4->show();
             ui.groupBox_main_ch4->move(SCREEN_POS_2);
             ui.groupBox_main_par_0->move(SCREEN_POS_3);
-            ui.groupBox_main_par_1->move(SCREEN_POS_4);
         }
         else{                                       //ch3 -ch4
             ui.groupBox_main_ch4->hide();
             ui.groupBox_main_par_0->move(SCREEN_POS_2);
-            ui.groupBox_main_par_1->move(SCREEN_POS_3);
         }
     }
 }
