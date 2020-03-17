@@ -616,11 +616,9 @@ void DC_Motor_PC::init_GUI(void){
     connect(this->ui.spinBox_dp_ch4,SIGNAL(valueChanged(int)),this,SLOT(dp_ch4_change_handler()));
     connect(this->ui.spinBox_dp_displacement,SIGNAL(valueChanged(int)),this,SLOT(dp_displacement_change_handler()));
 
-    connect(this->ui.lineEdit_admin_password,SIGNAL(textChanged(QString)),this,SLOT(admin_authorization_handler()));
     connect(this->ui.doubleSpinBox_briquette_t,SIGNAL(valueChanged(double)),this,SLOT(marshall_correction_factor_calculator()));
     marshall_correction_factor_calculator();
 
-    admin_authorization_handler();
     calculate_area_cylindrical();
     ch3_name_handler();
     ch4_name_handler();
@@ -634,4 +632,8 @@ void DC_Motor_PC::init_GUI(void){
 
     ui.spinBox_test_no->setValue(current_test_no);
     read_test_results_from_file();
+
+    ui.label_main_calibration->setStyleSheet("color : rgb(96,96,96); border: none;");
+    ui.label_main_admin->setStyleSheet("color : rgb(96,96,96); border: none;");
+
 }

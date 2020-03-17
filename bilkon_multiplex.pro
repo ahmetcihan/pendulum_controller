@@ -10,7 +10,8 @@ HEADERS += dc_motor_pc.h \
 	remoteconsole.h \
 	settingsserver.h \
 	fuzzy_pid.h \
-    macros.h
+    macros.h \
+    password.h
 
 SOURCES += sources/plot.cpp \
 	sources/process.cpp \
@@ -39,11 +40,13 @@ SOURCES += sources/plot.cpp \
     sources/unit_system.cpp \
     sources/jog.cpp \
     sources/cbr.cpp \
-    sources/marshall.cpp
+    sources/marshall.cpp \
+    password.cpp
 
 FORMS += dc_motor_pc.ui \
 	keyboard.ui \
-	fuzzy_pid.ui
+	fuzzy_pid.ui \
+    password.ui
 
 include(/home/ahmet/Desktop/qextserialport/src/qextserialport.pri)
 

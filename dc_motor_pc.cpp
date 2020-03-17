@@ -14,6 +14,7 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     connect(app,SIGNAL(focusChanged(QWidget*,QWidget*)),this,SLOT(focusChanged(QWidget*,QWidget*)));
     forbid_pace_recalculate_timer.addSecs(1);
     block_double_click.addSecs(1);
+    admin_authorization = false;
 
 #ifdef CONFIG_ARM
     QCursor pCursor;
@@ -295,18 +296,18 @@ void DC_Motor_PC::load_factory_settings(){
         break;
     }
 }
-void DC_Motor_PC::admin_authorization_handler(){
-    if(ui.lineEdit_admin_password->text() == "88378"){
-        ui.tabWidget->setTabEnabled(TAB_CALIBRATION,1);
-        ui.tabWidget->setTabEnabled(TAB_ADMIN,1);
+void DC_Motor_PC::admin_authorization_handler(QString val){
+    if(val == "1881"){
+        admin_authorization = true;
+        ui.label_main_calibration->setStyleSheet("color : rgb(0,0,139); border: none;");
+        ui.label_main_admin->setStyleSheet("color : rgb(0,0,139); border: none;");
+
     }
     else{
-        if(ui.lineEdit_admin_password->text() != "*****"){
-            ui.tabWidget->setTabEnabled(TAB_CALIBRATION,0);
-            ui.tabWidget->setTabEnabled(TAB_ADMIN,0);
-        }
+        admin_authorization = false;
+        ui.label_main_calibration->setStyleSheet("color : rgb(96,96,96); border: none;");
+        ui.label_main_admin->setStyleSheet("color : rgb(96,96,96); border: none;");
     }
-    ui.lineEdit_admin_password->setText("*****");
 }
 void DC_Motor_PC::main_screen_arrangements(void){
     if(test_type == CBR){
@@ -743,6 +744,7 @@ void DC_Motor_PC::update_gui(){
 void DC_Motor_PC::_100_msec_handler(){
     static bool do_at_the_opening = true;
 
+    //qDebug() << "pushbutton_focus" ;
     if(do_at_the_opening){
         if(fuzpid->communication_established){
             gain_send_timer->start();
@@ -865,21 +867,20 @@ void DC_Motor_PC::closeEvent(QCloseEvent *ev){
 void DC_Motor_PC::main_screen_signalmapper_handler(int i){
     if(prevent_double_click()) return;
 
-    ui.tabWidget->setCurrentIndex(i);
-//    if(i < 5){
-//        ui.tabWidget->setCurrentIndex(i);
-//    }
-//    else{
-//        if(admin_authorization == false){
-//            pass = new password(this);
-//            pass->setGeometry(200,90,400,200);
-//            connect(pass,SIGNAL(emit_text_value(QString)),this,SLOT(admin_authorization_handler(QString)));
-//            pass->exec();
-//        }
-//        else{
-//            ui.tabWidget->setCurrentIndex(i);
-//        }
-//    }
+    if(i < 5){
+        ui.tabWidget->setCurrentIndex(i);
+    }
+    else{
+        if(admin_authorization == false){
+            pass = new password(this);
+            pass->setGeometry(200,90,400,200);
+            connect(pass,SIGNAL(emit_text_value(QString)),this,SLOT(admin_authorization_handler(QString)));
+            pass->exec();
+        }
+        else{
+            ui.tabWidget->setCurrentIndex(i);
+        }
+    }
 }
 void DC_Motor_PC::settings_screen_signalmapper_handler(int i){
     if(prevent_double_click()) return;

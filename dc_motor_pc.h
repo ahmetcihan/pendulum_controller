@@ -30,6 +30,7 @@
 
 #include "ui_dc_motor_pc.h"
 #include "keyboard.h"
+#include "password.h"
 #include "remoteconsole.h"
 #include "settingsserver.h"
 #include <math.h>
@@ -74,6 +75,7 @@ public:
     void closeEvent(QCloseEvent *ev);
     Ui::DC_Motor_PCClass ui;
     fuzzy_pid *fuzpid;
+    password *pass;
 
     QString readSettingEthernet(const QString &setting);
     QString getKeyText(QString txt);
@@ -297,6 +299,7 @@ public:
     bool PLOT_first_in;
     bool data_changed;
     bool correctly_opened;
+    bool admin_authorization;
 
 private:
     int prevent_double_click(void);
@@ -385,7 +388,7 @@ private slots:
     void dp_ch3_change_handler(void);
     void dp_ch4_change_handler(void);
     void dp_displacement_change_handler(void);
-    void admin_authorization_handler(void);
+    void admin_authorization_handler(QString val);
     void displacement_rate_handler(void);
     void pace_rate_handler_kn(void);
     void pace_rate_handler_mpa(void);

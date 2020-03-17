@@ -68,6 +68,14 @@ void DC_Motor_PC::motor_go_test_direction(void){
         ui.tabWidget->setTabEnabled(TAB_CALIBRATION,0);
         ui.tabWidget->setTabEnabled(TAB_ADMIN,0);
 
+        admin_authorization = false;
+        ui.label_main_calibration->setStyleSheet("color : rgb(96,96,96); border: none;");
+        ui.label_main_admin->setStyleSheet("color : rgb(96,96,96); border: none;");
+        ui.pushButton_go_main_screen->setDisabled(1);
+        ui.pushButton_go_main_screen->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                    "border-image: url(:go_main_screen_button_passive.jpg);"
+                                                    "border-width: 0px ;");
+
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
                                                     "border-image: url(:start_button_passive.jpg);"
                                                     "border-width: 0px ;");

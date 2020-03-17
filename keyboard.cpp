@@ -1,6 +1,5 @@
 #include "keyboard.h"
 #include "ui_keyboard.h"
-//#include "common.h"
 
 
 Keyboard::Keyboard(QWidget *parent) :
