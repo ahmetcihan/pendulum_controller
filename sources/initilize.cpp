@@ -602,7 +602,6 @@ void DC_Motor_PC::init_GUI(void){
     ui.tabWidget_gains->setCurrentIndex(0);
     ui.tabWidget_pid->setCurrentIndex(0);
     connect(ui.tabWidget,SIGNAL(currentChanged(int)),this,SLOT(tab_change_handler(int)));
-    connect(ui.tabWidget_admin,SIGNAL(currentChanged(int)),this,SLOT(tab_admin_change_handler(int)));
 
     connect(this->ui.doubleSpinBox_displacement_rate,SIGNAL(valueChanged(double)),this,SLOT(displacement_rate_handler()));
     connect(this->ui.doubleSpinBox_pace_rate,SIGNAL(valueChanged(double)),this,SLOT(pace_rate_handler_kn()));

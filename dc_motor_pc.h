@@ -353,7 +353,6 @@ private slots:
     void show_jog_widget(void);
     void save_and_reboot(void);
     void close_jog_widget(void);
-    void tab_admin_change_handler(int i);
     void eth0_address_set(void);
     void save_ip(void);
     void handle_JOG_up_button(void);

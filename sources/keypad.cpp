@@ -38,9 +38,9 @@ void DC_Motor_PC::checkLineEdit(QWidget *newwidget){
 void DC_Motor_PC::keyboard_delayed_operation(void){
     QApplication *app = (QApplication *) QApplication::instance();
     connect(app,SIGNAL(focusChanged(QWidget*,QWidget*)),this,SLOT(focusChanged(QWidget*,QWidget*)));
-    //if(do_not_change_focus == false){
+    if(do_not_change_focus == false){
         ui.pushButton_focus->setFocus();
-    //}
+    }
 }
 void DC_Motor_PC::focusChanged(QWidget *, QWidget *newwidget){
     QApplication *app = (QApplication *) QApplication::instance();

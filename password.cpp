@@ -10,8 +10,7 @@ password::password(QWidget *parent) :
     connect(ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(button_handler()));
 }
 void password::button_handler(){
-    qDebug() << "geldi";
-    emit emit_text_value(ui->lineEdit->text());
+    emit emit_text_value(ui->lineEdit_pass->text());
     close();
 }
 password::~password()

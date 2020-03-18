@@ -62,11 +62,6 @@ void DC_Motor_PC::motor_go_test_direction(void){
         ui.pushButton_pause_test->setEnabled(1);
 
         fuzpid->relay_start_stop = RELAY_ON;
-        ui.tabWidget->setTabEnabled(TAB_PARAMETERS,0);
-        ui.tabWidget->setTabEnabled(TAB_TEST_RESULTS,0);
-        ui.tabWidget->setTabEnabled(TAB_SETTINGS,0);
-        ui.tabWidget->setTabEnabled(TAB_CALIBRATION,0);
-        ui.tabWidget->setTabEnabled(TAB_ADMIN,0);
 
         admin_authorization = false;
         ui.label_main_calibration->setStyleSheet("color : rgb(96,96,96); border: none;");

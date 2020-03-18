@@ -2,12 +2,9 @@
 
 void DC_Motor_PC::unit_system_calibration_handler(void){
     static u8 tmp = 0;
-    static bool cal_tab_state = 0;
 
     switch(tmp){
     case 0:
-        cal_tab_state = ui.tabWidget->isTabEnabled(TAB_CALIBRATION);
-        ui.tabWidget->setTabEnabled(TAB_CALIBRATION,1);
         QTimer::singleShot(100,this,SLOT(unit_system_calibration_handler()));
         tmp++;
         break;
@@ -51,7 +48,6 @@ void DC_Motor_PC::unit_system_calibration_handler(void){
         tmp++;
         break;
     case 7:
-        ui.tabWidget->setTabEnabled(TAB_CALIBRATION,cal_tab_state);
         tmp = 0;
         break;
     }

@@ -93,10 +93,6 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     marshall.x_axis_line = new QwtPlotMarker();
     marshall.y_axis_line = new QwtPlotMarker();
 
-#ifdef CONFIG_x86
-    ui.tabWidget->setTabEnabled(TAB_CALIBRATION,1);
-    ui.tabWidget->setTabEnabled(TAB_ADMIN,1);
-#endif
     ui.tabWidget_parameters->setCurrentIndex(0);
     ui.tabWidget_settings->setCurrentIndex(0);
     ui.tabWidget_admin->setCurrentIndex(0);
@@ -242,10 +238,6 @@ void DC_Motor_PC::refresh_button_handler(void){
     ui.pushButton_tare_displacement->setEnabled(1);
     ui.pushButton_tare_ch3->setEnabled(1);
     ui.pushButton_tare_ch4->setEnabled(1);
-
-    ui.tabWidget->setTabEnabled(TAB_PARAMETERS,1);
-    ui.tabWidget->setTabEnabled(TAB_TEST_RESULTS,1);
-    ui.tabWidget->setTabEnabled(TAB_SETTINGS,1);
 }
 int DC_Motor_PC::prevent_double_click(void){
     if(block_double_click.elapsed() < DOUBLE_CLICK_BLOCK_TIME){
@@ -824,19 +816,6 @@ void DC_Motor_PC::tab_change_handler(int i){
         ui.pushButton_stop->click();
     }
     last_index = i;
-}
-void DC_Motor_PC::tab_admin_change_handler(int i){
-    if(i == 2){ //this is for autotunning
-        fuzpid->relay_auto_man = RELAY_ON;
-    }
-    else{
-        if(control_mode == AUTO){
-            fuzpid->relay_auto_man = RELAY_ON;
-        }
-        else{
-            fuzpid->relay_auto_man = RELAY_OFF;
-        }
-    }
 }
 void DC_Motor_PC::set_gradient(void){
     QFile file;
