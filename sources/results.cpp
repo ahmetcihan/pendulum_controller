@@ -45,8 +45,6 @@ void DC_Motor_PC::result_no_right(void){
     }
 }
 void DC_Motor_PC::read_test_results_from_file(void){
-    if(prevent_double_click()) return;
-
     QDir mydir("test_results");
     mydir.setNameFilters(QStringList() << QString("test_%1*.txt").arg(ui.spinBox_test_no->value()));
     QStringList mylist = mydir.entryList();
