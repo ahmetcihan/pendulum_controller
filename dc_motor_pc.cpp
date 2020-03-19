@@ -461,6 +461,10 @@ void DC_Motor_PC::test_finishing(){
         ui.label_test_status->setText(trUtf8("TEST is FINISHED.."));
         ui.label_test_status_cbr->setText(trUtf8("TEST is FINISHED.."));
         excel_file.close();
+        ui.pushButton_go_main_screen->setEnabled(1);
+        ui.pushButton_go_main_screen->setStyleSheet("min-width: 50px; min-height: 50px;"
+                                                    "border-image: url(:go_main_screen_button.jpg);"
+                                                    "border-width: 0px ;");
 
         ui.pushButton_start_test->setStyleSheet("min-width: 50px; min-height: 50px;"
                                                     "border-image: url(:start_button.jpg);"

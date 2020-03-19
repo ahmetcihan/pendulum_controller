@@ -198,7 +198,6 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
 
     guideline_target = (v_axis_radiobutton_no == V_AXIS_LOAD) ? ui.doubleSpinBox_pace_rate->value() : ui.doubleSpinBox_pace_rate_mpa->value();
 
-    qDebug() << "test type" << test_type << " guideline" << guideline_on;
     if(PLOT_first_in){
         PLOT_first_in = false;
         cycle = 0;

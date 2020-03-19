@@ -60,5 +60,6 @@
         <file>home_button.jpg</file>
         <file>go_load_button.jpg</file>
         <file>close_button.jpg</file>
+        <file>go_main_screen_button_passive.jpg</file>
     </qresource>
 </RCC>
