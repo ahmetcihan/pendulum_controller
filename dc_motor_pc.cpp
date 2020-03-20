@@ -501,7 +501,9 @@ void DC_Motor_PC::test_finishing(){
         ui.label_test_date_time_main->setText(results.starting_date_time + "-" + results.completion_date_time.section(" ",1));
         ui.label_test_date_time_main_cbr->setText(results.starting_date_time + "-" + results.completion_date_time.section(" ",1));
         ui.label_test_date_time_main_marshall->setText(results.starting_date_time + "-" + results.completion_date_time.section(" ",1));
-        cbr_export_log_to_file();
+        if(test_type == CBR){
+            cbr_export_log_to_file();
+        }
     }
 }
 void DC_Motor_PC::error_messagebox(void){
