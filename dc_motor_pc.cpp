@@ -96,6 +96,12 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     ui.tabWidget_parameters->setCurrentIndex(0);
     ui.tabWidget_settings->setCurrentIndex(0);
     ui.tabWidget_admin->setCurrentIndex(0);
+    ui.tabWidget_2->setCurrentIndex(0);
+    ui.tabWidget_3->setCurrentIndex(0);
+    ui.tabWidget_5->setCurrentIndex(0);
+    ui.tabWidget_gains->setCurrentIndex(0);
+    ui.tabWidget_pid->setCurrentIndex(0);
+    ui.tabWidget_test->setCurrentIndex(0);
 
     translator = new QTranslator(this);
     connect(this->ui.radioButton_english,SIGNAL(clicked()),this,SLOT(language_load()));
@@ -110,6 +116,7 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     connect(this->ui.radioButton_unit_kgf,SIGNAL(clicked()),this,SLOT(unit_system_handler()));
 
     QTimer::singleShot(20000,this,SLOT(check_the_storage()));
+
 }
 void DC_Motor_PC::check_the_storage(void){
     QProcess p;
