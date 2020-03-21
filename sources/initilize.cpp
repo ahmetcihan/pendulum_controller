@@ -345,6 +345,8 @@ void DC_Motor_PC::init_SPECIMENs(void){
     connect(this->ui.doubleSpinBox_specimen_cyl_l,SIGNAL(valueChanged(double)),this,SLOT(calculate_area_cylindrical()));
     connect(this->ui.doubleSpinBox_specimen_scb_notch,SIGNAL(valueChanged(double)),this,SLOT(calculate_area_cylindrical()));
     connect(this->ui.doubleSpinBox_specimen_scb_thickness,SIGNAL(valueChanged(double)),this,SLOT(calculate_area_cylindrical()));
+    connect(this->ui.doubleSpinBox_precalculated_area,SIGNAL(valueChanged(double)),this,SLOT(calculate_area_cylindrical()));
+    connect(this->ui.checkBox_precalculated_area,SIGNAL(stateChanged(int)),this,SLOT(calculate_area_cylindrical()));
 
     QPixmap pixmap;
     pixmap.load(QStringLiteral(":cylinder.jpg"));

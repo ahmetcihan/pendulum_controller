@@ -1,14 +1,20 @@
 #include "dc_motor_pc.h"
 
 void DC_Motor_PC::calculate_area_cylindrical(void){
-    if(test_type == IDT){
-        calculated_area = M_PI * (ui.doubleSpinBox_specimen_cyl_l->value() * ui.doubleSpinBox_specimen_cyl_d->value())/2.0;
-    }
-    else if(test_type == SCB){
-        calculated_area = (ui.doubleSpinBox_specimen_cyl_d->value()/2 - ui.doubleSpinBox_specimen_scb_notch->value()) * ui.doubleSpinBox_specimen_scb_thickness->value();
+
+   if(ui.checkBox_precalculated_area->isChecked()){
+        calculated_area = ui.doubleSpinBox_precalculated_area->value();
     }
     else{
-        calculated_area = M_PI * (ui.doubleSpinBox_specimen_cyl_d->value() * ui.doubleSpinBox_specimen_cyl_d->value())/4.0;
+        if(test_type == IDT){
+            calculated_area = M_PI * (ui.doubleSpinBox_specimen_cyl_l->value() * ui.doubleSpinBox_specimen_cyl_d->value())/2.0;
+        }
+        else if(test_type == SCB){
+            calculated_area = (ui.doubleSpinBox_specimen_cyl_d->value()/2 - ui.doubleSpinBox_specimen_scb_notch->value()) * ui.doubleSpinBox_specimen_scb_thickness->value();
+        }
+        else{
+            calculated_area = M_PI * (ui.doubleSpinBox_specimen_cyl_d->value() * ui.doubleSpinBox_specimen_cyl_d->value())/4.0;
+        }
     }
     ui.label_area->setText(QString::number(calculated_area,'f',3));
     ui.label_calculated_area->setText(QString::number(calculated_area,'f',3));

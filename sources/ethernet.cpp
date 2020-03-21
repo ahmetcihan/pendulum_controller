@@ -84,6 +84,8 @@ QString DC_Motor_PC::readSettingEthernet(const QString &setting){
     else if (setting == "param.scb_thickness")    return QString::number(ui.doubleSpinBox_specimen_scb_thickness->value());
     else if (setting == "param.test_type") return (test_type_name);
     else if (setting == "param.unit_system") return (QString::number(unit_system.index));
+    else if (setting == "param.precalculated_area")   return QString::number(ui.doubleSpinBox_precalculated_area->value());
+    else if (setting == "param.precalculated_area_status")   return QString::number(ui.checkBox_precalculated_area->isChecked());
 
     else if (setting == "cbr.standard.cbr")return QString::number(cbr.standard);
     else if (setting == "cbr.latest_point")return QString::number(ui.spinBox_test_latest_point->value());
@@ -215,6 +217,8 @@ int DC_Motor_PC::setSettingEthernet(const QString &setting, const QString &value
     else if (setting == "param.dp.ch4")    ui.spinBox_dp_ch4->setValue(value.toInt());
     else if (setting == "param.scb_notch")    ui.doubleSpinBox_specimen_scb_notch->setValue(value.toDouble());
     else if (setting == "param.scb_thickness")    ui.doubleSpinBox_specimen_scb_thickness->setValue(value.toDouble());
+    else if (setting == "param.precalculated_area")    ui.doubleSpinBox_precalculated_area->setValue(value.toDouble());
+    else if (setting == "param.precalculated_area_status")    ui.checkBox_precalculated_area->setChecked(value.toInt());
     else if (setting == "param.test_type"){
         test_type = value.toInt();
         switch (test_type) {

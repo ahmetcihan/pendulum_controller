@@ -185,8 +185,9 @@ public:
         double start_speed;
         double return_home_speed;
         double go_to_load_speed;
+        double precalculated_area;
         u8 break_percentage;
-
+        u8 precalculated_area_status;
     };
     _param parameters[10];
 

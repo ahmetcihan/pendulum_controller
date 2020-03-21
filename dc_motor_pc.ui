@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="iconSize">
      <size>
@@ -2347,6 +2347,80 @@ Parameters</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
+       </widget>
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_precalculated_area">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>360</y>
+          <width>140</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>0.001000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>9999999.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.001000000000000</double>
+        </property>
+        <property name="value">
+         <double>500.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_precalculated_area">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>360</y>
+          <width>341</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pre-Calculated Area</string>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_unit_area_3">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>360</y>
+          <width>61</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string notr="true">mm2</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_parameters">

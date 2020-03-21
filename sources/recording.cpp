@@ -35,6 +35,8 @@ void DC_Motor_PC::save_type_parameters(){
     parameters[test_type].start_speed = ui.doubleSpinBox_test_start_speed->value();
     parameters[test_type].return_home_speed = ui.doubleSpinBox_return_home_speed->value();
     parameters[test_type].go_to_load_speed = ui.doubleSpinBox_go_to_load_speed->value();
+    parameters[test_type].precalculated_area_status = ui.checkBox_precalculated_area->isChecked();
+    parameters[test_type].precalculated_area = ui.doubleSpinBox_precalculated_area->value();
     briquette.t = ui.doubleSpinBox_briquette_t->value();
 
     guideline_spacing = ui.spinBox_guideline_spacing->value();
@@ -66,6 +68,8 @@ void DC_Motor_PC::assign_type_parameters(){
     ui.doubleSpinBox_specimen_cyl_l->setValue(parameters[test_type].cylinder.l);
     ui.doubleSpinBox_return_home_speed->setValue(parameters[test_type].return_home_speed);
     ui.doubleSpinBox_go_to_load_speed->setValue(parameters[test_type].go_to_load_speed);
+    ui.checkBox_precalculated_area->setChecked(parameters[test_type].precalculated_area_status);
+    ui.doubleSpinBox_precalculated_area->setValue(parameters[test_type].precalculated_area);
     ui.doubleSpinBox_briquette_t->setValue(briquette.t);
 
     ui.doubleSpinBox_pace_rate->setValue(pace_rate);
@@ -188,6 +192,8 @@ void DC_Motor_PC::writeAppSettings(){
         settings.setValue(QStringLiteral("start_speed_%1").arg(j),parameters[j].start_speed);
         settings.setValue(QStringLiteral("return_home_speed_%1").arg(j),parameters[j].return_home_speed);
         settings.setValue(QStringLiteral("go_to_load_speed_%1").arg(j),parameters[j].go_to_load_speed);
+        settings.setValue(QStringLiteral("precalculated_area_status_%1").arg(j),parameters[j].precalculated_area_status);
+        settings.setValue(QStringLiteral("precalculated_area_%1").arg(j),parameters[j].precalculated_area);
     }
     settings.endGroup();
     settings.sync();
@@ -447,6 +453,8 @@ void DC_Motor_PC::readAppSettings(){
         parameters[j].start_speed = settings.value(QStringLiteral("parameters/start_speed_%1").arg(j)).toDouble();
         parameters[j].return_home_speed = settings.value(QStringLiteral("parameters/return_home_speed_%1").arg(j)).toDouble();
         parameters[j].go_to_load_speed = settings.value(QStringLiteral("parameters/go_to_load_speed_%1").arg(j)).toDouble();
+        parameters[j].precalculated_area_status = settings.value(QStringLiteral("parameters/precalculated_area_status_%1").arg(j)).toInt();
+        parameters[j].precalculated_area = settings.value(QStringLiteral("parameters/precalculated_area_%1").arg(j)).toDouble();
     }
 
     fuzpid->from_gui.test_type = test_type;
