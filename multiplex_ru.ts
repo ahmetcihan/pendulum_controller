@@ -1505,7 +1505,23 @@ LOW</source>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="13592"/>
-        <source>CEOEFFICIENTS</source>
+        <source>COEFFICIENTS</source>
+        <oldsource>CEOEFFICIENTS</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="13628"/>
+        <source>Kd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="13681"/>
+        <source>Kp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="13704"/>
+        <source>Ki</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2025,21 +2041,6 @@ TO MEMORY</source>
         <location filename="dc_motor_pc.ui" line="13374"/>
         <location filename="dc_motor_pc.ui" line="13547"/>
         <source>unitless</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="dc_motor_pc.ui" line="13628"/>
-        <source>Kd           :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="dc_motor_pc.ui" line="13681"/>
-        <source>Kp           :</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="dc_motor_pc.ui" line="13704"/>
-        <source>Ki            :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

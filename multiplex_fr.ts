@@ -1456,6 +1456,21 @@ LENT</translation>
         <translation>Copier les données sur USB</translation>
     </message>
     <message>
+        <location filename="dc_motor_pc.ui" line="13628"/>
+        <source>Kd</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="13681"/>
+        <source>Kp</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="13704"/>
+        <source>Ki</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="dc_motor_pc.ui" line="14246"/>
         <source>Load Factory
 Settings</source>
@@ -1570,65 +1585,68 @@ MILIEU</translation>
     <message>
         <location filename="dc_motor_pc.ui" line="118"/>
         <source>Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Résultats</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="146"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Réglages</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="174"/>
         <source>Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Essai</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="202"/>
         <source>Calibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Étalonnage</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="230"/>
         <source>Admin</source>
-        <translation type="unfinished"></translation>
+        <translation>Admin</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="312"/>
         <source>Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1176"/>
         <source>Specimen</source>
-        <translation type="unfinished"></translation>
+        <translation>Spécimen</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1268"/>
         <source>Graph</source>
-        <translation type="unfinished"></translation>
+        <translation>Graphique</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1296"/>
         <source>Test Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de Test</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1324"/>
         <source>Test
 Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres
+De test</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1435"/>
         <source>CBR
 Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>CBR
+Paramètres</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1500"/>
         <source>MARSHALL
 Parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>MARSHALL
+Paramètres</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1888"/>
@@ -1645,12 +1663,12 @@ Parameters</source>
     <message>
         <location filename="dc_motor_pc.ui" line="2396"/>
         <source>Pre-Calculated Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Zone Précalculée</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="3288"/>
         <source>DP</source>
-        <translation type="unfinished"></translation>
+        <translation>DP</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="4994"/>
@@ -1862,27 +1880,27 @@ Parameters</source>
     <message>
         <location filename="dc_motor_pc.ui" line="9773"/>
         <source>Date-Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Date-Heure</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="9801"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>La langue</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="9829"/>
         <source>Unit Systems</source>
-        <translation type="unfinished"></translation>
+        <translation>Systèmes D&apos;unités</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="9875"/>
         <source>Company</source>
-        <translation type="unfinished"></translation>
+        <translation>Compagnie</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="9903"/>
         <source>USB Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Stockage USB</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="10359"/>
@@ -1917,37 +1935,38 @@ Parameters</source>
     <message>
         <location filename="dc_motor_pc.ui" line="11833"/>
         <source>ADMIN</source>
-        <translation type="unfinished"></translation>
+        <translation>ADMIN</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="11915"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="11943"/>
         <source>Device</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;appareil</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="12035"/>
         <source>Gains</source>
-        <translation type="unfinished"></translation>
+        <translation>Gain</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="12063"/>
         <source>Channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Canaux</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="12091"/>
         <source>Speed Tune</source>
-        <translation type="unfinished"></translation>
+        <translation>Tune de la Vitesse</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="13592"/>
-        <source>CEOEFFICIENTS</source>
-        <translation type="unfinished"></translation>
+        <source>COEFFICIENTS</source>
+        <oldsource>CEOEFFICIENTS</oldsource>
+        <translation>COEFFICIENTS</translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="15203"/>
@@ -2081,21 +2100,6 @@ EN MÉMOIRE</translation>
         <location filename="dc_motor_pc.ui" line="13547"/>
         <source>unitless</source>
         <translation>sans unité</translation>
-    </message>
-    <message>
-        <location filename="dc_motor_pc.ui" line="13628"/>
-        <source>Kd           :</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="dc_motor_pc.ui" line="13681"/>
-        <source>Kp           :</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="dc_motor_pc.ui" line="13704"/>
-        <source>Ki            :</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="13785"/>
@@ -2693,17 +2697,17 @@ EN MÉMOIRE</translation>
     <message>
         <location filename="password.ui" line="17"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="password.ui" line="34"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="password.ui" line="52"/>
         <source>* * * * *</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 </TS>

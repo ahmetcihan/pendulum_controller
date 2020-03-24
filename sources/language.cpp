@@ -84,7 +84,7 @@ void DC_Motor_PC::language_load(void){
         ui.tabWidget->setFont(font);
     }
 #ifdef CONFIG_x86
-    QString filename = QString("/home/ahmet/Desktop/QT-Projects/multiplex/multiplex_%1.qm").arg(lang);
+    QString filename = QString("/home/ahmet/Desktop/QT-Projects/bilkon_multiplex/multiplex_%1.qm").arg(lang);
 #else
     QString filename = QString("/usr/local/bin/multiplex_%1.qm").arg(lang);
 #endif
