@@ -175,7 +175,8 @@ void DC_Motor_PC::writeAppSettings(){
     }
 
     for(u8 j = 0; j < 4; j++){
-        settings.setValue(QString("gain_%2").arg(j),fuzpid->gain[j]);
+        settings.setValue(QString("gain_%1").arg(j),fuzpid->gain[j]);
+        settings.setValue(QString("polarity_%1").arg(j),fuzpid->ch_polarity[j]);
     }
     settings.endGroup();
 
@@ -270,6 +271,7 @@ void DC_Motor_PC::load_temporary_settings(void){
     fuzpid->from_gui.test_type = CBR;
     for(u8 j = 0; j < 4; j++){
         fuzpid->gain[j] = 0;
+        fuzpid->ch_polarity[j] = 0;
     }
     for(u8 j = 0; j < 10; j++){
         pid[j].Kp = 0;
@@ -436,7 +438,8 @@ void DC_Motor_PC::readAppSettings(){
     }
 
     for(u8 j = 0; j < 4; j++){
-        fuzpid->gain[j] = settings.value(QString("common/gain_%2").arg(j)).toInt();
+        fuzpid->gain[j] = settings.value(QString("common/gain_%1").arg(j)).toInt();
+        fuzpid->ch_polarity[j] = settings.value(QString("common/polarity_%1").arg(j)).toInt();
     }
     // commons end
 

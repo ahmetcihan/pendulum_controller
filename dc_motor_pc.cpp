@@ -582,6 +582,33 @@ void DC_Motor_PC::update_gui(){
         }
         ui.label_pid_load_pace_2->setText(trUtf8("Displacement : ") + QString::number(fuzpid->displacement_value,'f',dp.displacement) + trUtf8("\tPace : ") + QString::number(fuzpid->current_displacement_rate,'f',3));
 
+        if(fuzpid->to_gui.ch_polarity[0] == 0){
+            ui.label_polarity_load->setText("0/+");
+        }
+        else{
+            ui.label_polarity_load->setText("-/+");
+        }
+
+        if(fuzpid->to_gui.ch_polarity[1] == 0){
+            ui.label_polarity_displacement->setText("0/+");
+        }
+        else{
+            ui.label_polarity_displacement->setText("-/+");
+        }
+
+        if(fuzpid->to_gui.ch_polarity[2] == 0){
+            ui.label_polarity_extensometer->setText("0/+");
+        }
+        else{
+            ui.label_polarity_extensometer->setText("-/+");
+        }
+
+        if(fuzpid->to_gui.ch_polarity[3] == 0){
+            ui.label_polarity_ch4->setText("0/+");
+        }
+        else{
+            ui.label_polarity_ch4->setText("-/+");
+        }
     }
     if(current_tab_index == TAB_SETTINGS){
         if((local_counter %10) == 0){

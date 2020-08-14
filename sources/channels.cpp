@@ -37,7 +37,7 @@ void DC_Motor_PC::ch4_unit_handler(){
     data_changed = true;
 }
 void DC_Motor_PC::dp_load_change_handler(){
-    u8 load_dp;
+    u8 load_dp = 0;
 
     switch (load_calibration_channel) {
     case LOAD_1:

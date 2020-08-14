@@ -59,7 +59,13 @@ void DC_Motor_PC::command_sending_protection(void){
         else if(usart_signalmapper_no < 49){
             fuzpid->tare_channel(usart_signalmapper_no - 44);
         }
-        else if(usart_signalmapper_no == 50){
+        else if(usart_signalmapper_no < 54){
+            fuzpid->channel_polarity(usart_signalmapper_no - 50, 0);
+        }
+        else if(usart_signalmapper_no < 58){
+            fuzpid->channel_polarity(usart_signalmapper_no - 54, 1);
+        }
+        else if(usart_signalmapper_no == 60){
             send_calibration_values();
         }
         tmp++;
@@ -74,6 +80,24 @@ void DC_Motor_PC::command_sending_protection(void){
         tmp = 0;
         break;
     }
+}
+void fuzzy_pid::channel_polarity(u8 channel, u8 polarity){
+    QByteArray data;
+    data.resize(10);
+
+    send_data_order(data.data(),"PLRT",0,3);
+    data[4] = 0x30 + channel;
+    data[5] = 0x30 + polarity ;
+
+    EOL(data.data(),6);
+
+    ch_polarity[channel] = polarity;
+
+    pSerial->write(data);
+#ifdef CONFIG_x86
+    qDebug(__FUNCTION__);
+#endif
+
 }
 void fuzzy_pid::send_gains(void){
     static u8 tmp = 0;
@@ -102,6 +126,22 @@ void fuzzy_pid::send_gains(void){
         tmp++;
         break;
     case 6:
+        channel_polarity(0,ch_polarity[0]);    //polarity_load
+        tmp++;
+        break;
+    case 7:
+        channel_polarity(1,ch_polarity[1]);    //polarity_load
+        tmp++;
+        break;
+    case 8:
+        channel_polarity(2,ch_polarity[2]);    //polarity_load
+        tmp++;
+        break;
+    case 9:
+        channel_polarity(3,ch_polarity[3]);    //polarity_load
+        tmp++;
+        break;
+    case 10:
         tmp = 0;
         dcMotorPc->gain_send_timer->stop();
         command_silencer = false;
@@ -177,7 +217,15 @@ void DC_Motor_PC::usart_signalmapper(void){
     signalMapper_usart->setMapping(this->ui.pushButton_tare_displacement,       45);
     signalMapper_usart->setMapping(this->ui.pushButton_tare_ch3,                46);
     signalMapper_usart->setMapping(this->ui.pushButton_tare_ch4,                47);
-    signalMapper_usart->setMapping(this->ui.pushButton_save_all_cal_data,       50);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_load_unipolar,          50);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_displacement_unipolar,  51);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_extensometer_unipolar,  52);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_ch4_unipolar,           53);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_load_bipolar,           54);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_displacement_bipolar,   55);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_extensometer_bipolar,   56);
+    signalMapper_usart->setMapping(this->ui.pushButton_set_polarity_ch4_bipolar,            57);
+    signalMapper_usart->setMapping(this->ui.pushButton_save_all_cal_data,       60);
 
     connect(this->ui.pushButton_set_gain_load_0,            SIGNAL(clicked()),signalMapper_usart, SLOT (map()));
     connect(this->ui.pushButton_set_gain_load_1,            SIGNAL(clicked()),signalMapper_usart, SLOT (map()));
@@ -227,6 +275,14 @@ void DC_Motor_PC::usart_signalmapper(void){
     connect(this->ui.pushButton_tare_displacement,          SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
     connect(this->ui.pushButton_tare_ch3,                   SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
     connect(this->ui.pushButton_tare_ch4,                   SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_load_unipolar,         SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_displacement_unipolar, SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_extensometer_unipolar, SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_ch4_unipolar,          SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_load_bipolar,          SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_displacement_bipolar,  SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_extensometer_bipolar,  SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
+    connect(this->ui.pushButton_set_polarity_ch4_bipolar,           SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
     connect(this->ui.pushButton_save_all_cal_data,          SIGNAL(pressed()),signalMapper_usart, SLOT (map()));
 
     connect(signalMapper_usart, SIGNAL(mapped(int)),this,SLOT(usart_signalmapper_handler(int)));
@@ -236,4 +292,5 @@ void DC_Motor_PC::usart_signalmapper_handler(int i){
     usart_signalmapper_no = i;
     command_send_protection_wait_timer->start();
     fuzpid->command_silencer = true;
+    data_changed = true;
 }

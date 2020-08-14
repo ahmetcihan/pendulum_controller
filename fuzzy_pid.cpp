@@ -104,7 +104,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(25);
+    data_array.resize(29);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -130,10 +130,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),23);
+        fcrc = crc_chk((u8*)data_array.data(),27);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[23])&&(crc_low == (u8)data_array[24])){
+        if((crc_high == (u8)data_array[27])&&(crc_low == (u8)data_array[28])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 5; i++){
@@ -208,6 +208,10 @@ void fuzzy_pid::read_parameters(void){
                 current_pace_rate = 0;
             }
 
+            to_gui.ch_polarity[0] = (u8)data_array[23] - 0x30;
+            to_gui.ch_polarity[1] = (u8)data_array[24] - 0x30;
+            to_gui.ch_polarity[2] = (u8)data_array[25] - 0x30;
+            to_gui.ch_polarity[3] = (u8)data_array[26] - 0x30;
             //current_pace_rate = IIR_Filter(&usart_pace_rate,12);
             //double fir_pace_rate = classic_MA(&usart_pace_rate,12);
             //double wma = WMA(&usart_pace_rate,12);

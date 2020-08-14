@@ -42,6 +42,7 @@ public:
     float peak_stress;
     float current_pace_rate;
     float current_displacement_rate;
+    u8 ch_polarity[4];
     u8 gain[4];
     u8 breaking_case;
     u8 test_status;
@@ -83,6 +84,7 @@ public:
     _error error;
 
     struct _to_gui{
+        u8 ch_polarity[5];
         u8 gain[5];
         s32 signed_raw[5];
         bool test_finished;
@@ -113,6 +115,7 @@ public slots:
     void send_gain(int _gain);
     void send_gains(void);
     void tare_channel(u8 channel);
+    void channel_polarity(u8 channel, u8 polar);
     void slope_calculation(u8 no);
     double evaluate_calibrated_values_ascending(u8 no);
 

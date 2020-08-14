@@ -11799,7 +11799,7 @@ QTabWidget::pane { border: none; }</string>
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideNone</enum>
@@ -12120,9 +12120,9 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QGroupBox" name="groupBox_20">
         <property name="geometry">
          <rect>
-          <x>470</x>
+          <x>410</x>
           <y>220</y>
-          <width>190</width>
+          <width>150</width>
           <height>190</height>
          </rect>
         </property>
@@ -12137,9 +12137,9 @@ QTabWidget::pane { border: none; }</string>
         <widget class="QLabel" name="label_adc_channel_3">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>110</y>
-           <width>131</width>
+           <width>130</width>
            <height>35</height>
           </rect>
          </property>
@@ -12160,9 +12160,9 @@ QTabWidget::pane { border: none; }</string>
         <widget class="QLabel" name="label_adc_channel_1">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>30</y>
-           <width>131</width>
+           <width>130</width>
            <height>35</height>
           </rect>
          </property>
@@ -12183,9 +12183,9 @@ QTabWidget::pane { border: none; }</string>
         <widget class="QLabel" name="label_adc_channel_2">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>70</y>
-           <width>131</width>
+           <width>130</width>
            <height>35</height>
           </rect>
          </property>
@@ -12206,9 +12206,9 @@ QTabWidget::pane { border: none; }</string>
         <widget class="QLabel" name="label_adc_channel_4">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>10</x>
            <y>150</y>
-           <width>131</width>
+           <width>130</width>
            <height>35</height>
           </rect>
          </property>
@@ -12230,7 +12230,7 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QGroupBox" name="groupBox_38">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>110</x>
           <y>220</y>
           <width>290</width>
           <height>190</height>
@@ -12412,9 +12412,9 @@ QTabWidget::pane { border: none; }</string>
        <widget class="QTabWidget" name="tabWidget_gains">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>20</y>
-          <width>614</width>
+          <x>40</x>
+          <y>10</y>
+          <width>715</width>
           <height>190</height>
          </rect>
         </property>
@@ -12425,7 +12425,7 @@ QTabWidget::pane { border: none; }</string>
         </property>
         <property name="styleSheet">
          <string notr="true">QTabBar::tab { height: 50px;}
-QTabBar::tab { width: 152px;}</string>
+QTabBar::tab { width: 174px;}</string>
         </property>
         <property name="currentIndex">
          <number>0</number>
@@ -12545,8 +12545,8 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_load_6">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>70</y>
+            <x>610</x>
+            <y>5</y>
             <width>95</width>
             <height>61</height>
            </rect>
@@ -12563,7 +12563,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_load_7">
           <property name="geometry">
            <rect>
-            <x>110</x>
+            <x>10</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12581,7 +12581,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_load_8">
           <property name="geometry">
            <rect>
-            <x>210</x>
+            <x>110</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12599,7 +12599,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_load_9">
           <property name="geometry">
            <rect>
-            <x>310</x>
+            <x>210</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12617,7 +12617,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_load_10">
           <property name="geometry">
            <rect>
-            <x>410</x>
+            <x>310</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12630,6 +12630,56 @@ QTabBar::tab { width: 152px;}</string>
           </property>
           <property name="text">
            <string notr="true">+/- 5 mV</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_load_unipolar">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+0/+</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_load_bipolar">
+          <property name="geometry">
+           <rect>
+            <x>510</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+-/+</string>
           </property>
          </widget>
         </widget>
@@ -12748,8 +12798,8 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_displacement_6">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>70</y>
+            <x>610</x>
+            <y>5</y>
             <width>95</width>
             <height>61</height>
            </rect>
@@ -12766,7 +12816,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_displacement_7">
           <property name="geometry">
            <rect>
-            <x>110</x>
+            <x>10</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12784,7 +12834,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_displacement_8">
           <property name="geometry">
            <rect>
-            <x>210</x>
+            <x>110</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12802,7 +12852,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_displacement_9">
           <property name="geometry">
            <rect>
-            <x>310</x>
+            <x>210</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12820,7 +12870,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_displacement_10">
           <property name="geometry">
            <rect>
-            <x>410</x>
+            <x>310</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12833,6 +12883,56 @@ QTabBar::tab { width: 152px;}</string>
           </property>
           <property name="text">
            <string notr="true">+/- 5 mV</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_displacement_unipolar">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+0/+</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_displacement_bipolar">
+          <property name="geometry">
+           <rect>
+            <x>510</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+-/+</string>
           </property>
          </widget>
         </widget>
@@ -12951,8 +13051,8 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_extensometer_6">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>70</y>
+            <x>610</x>
+            <y>5</y>
             <width>95</width>
             <height>61</height>
            </rect>
@@ -12969,7 +13069,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_extensometer_7">
           <property name="geometry">
            <rect>
-            <x>110</x>
+            <x>10</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -12987,7 +13087,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_extensometer_8">
           <property name="geometry">
            <rect>
-            <x>210</x>
+            <x>110</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13005,7 +13105,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_extensometer_9">
           <property name="geometry">
            <rect>
-            <x>310</x>
+            <x>210</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13023,7 +13123,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_extensometer_10">
           <property name="geometry">
            <rect>
-            <x>410</x>
+            <x>310</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13036,6 +13136,56 @@ QTabBar::tab { width: 152px;}</string>
           </property>
           <property name="text">
            <string notr="true">+/- 5 mV</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_extensometer_unipolar">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+0/+</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_extensometer_bipolar">
+          <property name="geometry">
+           <rect>
+            <x>510</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+-/+</string>
           </property>
          </widget>
         </widget>
@@ -13064,7 +13214,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_ch4_7">
           <property name="geometry">
            <rect>
-            <x>110</x>
+            <x>10</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13100,8 +13250,8 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_ch4_6">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>70</y>
+            <x>610</x>
+            <y>5</y>
             <width>95</width>
             <height>61</height>
            </rect>
@@ -13154,7 +13304,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_ch4_8">
           <property name="geometry">
            <rect>
-            <x>210</x>
+            <x>110</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13172,7 +13322,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_ch4_10">
           <property name="geometry">
            <rect>
-            <x>410</x>
+            <x>310</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13208,7 +13358,7 @@ QTabBar::tab { width: 152px;}</string>
          <widget class="QPushButton" name="pushButton_set_gain_ch4_9">
           <property name="geometry">
            <rect>
-            <x>310</x>
+            <x>210</x>
             <y>70</y>
             <width>95</width>
             <height>61</height>
@@ -13241,6 +13391,166 @@ QTabBar::tab { width: 152px;}</string>
            <string notr="true">+/- 1 V</string>
           </property>
          </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_ch4_bipolar">
+          <property name="geometry">
+           <rect>
+            <x>510</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+-/+</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_set_polarity_ch4_unipolar">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>70</y>
+            <width>95</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 255);
+background-color: rgb(221, 0, 166);</string>
+          </property>
+          <property name="text">
+           <string notr="true">Polarity
+0/+</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_21">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>220</y>
+          <width>110</width>
+          <height>190</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="title">
+         <string>POLARITY</string>
+        </property>
+        <widget class="QLabel" name="label_polarity_extensometer">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>90</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string notr="true">-------</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_polarity_load">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>90</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string notr="true">-------</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_polarity_displacement">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>90</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string notr="true">-------</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_polarity_ch4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>150</y>
+           <width>90</width>
+           <height>35</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string notr="true">-------</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
         </widget>
        </widget>
       </widget>
