@@ -89,6 +89,7 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     connect(ui.pushButton_copy_settings_to_usb,SIGNAL(pressed()),this,SLOT(copy_settings_to_usb()));
 
     connect(this->ui.pushButton_get_test_results,SIGNAL(pressed()),this,SLOT(read_test_results_from_file()));
+    connect(this->ui.pushButton_update_device,SIGNAL(pressed()),this,SLOT(update_device()));
 
     connect(this->ui.pushButton_stop_motor,SIGNAL(pressed()),this,SLOT(motor_stop()));
     connect(this->ui.pushButton_start_test,SIGNAL(pressed()),this,SLOT(motor_go_test_direction()));

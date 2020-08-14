@@ -434,3 +434,79 @@ void DC_Motor_PC::copy_settings_to_usb(){
         break;
     }
 }
+void DC_Motor_PC::update_device(void){
+    if(prevent_double_click()) return;
+    static u8 tmp = 0;
+    static QLabel deneme_label;
+    QMessageBox msgBox;
+    QFile update_file("/media/usb/venceremos");
+    QFile usb_flash_drive("/dev/sda1");
+
+    switch(tmp){
+    case 0:
+        msgBox.setWindowTitle(trUtf8("Device Update"));
+        msgBox.setText(trUtf8("<font size = 10>The device will be updated. Are you sure?"));
+        msgBox.setStandardButtons(QMessageBox::Yes);
+        msgBox.addButton(QMessageBox::No);
+        msgBox.setDefaultButton(QMessageBox::No);
+        msgBox.setButtonText(QMessageBox::Yes, trUtf8("Yes"));
+        msgBox.setButtonText(QMessageBox::No, trUtf8("No"));
+        if(msgBox.exec() == QMessageBox::Yes){
+            tmp++;
+            QTimer::singleShot(500,this,SLOT(update_device()));
+        }
+        break;
+    case 1:
+        if(usb_flash_drive.exists()){
+            deneme_label.setGeometry(150,220,500,100);
+            deneme_label.setFont(QFont("Ubuntu",16,QFont::Black,true));
+            deneme_label.setText(QString(trUtf8("Please wait.. \n"
+                                                "mount /dev/sda1 /media/usb")));
+            deneme_label.show();
+            QProcess::execute("mount /dev/sda1 /media/usb");
+            QTimer::singleShot(5000,this,SLOT(update_device()));
+            tmp++;
+        }
+        else{
+            deneme_label.setGeometry(150,220,500,100);
+            deneme_label.setFont(QFont("Ubuntu",16,QFont::Black,true));
+            deneme_label.setText(QString(trUtf8("USB Flash Drive is not detected\n"
+                                                "Please format to FAT32")));
+            deneme_label.show();
+            QTimer::singleShot(3000,this,SLOT(update_device()));
+            tmp = 5;
+        }
+        break;
+    case 2:
+        if(update_file.exists()){
+            deneme_label.setText(trUtf8("copying files.."));
+            QProcess::execute("cp /media/usb/venceremos /usr/local/bin/");
+            tmp = 3;
+        }
+        else{
+            deneme_label.setText(trUtf8("update file doesn't exist.."));
+            tmp = 5;
+        }
+        QTimer::singleShot(5000,this,SLOT(update_device()));
+        break;
+    case 3:
+        QProcess::execute("find /media/usb/ -name \"*.qm\" -exec cp {} /usr/local/bin/ ;");
+        QTimer::singleShot(2000,this,SLOT(update_device()));
+        tmp++;
+        break;
+    case 4:
+        deneme_label.setText(QString(trUtf8("Please wait.. \n"
+                                            "umount /media/usb")));
+        QProcess::execute("umount /media/usb");
+        QTimer::singleShot(5000,this,SLOT(update_device()));
+        tmp = 6;
+        break;
+    case 5:
+        deneme_label.hide();
+        tmp = 0;
+        break;
+    case 6:
+        QProcess::execute("reboot");
+        break;
+    }
+}

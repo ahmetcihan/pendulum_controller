@@ -333,6 +333,7 @@ public slots:
     void unit_system_recalculate(void);
 
 private slots:
+    void update_device(void);
 
     void specimen_protection_handler(void);
     void load_cal_channel_handler(void);
