@@ -227,8 +227,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="414"/>
         <location filename="sources/ethernet.cpp" line="243"/>
-        <location filename="sources/initilize.cpp" line="364"/>
-        <location filename="sources/initilize.cpp" line="507"/>
+        <location filename="sources/initilize.cpp" line="365"/>
+        <location filename="sources/initilize.cpp" line="508"/>
         <location filename="sources/language.cpp" line="11"/>
         <source>TRIAXIAL</source>
         <translation type="unfinished"></translation>
@@ -273,8 +273,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="402"/>
         <location filename="sources/ethernet.cpp" line="231"/>
-        <location filename="sources/initilize.cpp" line="361"/>
-        <location filename="sources/initilize.cpp" line="495"/>
+        <location filename="sources/initilize.cpp" line="362"/>
+        <location filename="sources/initilize.cpp" line="496"/>
         <location filename="sources/language.cpp" line="8"/>
         <source>MARSHALL</source>
         <translation type="unfinished"></translation>
@@ -282,8 +282,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="406"/>
         <location filename="sources/ethernet.cpp" line="235"/>
-        <location filename="sources/initilize.cpp" line="362"/>
-        <location filename="sources/initilize.cpp" line="499"/>
+        <location filename="sources/initilize.cpp" line="363"/>
+        <location filename="sources/initilize.cpp" line="500"/>
         <location filename="sources/language.cpp" line="9"/>
         <source>IDT</source>
         <translation type="unfinished"></translation>
@@ -291,8 +291,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="410"/>
         <location filename="sources/ethernet.cpp" line="239"/>
-        <location filename="sources/initilize.cpp" line="363"/>
-        <location filename="sources/initilize.cpp" line="503"/>
+        <location filename="sources/initilize.cpp" line="364"/>
+        <location filename="sources/initilize.cpp" line="504"/>
         <location filename="sources/language.cpp" line="10"/>
         <source>SCB</source>
         <translation type="unfinished"></translation>
@@ -300,8 +300,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="418"/>
         <location filename="sources/ethernet.cpp" line="247"/>
-        <location filename="sources/initilize.cpp" line="365"/>
-        <location filename="sources/initilize.cpp" line="511"/>
+        <location filename="sources/initilize.cpp" line="366"/>
+        <location filename="sources/initilize.cpp" line="512"/>
         <location filename="sources/language.cpp" line="12"/>
         <source>UU</source>
         <translation type="unfinished"></translation>
@@ -309,8 +309,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="422"/>
         <location filename="sources/ethernet.cpp" line="251"/>
-        <location filename="sources/initilize.cpp" line="366"/>
-        <location filename="sources/initilize.cpp" line="515"/>
+        <location filename="sources/initilize.cpp" line="367"/>
+        <location filename="sources/initilize.cpp" line="516"/>
         <location filename="sources/language.cpp" line="13"/>
         <source>CU-CD</source>
         <translation type="unfinished"></translation>
@@ -318,8 +318,8 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="426"/>
         <location filename="sources/ethernet.cpp" line="255"/>
-        <location filename="sources/initilize.cpp" line="367"/>
-        <location filename="sources/initilize.cpp" line="519"/>
+        <location filename="sources/initilize.cpp" line="368"/>
+        <location filename="sources/initilize.cpp" line="520"/>
         <location filename="sources/language.cpp" line="14"/>
         <source>UNIAXIAL</source>
         <translation type="unfinished"></translation>
@@ -327,14 +327,14 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="430"/>
         <location filename="sources/ethernet.cpp" line="259"/>
-        <location filename="sources/initilize.cpp" line="523"/>
+        <location filename="sources/initilize.cpp" line="524"/>
         <source>LOAD CTRL.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dc_motor_pc.cpp" line="434"/>
         <location filename="sources/ethernet.cpp" line="263"/>
-        <location filename="sources/initilize.cpp" line="527"/>
+        <location filename="sources/initilize.cpp" line="528"/>
         <source>DISPL. CTRL.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -344,14 +344,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.cpp" line="687"/>
-        <location filename="dc_motor_pc.cpp" line="688"/>
+        <location filename="dc_motor_pc.cpp" line="714"/>
+        <location filename="dc_motor_pc.cpp" line="715"/>
         <source>THRESHOLD is EXCEEDED..</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.cpp" line="735"/>
-        <location filename="dc_motor_pc.cpp" line="736"/>
+        <location filename="dc_motor_pc.cpp" line="762"/>
+        <location filename="dc_motor_pc.cpp" line="763"/>
         <location filename="sources/language.cpp" line="19"/>
         <source>MAX LOAD ERROR!!</source>
         <translation type="unfinished"></translation>
@@ -367,10 +367,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.cpp" line="743"/>
-        <location filename="dc_motor_pc.cpp" line="744"/>
-        <location filename="sources/initilize.cpp" line="434"/>
+        <location filename="dc_motor_pc.cpp" line="770"/>
+        <location filename="dc_motor_pc.cpp" line="771"/>
         <location filename="sources/initilize.cpp" line="435"/>
+        <location filename="sources/initilize.cpp" line="436"/>
         <location filename="sources/jog.cpp" line="9"/>
         <location filename="sources/jog.cpp" line="32"/>
         <location filename="sources/language.cpp" line="25"/>
@@ -380,8 +380,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.cpp" line="739"/>
-        <location filename="dc_motor_pc.cpp" line="740"/>
+        <location filename="dc_motor_pc.cpp" line="766"/>
+        <location filename="dc_motor_pc.cpp" line="767"/>
         <location filename="sources/language.cpp" line="22"/>
         <source>MAX DISPL. ERROR!!</source>
         <translation type="unfinished"></translation>
@@ -394,36 +394,36 @@
     <message>
         <location filename="dc_motor_pc.cpp" line="398"/>
         <location filename="sources/ethernet.cpp" line="227"/>
-        <location filename="sources/initilize.cpp" line="360"/>
-        <location filename="sources/initilize.cpp" line="491"/>
-        <location filename="sources/initilize.cpp" line="532"/>
+        <location filename="sources/initilize.cpp" line="361"/>
+        <location filename="sources/initilize.cpp" line="492"/>
+        <location filename="sources/initilize.cpp" line="533"/>
         <location filename="sources/language.cpp" line="7"/>
         <source>CBR</source>
         <oldsource>1</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="368"/>
+        <location filename="sources/initilize.cpp" line="369"/>
         <location filename="sources/language.cpp" line="15"/>
         <source>LOAD CTRL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="369"/>
+        <location filename="sources/initilize.cpp" line="370"/>
         <location filename="sources/language.cpp" line="16"/>
         <source>DISPL CTRL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="429"/>
         <location filename="sources/initilize.cpp" line="430"/>
+        <location filename="sources/initilize.cpp" line="431"/>
         <location filename="sources/language.cpp" line="30"/>
         <source>TEST STOPPED..</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="436"/>
-        <location filename="sources/initilize.cpp" line="438"/>
+        <location filename="sources/initilize.cpp" line="437"/>
+        <location filename="sources/initilize.cpp" line="439"/>
         <location filename="sources/language.cpp" line="29"/>
         <location filename="sources/servo_motor.cpp" line="97"/>
         <location filename="sources/servo_motor.cpp" line="99"/>
@@ -431,21 +431,21 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="437"/>
+        <location filename="sources/initilize.cpp" line="438"/>
         <location filename="sources/language.cpp" line="28"/>
         <location filename="sources/servo_motor.cpp" line="98"/>
         <source>CBR Test No : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="466"/>
+        <location filename="sources/initilize.cpp" line="467"/>
         <location filename="sources/plot.cpp" line="77"/>
         <location filename="sources/plot.cpp" line="418"/>
         <source>Load (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="470"/>
+        <location filename="sources/initilize.cpp" line="471"/>
         <location filename="sources/plot.cpp" line="422"/>
         <source>Stress (%1)</source>
         <translation type="unfinished"></translation>
@@ -458,7 +458,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/initilize.cpp" line="474"/>
+        <location filename="sources/initilize.cpp" line="475"/>
         <location filename="sources/plot.cpp" line="426"/>
         <location filename="sources/plot.cpp" line="438"/>
         <source>Displacement (%1)</source>
@@ -478,7 +478,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/recording.cpp" line="226"/>
+        <location filename="sources/recording.cpp" line="227"/>
         <source>Please reboot to fix the error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -683,24 +683,26 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/recording.cpp" line="501"/>
+        <location filename="sources/recording.cpp" line="504"/>
         <source>Clean Data Logs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/recording.cpp" line="502"/>
+        <location filename="sources/recording.cpp" line="505"/>
         <source>&lt;font size = 10&gt;Are you sure?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dc_motor_pc.cpp" line="270"/>
-        <location filename="sources/recording.cpp" line="506"/>
+        <location filename="sources/recording.cpp" line="509"/>
+        <location filename="sources/usb.cpp" line="452"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dc_motor_pc.cpp" line="271"/>
-        <location filename="sources/recording.cpp" line="507"/>
+        <location filename="sources/recording.cpp" line="510"/>
+        <location filename="sources/usb.cpp" line="453"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
@@ -752,6 +754,7 @@
         <location filename="sources/usb.cpp" line="301"/>
         <location filename="sources/usb.cpp" line="349"/>
         <location filename="sources/usb.cpp" line="401"/>
+        <location filename="sources/usb.cpp" line="463"/>
         <source>Please wait.. 
 mount /dev/sda1 /media/usb</source>
         <translation type="unfinished"></translation>
@@ -765,6 +768,7 @@ mount /dev/sda1 /media/usb</source>
         <location filename="sources/usb.cpp" line="311"/>
         <location filename="sources/usb.cpp" line="359"/>
         <location filename="sources/usb.cpp" line="411"/>
+        <location filename="sources/usb.cpp" line="473"/>
         <source>USB Flash Drive is not detected
 Please format to FAT32</source>
         <translation type="unfinished"></translation>
@@ -790,6 +794,7 @@ Copying Data Logs</source>
         <location filename="sources/usb.cpp" line="325"/>
         <location filename="sources/usb.cpp" line="378"/>
         <location filename="sources/usb.cpp" line="425"/>
+        <location filename="sources/usb.cpp" line="498"/>
         <source>Please wait.. 
 umount /media/usb</source>
         <translation type="unfinished"></translation>
@@ -845,6 +850,26 @@ umount /media/usb</source>
     <message>
         <location filename="sources/usb.cpp" line="372"/>
         <source>settings.ini file doesn&apos;t exist..</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="sources/usb.cpp" line="447"/>
+        <source>Device Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="sources/usb.cpp" line="448"/>
+        <source>&lt;font size = 10&gt;The device will be updated. Are you sure?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="sources/usb.cpp" line="482"/>
+        <source>copying files..</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="sources/usb.cpp" line="487"/>
+        <source>update file doesn&apos;t exist..</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -921,21 +946,21 @@ The device will reboot after %1 secs</source>
     <message>
         <location filename="sources/cbr.cpp" line="287"/>
         <location filename="sources/ethernet.cpp" line="291"/>
-        <location filename="sources/initilize.cpp" line="541"/>
+        <location filename="sources/initilize.cpp" line="542"/>
         <source>Standard: ASTM/AASHTO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="sources/cbr.cpp" line="291"/>
         <location filename="sources/ethernet.cpp" line="295"/>
-        <location filename="sources/initilize.cpp" line="545"/>
+        <location filename="sources/initilize.cpp" line="546"/>
         <source>Standard: EN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="sources/cbr.cpp" line="295"/>
         <location filename="sources/ethernet.cpp" line="299"/>
-        <location filename="sources/initilize.cpp" line="549"/>
+        <location filename="sources/initilize.cpp" line="550"/>
         <source>Standard: BS 1377</source>
         <translation type="unfinished"></translation>
     </message>
@@ -982,8 +1007,8 @@ The device will reboot after %1 secs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13314"/>
-        <location filename="dc_motor_pc.ui" line="13487"/>
+        <location filename="dc_motor_pc.ui" line="13624"/>
+        <location filename="dc_motor_pc.ui" line="13797"/>
         <source>kN</source>
         <translation type="unfinished"></translation>
     </message>
@@ -998,8 +1023,8 @@ The device will reboot after %1 secs</source>
     <message>
         <location filename="dc_motor_pc.ui" line="8070"/>
         <location filename="dc_motor_pc.ui" line="8134"/>
-        <location filename="dc_motor_pc.ui" line="13344"/>
-        <location filename="dc_motor_pc.ui" line="13517"/>
+        <location filename="dc_motor_pc.ui" line="13654"/>
+        <location filename="dc_motor_pc.ui" line="13827"/>
         <source>mm</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1029,21 +1054,21 @@ The device will reboot after %1 secs</source>
         <location filename="dc_motor_pc.ui" line="774"/>
         <location filename="dc_motor_pc.ui" line="3347"/>
         <location filename="dc_motor_pc.ui" line="12331"/>
-        <location filename="dc_motor_pc.ui" line="12841"/>
-        <location filename="dc_motor_pc.ui" line="13451"/>
+        <location filename="dc_motor_pc.ui" line="12941"/>
+        <location filename="dc_motor_pc.ui" line="13761"/>
         <source>CHANNEL 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="731"/>
-        <location filename="dc_motor_pc.ui" line="15263"/>
-        <location filename="dc_motor_pc.ui" line="15467"/>
+        <location filename="dc_motor_pc.ui" line="15591"/>
+        <location filename="dc_motor_pc.ui" line="15795"/>
         <source>TEST STATUS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="671"/>
-        <location filename="dc_motor_pc.ui" line="15407"/>
+        <location filename="dc_motor_pc.ui" line="15735"/>
         <source>Test No : -- </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1061,8 +1086,8 @@ The device will reboot after %1 secs</source>
         <location filename="dc_motor_pc.ui" line="923"/>
         <location filename="dc_motor_pc.ui" line="3406"/>
         <location filename="dc_motor_pc.ui" line="12385"/>
-        <location filename="dc_motor_pc.ui" line="13044"/>
-        <location filename="dc_motor_pc.ui" line="13402"/>
+        <location filename="dc_motor_pc.ui" line="13194"/>
+        <location filename="dc_motor_pc.ui" line="13712"/>
         <source>CHANNEL 4</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1072,7 +1097,7 @@ The device will reboot after %1 secs</source>
         <location filename="dc_motor_pc.ui" line="4870"/>
         <location filename="dc_motor_pc.ui" line="4948"/>
         <location filename="dc_motor_pc.ui" line="12367"/>
-        <location filename="dc_motor_pc.ui" line="12638"/>
+        <location filename="dc_motor_pc.ui" line="12688"/>
         <source>DISPLACEMENT</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1100,9 +1125,9 @@ The device will reboot after %1 secs</source>
         <location filename="dc_motor_pc.ui" line="3233"/>
         <location filename="dc_motor_pc.ui" line="4171"/>
         <location filename="dc_motor_pc.ui" line="4194"/>
-        <location filename="dc_motor_pc.ui" line="14471"/>
-        <location filename="dc_motor_pc.ui" line="14606"/>
-        <location filename="dc_motor_pc.ui" line="14833"/>
+        <location filename="dc_motor_pc.ui" line="14781"/>
+        <location filename="dc_motor_pc.ui" line="14916"/>
+        <location filename="dc_motor_pc.ui" line="15143"/>
         <source>mm/min</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1133,7 +1158,7 @@ The device will reboot after %1 secs</source>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1568"/>
-        <location filename="dc_motor_pc.ui" line="15386"/>
+        <location filename="dc_motor_pc.ui" line="15714"/>
         <source>MARSHALL</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1149,7 +1174,7 @@ The device will reboot after %1 secs</source>
     </message>
     <message>
         <location filename="dc_motor_pc.ui" line="1767"/>
-        <location filename="dc_motor_pc.ui" line="15510"/>
+        <location filename="dc_motor_pc.ui" line="15838"/>
         <source>PACE RATE</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1504,45 +1529,50 @@ LOW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13592"/>
+        <location filename="dc_motor_pc.ui" line="13461"/>
+        <source>POLARITY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="13902"/>
         <source>COEFFICIENTS</source>
         <oldsource>CEOEFFICIENTS</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13628"/>
+        <location filename="dc_motor_pc.ui" line="13938"/>
         <source>Kd</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13681"/>
+        <location filename="dc_motor_pc.ui" line="13991"/>
         <source>Kp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13704"/>
+        <location filename="dc_motor_pc.ui" line="14014"/>
         <source>Ki</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14246"/>
+        <location filename="dc_motor_pc.ui" line="14556"/>
         <source>Load Factory
 Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14265"/>
+        <location filename="dc_motor_pc.ui" line="14575"/>
         <source>Copy LOGO
 from USB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14286"/>
+        <location filename="dc_motor_pc.ui" line="14596"/>
         <source>Copy from USB Flash Drive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14376"/>
+        <location filename="dc_motor_pc.ui" line="14686"/>
         <source>Copy to USB Flash Drive</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2038,109 +2068,109 @@ TO MEMORY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13374"/>
-        <location filename="dc_motor_pc.ui" line="13547"/>
+        <location filename="dc_motor_pc.ui" line="13684"/>
+        <location filename="dc_motor_pc.ui" line="13857"/>
         <source>unitless</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13785"/>
-        <location filename="dc_motor_pc.ui" line="14993"/>
+        <location filename="dc_motor_pc.ui" line="14095"/>
+        <location filename="dc_motor_pc.ui" line="15303"/>
         <source>SAVE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13810"/>
+        <location filename="dc_motor_pc.ui" line="14120"/>
         <source>AUTOTUNING</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="13967"/>
+        <location filename="dc_motor_pc.ui" line="14277"/>
         <source>Load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14000"/>
+        <location filename="dc_motor_pc.ui" line="14310"/>
         <source>Step (mm/min)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14056"/>
+        <location filename="dc_motor_pc.ui" line="14366"/>
         <source>Base (mm/min)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14079"/>
+        <location filename="dc_motor_pc.ui" line="14389"/>
         <source>Switch Time (sec)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14127"/>
+        <location filename="dc_motor_pc.ui" line="14437"/>
         <source>START STEP ANALYSIS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14195"/>
+        <location filename="dc_motor_pc.ui" line="14505"/>
         <source>PID channel : Load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14218"/>
+        <location filename="dc_motor_pc.ui" line="14528"/>
         <source>Displacement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14550"/>
+        <location filename="dc_motor_pc.ui" line="14860"/>
         <source>Motor RPM </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14629"/>
+        <location filename="dc_motor_pc.ui" line="14939"/>
         <source>Boundary 2-3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14652"/>
+        <location filename="dc_motor_pc.ui" line="14962"/>
         <source>Boundary 1-2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14708"/>
+        <location filename="dc_motor_pc.ui" line="15018"/>
         <source>Speed Multiplier 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14731"/>
+        <location filename="dc_motor_pc.ui" line="15041"/>
         <source>Speed Multiplier 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14754"/>
+        <location filename="dc_motor_pc.ui" line="15064"/>
         <source>Disp. Speed </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14810"/>
+        <location filename="dc_motor_pc.ui" line="15120"/>
         <source>Speed Multiplier 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="14958"/>
+        <location filename="dc_motor_pc.ui" line="15268"/>
         <source>IP ADDRESS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15047"/>
+        <location filename="dc_motor_pc.ui" line="15357"/>
         <source>IP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15065"/>
+        <location filename="dc_motor_pc.ui" line="15375"/>
         <source>SM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15083"/>
+        <location filename="dc_motor_pc.ui" line="15393"/>
         <source>GW</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2150,55 +2180,60 @@ TO MEMORY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15150"/>
+        <location filename="dc_motor_pc.ui" line="15435"/>
+        <source>UPDATE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dc_motor_pc.ui" line="15478"/>
         <source>START</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15168"/>
+        <location filename="dc_motor_pc.ui" line="15496"/>
         <source>STOP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15203"/>
+        <location filename="dc_motor_pc.ui" line="15531"/>
         <source>CBR Test No : -- </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15221"/>
-        <location filename="dc_motor_pc.ui" line="15425"/>
+        <location filename="dc_motor_pc.ui" line="15549"/>
+        <location filename="dc_motor_pc.ui" line="15753"/>
         <source>Speed : 1 mm/min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15242"/>
-        <location filename="dc_motor_pc.ui" line="15446"/>
+        <location filename="dc_motor_pc.ui" line="15570"/>
+        <location filename="dc_motor_pc.ui" line="15774"/>
         <source>Date&amp;Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15284"/>
-        <location filename="dc_motor_pc.ui" line="15488"/>
+        <location filename="dc_motor_pc.ui" line="15612"/>
+        <location filename="dc_motor_pc.ui" line="15816"/>
         <source>NO ALERT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15305"/>
+        <location filename="dc_motor_pc.ui" line="15633"/>
         <source>Next step: 0 - 0 mm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15326"/>
+        <location filename="dc_motor_pc.ui" line="15654"/>
         <source>Standard: ASTM/AASHTO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15347"/>
+        <location filename="dc_motor_pc.ui" line="15675"/>
         <source>Step 0 Load: 0 kN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dc_motor_pc.ui" line="15654"/>
+        <location filename="dc_motor_pc.ui" line="15982"/>
         <source>PushButton</source>
         <translation type="unfinished"></translation>
     </message>
