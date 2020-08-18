@@ -142,12 +142,14 @@ void fuzzy_pid::read_parameters(void){
                 if(abs(value[i] - old_raw[i]) < 60000){
                     to_gui.signed_raw[i] = value[i];
                     to_gui.gain[i] = ((u8)data_array[6+4*i] & 0x0F);
-                    if(i == 1){
-                        raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '-' : '+';
-                    }
-                    else{
-                        raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '+' : '-';
-                    }
+//                    if(i == 1){
+//                        raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '-' : '+';
+//                    }
+//                    else{
+//                        raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '+' : '-';
+//                    }
+                    raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '+' : '-';
+
                     if(raw_sign == '-'){
                         to_gui.signed_raw[i] = -1*to_gui.signed_raw[i];
                     }
