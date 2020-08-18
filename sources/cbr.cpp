@@ -1,12 +1,23 @@
 #include "dc_motor_pc.h"
 
 void DC_Motor_PC::cbr_zero_suppression_exceeded(void){
-    load_graphic_timer->start();
-    draw_load_graphic();
-    ui.pushButton_tare_displacement->setEnabled(1);
-    ui.pushButton_tare_displacement->click();
-    ui.pushButton_tare_displacement->setDisabled(1);
-    fuzpid->run_cbr = true;
+    static u8 tmp = 0;
+
+    switch(tmp){
+    case 0:
+        ui.pushButton_tare_displacement->setEnabled(1);
+        ui.pushButton_tare_displacement->click();
+        ui.pushButton_tare_displacement->setDisabled(1);
+        QTimer::singleShot(500,this,SLOT(zero_suppression_exceeded()));
+        tmp = 1;
+        break;
+    case 1:
+        load_graphic_timer->start();
+        draw_load_graphic();
+        fuzpid->run_cbr = true;
+        tmp = 0;
+        break;
+    }
 }
 void DC_Motor_PC::cbr_points_detection(double l_val, double d_val){
     static bool _2_54_detected = false;

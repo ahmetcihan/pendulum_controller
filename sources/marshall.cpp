@@ -43,11 +43,23 @@ void DC_Motor_PC::marshall_diameter_selection_handle(int val){
     data_changed = true;
 }
 void DC_Motor_PC::marshall_zero_suppression_exceeded(void){
-    load_graphic_timer->start();
-    draw_load_graphic();
-    ui.pushButton_tare_displacement->setEnabled(1);
-    ui.pushButton_tare_displacement->click();
-    ui.pushButton_tare_displacement->setDisabled(1);
+    static u8 tmp = 0;
+
+    switch(tmp){
+    case 0:
+        ui.pushButton_tare_displacement->setEnabled(1);
+        ui.pushButton_tare_displacement->click();
+        ui.pushButton_tare_displacement->setDisabled(1);
+        QTimer::singleShot(500,this,SLOT(marshall_zero_suppression_exceeded()));
+        tmp = 1;
+        break;
+    case 1:
+        load_graphic_timer->start();
+        draw_load_graphic();
+        tmp = 0;
+        break;
+    }
+
 }
 void DC_Motor_PC::marshall_thickness_correction_handler(){
     if(ui.radioButton_thickness_correction_on->isChecked()){
