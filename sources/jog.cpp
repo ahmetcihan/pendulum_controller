@@ -54,10 +54,8 @@ void DC_Motor_PC::JOG_operation(){
     if(JOG.up){
         switch(up_tmp){
         case 0:
-            if((fuzpid->error.max_load == 0) && (fuzpid->error.max_displacement == 0)){
-                speed_correction(0);
-                up_tmp++;
-            }
+            speed_correction(0);
+            up_tmp++;
             break;
         case 1:
             servo.start = 1;
