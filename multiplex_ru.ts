@@ -466,14 +466,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/jog.cpp" line="82"/>
-        <location filename="sources/jog.cpp" line="129"/>
+        <location filename="sources/jog.cpp" line="80"/>
+        <location filename="sources/jog.cpp" line="127"/>
         <source>SPECIMEN PROTECTION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/jog.cpp" line="83"/>
-        <location filename="sources/jog.cpp" line="130"/>
+        <location filename="sources/jog.cpp" line="81"/>
+        <location filename="sources/jog.cpp" line="128"/>
         <source>&lt;font size = 10&gt;Please select the checkbox OFF and tune the load</source>
         <translation type="unfinished"></translation>
     </message>
@@ -894,93 +894,93 @@ The device will reboot after %1 secs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="115"/>
+        <location filename="sources/cbr.cpp" line="126"/>
         <source>Next step:%1 - %2 %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="116"/>
+        <location filename="sources/cbr.cpp" line="127"/>
         <source>Step %1 load: %2 %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="215"/>
-        <location filename="sources/cbr.cpp" line="218"/>
+        <location filename="sources/cbr.cpp" line="226"/>
+        <location filename="sources/cbr.cpp" line="229"/>
         <source>*******************************************
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="216"/>
+        <location filename="sources/cbr.cpp" line="227"/>
         <source>===============  UTEST  ===================
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="217"/>
+        <location filename="sources/cbr.cpp" line="228"/>
         <source>================  CBR  ====================
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="220"/>
+        <location filename="sources/cbr.cpp" line="231"/>
         <source>Start date &amp; time : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="221"/>
+        <location filename="sources/cbr.cpp" line="232"/>
         <source>Finish time       : </source>
         <oldsource>End time          : </oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="222"/>
+        <location filename="sources/cbr.cpp" line="233"/>
         <source>Last Point        : </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="259"/>
+        <location filename="sources/cbr.cpp" line="270"/>
         <source>CBR Points for Test No : %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="287"/>
+        <location filename="sources/cbr.cpp" line="298"/>
         <location filename="sources/ethernet.cpp" line="291"/>
         <location filename="sources/initilize.cpp" line="542"/>
         <source>Standard: ASTM/AASHTO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="291"/>
+        <location filename="sources/cbr.cpp" line="302"/>
         <location filename="sources/ethernet.cpp" line="295"/>
         <location filename="sources/initilize.cpp" line="546"/>
         <source>Standard: EN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="295"/>
+        <location filename="sources/cbr.cpp" line="306"/>
         <location filename="sources/ethernet.cpp" line="299"/>
         <location filename="sources/initilize.cpp" line="550"/>
         <source>Standard: BS 1377</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/marshall.cpp" line="65"/>
-        <location filename="sources/marshall.cpp" line="72"/>
-        <location filename="sources/marshall.cpp" line="78"/>
+        <location filename="sources/marshall.cpp" line="77"/>
         <location filename="sources/marshall.cpp" line="84"/>
-        <location filename="sources/marshall.cpp" line="93"/>
-        <location filename="sources/marshall.cpp" line="99"/>
+        <location filename="sources/marshall.cpp" line="90"/>
+        <location filename="sources/marshall.cpp" line="96"/>
+        <location filename="sources/marshall.cpp" line="105"/>
+        <location filename="sources/marshall.cpp" line="111"/>
         <source>Correction factor is </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/marshall.cpp" line="331"/>
+        <location filename="sources/marshall.cpp" line="343"/>
         <source>ERROR!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="sources/marshall.cpp" line="332"/>
+        <location filename="sources/marshall.cpp" line="344"/>
         <source>&lt;font size = 10&gt;inconvenient test data..</source>
         <translation type="unfinished"></translation>
     </message>
