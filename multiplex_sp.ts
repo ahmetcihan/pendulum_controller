@@ -902,73 +902,73 @@ El equipo se reiniciará despues de %1 segundos</translation>
         <translation>PARAR SINTON. AUTO.</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="126"/>
+        <location filename="sources/cbr.cpp" line="152"/>
         <source>Next step:%1 - %2 %3</source>
         <translation>Próximo paso :%1 - %2 %3</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="127"/>
+        <location filename="sources/cbr.cpp" line="153"/>
         <source>Step %1 load: %2 %3</source>
         <translation>Paso %1 Carga:%2 %3</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="226"/>
-        <location filename="sources/cbr.cpp" line="229"/>
+        <location filename="sources/cbr.cpp" line="252"/>
+        <location filename="sources/cbr.cpp" line="255"/>
         <source>*******************************************
 </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="227"/>
+        <location filename="sources/cbr.cpp" line="253"/>
         <source>===============  UTEST  ===================
 </source>
         <translation>===============  UTEST  ===================
 </translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="228"/>
+        <location filename="sources/cbr.cpp" line="254"/>
         <source>================  CBR  ====================
 </source>
         <translation>================  CBR  ====================
 </translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="231"/>
+        <location filename="sources/cbr.cpp" line="257"/>
         <source>Start date &amp; time : </source>
         <translation>Fecha &amp; Hora de inicio : </translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="232"/>
+        <location filename="sources/cbr.cpp" line="258"/>
         <source>Finish time       : </source>
         <oldsource>End time          : </oldsource>
         <translation>Tiempo de terminación : </translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="233"/>
+        <location filename="sources/cbr.cpp" line="259"/>
         <source>Last Point        : </source>
         <translation>Punto Más Reciente :</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="270"/>
+        <location filename="sources/cbr.cpp" line="296"/>
         <source>CBR Points for Test No : %1</source>
         <translation>Puntos de CBR para Prueba No : %1</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="298"/>
+        <location filename="sources/cbr.cpp" line="324"/>
         <location filename="sources/ethernet.cpp" line="291"/>
         <location filename="sources/initilize.cpp" line="542"/>
         <source>Standard: ASTM/AASHTO</source>
         <translation>Estándar: ASTM/AASHTO</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="302"/>
+        <location filename="sources/cbr.cpp" line="328"/>
         <location filename="sources/ethernet.cpp" line="295"/>
         <location filename="sources/initilize.cpp" line="546"/>
         <source>Standard: EN</source>
         <translation>Estándar: EN</translation>
     </message>
     <message>
-        <location filename="sources/cbr.cpp" line="306"/>
+        <location filename="sources/cbr.cpp" line="332"/>
         <location filename="sources/ethernet.cpp" line="299"/>
         <location filename="sources/initilize.cpp" line="550"/>
         <source>Standard: BS 1377</source>
