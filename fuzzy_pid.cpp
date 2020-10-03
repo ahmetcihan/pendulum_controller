@@ -252,7 +252,7 @@ void fuzzy_pid::read_parameters(void){
                             run_pid = true;
                             plot_graphics = true;
                             if(from_gui.test_type == CBR){
-                                emit zero_suppression_exceeded();
+                                emit zero_suppression_exceeded_cbr();
                             }
                             else if(from_gui.test_type == MARSHALL){
                                 emit zero_suppression_exceeded_marshall();

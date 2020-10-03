@@ -96,7 +96,7 @@ signals:
     void cohen_coon_ki(QString);
     void cohen_coon_kd(QString);
     void let_step_response(void);
-    void zero_suppression_exceeded(void);
+    void zero_suppression_exceeded_cbr(void);
     void zero_suppression_exceeded_marshall(void);
     void cbr_process(double l_val, double d_val);
 

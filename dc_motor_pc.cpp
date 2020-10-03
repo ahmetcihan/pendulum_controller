@@ -66,7 +66,7 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     connect(fuzpid,SIGNAL(cohen_coon_kd(QString)),this->ui.label_step_resp_CC_Kd,SLOT(setText(QString)));
     connect(fuzpid,SIGNAL(let_step_response()),this,SLOT(step_response_handle()));
 
-    connect(fuzpid,SIGNAL(zero_suppression_exceeded()),this,SLOT(cbr_zero_suppression_exceeded()));
+    connect(fuzpid,SIGNAL(zero_suppression_exceeded_cbr()),this,SLOT(cbr_zero_suppression_exceeded()));
     connect(fuzpid,SIGNAL(zero_suppression_exceeded_marshall()),this,SLOT(marshall_zero_suppression_exceeded()));
     connect(fuzpid,SIGNAL(cbr_process(double,double)),this,SLOT(cbr_process(double,double)));
 
