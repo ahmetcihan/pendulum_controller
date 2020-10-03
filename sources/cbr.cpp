@@ -126,14 +126,14 @@ void DC_Motor_PC::cbr_points_detection(double l_val, double d_val){
                     cbr.p_5_08 = (((0.2 - d_5_08_values[1])*(l_5_08_values[1] - l_5_08_values[0]))/(d_5_08_values[1] - d_5_08_values[0]) + l_5_08_values[1]);
                     switch(cbr.standard){
                     case ASTM_STANDARD_CBR:
-                        cbr.p_2_54 =  (cbr.p_2_54) / (ui.doubleSpinBox_area_cbr->value());
-                        cbr.p_2_54 = 100 * cbr.p_2_54 / 1500;
+                        cbr.p_5_08 =  (cbr.p_5_08) / (ui.doubleSpinBox_area_cbr->value());
+                        cbr.p_5_08 = 100 * cbr.p_5_08 / 1500;
                         break;
                     case EN_STANDARD_CBR:
-                        cbr.p_2_54 = 100 * cbr.p_2_54 / 4496.17;
+                        cbr.p_5_08 = 100 * cbr.p_5_08 / 4496.17;
                         break;
                     case BS_STANDARD_CBR:
-                        cbr.p_2_54 = 100 * cbr.p_2_54 / 4496.17;
+                        cbr.p_5_08 = 100 * cbr.p_5_08 / 4496.17;
                         break;
                     }
                 }
@@ -144,14 +144,14 @@ void DC_Motor_PC::cbr_points_detection(double l_val, double d_val){
                     cbr.p_5_08 = (((0.508 - d_5_08_values[1])*(l_5_08_values[1] - l_5_08_values[0]))/(d_5_08_values[1] - d_5_08_values[0]) + l_5_08_values[1]);
                     switch(cbr.standard){
                     case ASTM_STANDARD_CBR:
-                        cbr.p_2_54 =  (cbr.p_2_54) / (ui.doubleSpinBox_area_cbr->value());
-                        cbr.p_2_54 = 100 * cbr.p_2_54 / 101.97;
+                        cbr.p_5_08 =  (cbr.p_5_08) / (ui.doubleSpinBox_area_cbr->value());
+                        cbr.p_5_08 = 100 * cbr.p_5_08 / 101.97;
                         break;
                     case EN_STANDARD_CBR:
-                        cbr.p_2_54 = 100 * cbr.p_2_54 / 2039;
+                        cbr.p_5_08 = 100 * cbr.p_5_08 / 2039;
                         break;
                     case BS_STANDARD_CBR:
-                        cbr.p_2_54 = 100 * cbr.p_2_54 / 2039;
+                        cbr.p_5_08 = 100 * cbr.p_5_08 / 2039;
                         break;
                     }
                 }
