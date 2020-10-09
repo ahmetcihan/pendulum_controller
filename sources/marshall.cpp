@@ -50,7 +50,7 @@ void DC_Motor_PC::marshall_zero_suppression_exceeded(void){
         ui.pushButton_tare_displacement->setEnabled(1);
         ui.pushButton_tare_displacement->click();
         ui.pushButton_tare_displacement->setDisabled(1);
-        QTimer::singleShot(500,this,SLOT(marshall_zero_suppression_exceeded()));
+        QTimer::singleShot(1500,this,SLOT(marshall_zero_suppression_exceeded()));
         tmp = 1;
         break;
     case 1:
