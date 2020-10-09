@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>6</number>
     </property>
     <property name="iconSize">
      <size>
@@ -15411,7 +15411,7 @@ from USB</string>
          </font>
         </property>
         <property name="text">
-         <string notr="true">Version : 2020-10-03 12:06:18</string>
+         <string notr="true">Version : 2020-10-09 11:23:59</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
