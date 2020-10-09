@@ -15411,7 +15411,7 @@ from USB</string>
          </font>
         </property>
         <property name="text">
-         <string notr="true">Version : 2020-10-09 11:23:59</string>
+         <string notr="true">Version : 2020-10-09 14:35:55</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
