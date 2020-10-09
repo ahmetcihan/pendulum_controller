@@ -290,7 +290,12 @@ void fuzzy_pid::read_parameters(void){
 
                     if(test_status == TEST_RUNNING){
                         if(run_pid){
-                            dcMotorPc->speed_correction(discrete_PID_dac());
+                            if((from_gui.test_type == CBR) || (from_gui.test_type == MARSHALL)){
+                                dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
+                            }
+                            else{
+                                dcMotorPc->speed_correction(discrete_PID_dac());
+                            }
                         }
                     }
                     else{
