@@ -183,7 +183,8 @@ void fuzzy_pid::read_parameters(void){
             double unfiltered_displacement;
 
             if(from_gui.test_type == MARSHALL){
-                unfiltered_displacement  = -evaluate_calibrated_values_ascending(3);  //ch2
+                //unfiltered_displacement  = -evaluate_calibrated_values_ascending(3);  //ch2
+                unfiltered_displacement  = evaluate_calibrated_values_ascending(3);  //ch2
             }
             else{
                 unfiltered_displacement  = evaluate_calibrated_values_ascending(3);  //ch2

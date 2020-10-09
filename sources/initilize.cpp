@@ -550,6 +550,14 @@ void DC_Motor_PC::init_GUI(void){
         ui.label_main_standard_cbr->setText(trUtf8("Standard: BS 1377"));
         break;
     }
+    switch(marshall.standard){
+    case ASTM_STANDARD_MARSHALL:
+        ui.radioButton_standard_astm_marshall->setChecked(1);
+        break;
+    case EN_STANDARD_MARSHALL:
+        ui.radioButton_standard_en_marshall->setChecked(1);
+        break;
+    }
 
     ui.label_test_type_specimen->setText(test_type_name);
 
