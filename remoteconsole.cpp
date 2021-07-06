@@ -55,7 +55,7 @@ QString RemoteConsole::processMessage(QString mes,  const QHostAddress sender, q
         QString set = fields[1].trimmed();
         QString value = fields[2].trimmed();
 
-        if (set == "device_settings.stream.enable") {
+        if (set == "device_settings_liya.stream.enable") {
             if (value.toInt()) {
                 streamHost = sender;
                 streamHostPort = senderPort;
