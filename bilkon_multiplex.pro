@@ -41,7 +41,8 @@ SOURCES += sources/plot.cpp \
     sources/jog.cpp \
     sources/cbr.cpp \
     sources/marshall.cpp \
-    password.cpp
+    password.cpp \
+    sources/stepper_motor.cpp
 
 FORMS += dc_motor_pc.ui \
 	keyboard.ui \

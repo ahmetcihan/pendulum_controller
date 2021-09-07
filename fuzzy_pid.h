@@ -11,6 +11,13 @@
 #include <qextserialport.h>
 #include "macros.h"
 
+
+#define STEPPER_COMMAND_RUN_LEFT    1
+#define STEPPER_COMMAND_RUN_RIGHT   2
+#define STEPPER_COMMAND_STOP        3
+#define STEPPER_COMMAND_POS_RESET   4
+#define STEPPER_COMMAND_GO_POS      5
+
 namespace Ui {
     class fuzzy_pid;
 }
@@ -58,6 +65,8 @@ public:
     bool step_response_first_in;
     bool communication_established;
     bool PID_first_in;
+    u8 step_motor_command;
+    u32 step_abs_position;
 
     struct _cal{
         double slope[7];
@@ -118,6 +127,12 @@ public slots:
     void channel_polarity(u8 channel, u8 polar);
     void slope_calculation(u8 no);
     double evaluate_calibrated_values_ascending(u8 no);
+
+    void step_run_left(void);
+    void step_run_right(void);
+    void step_stop(void);
+    void step_pos_reset(void);
+    void step_go_pos(void);
 
 private:
     Ui::fuzzy_pid *ui;

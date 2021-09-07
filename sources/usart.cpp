@@ -26,7 +26,17 @@ void fuzzy_pid::always_send(void){
     data[12] = dcMotorPc->servo.down;
     data[13] = dcMotorPc->servo.up;
 
-    EOL(data.data(),14);
+    data[14] = step_motor_command;
+
+    data[15] = (dcMotorPc->ui.spinBox_go_pos->value() / 256) % 256;
+    data[16] = (dcMotorPc->ui.spinBox_go_pos->value()) % 256;
+
+    data[17] = ((dcMotorPc->step_motor_speed / 65536) % 256);
+    data[18] = ((dcMotorPc->step_motor_speed / 256) % 256);
+    data[19] = ((dcMotorPc->step_motor_speed) % 256);
+
+
+    EOL(data.data(),20);
 
     send_fuzzy_raw_servo_speed = 0;
     dcMotorPc->servo.start = 0;

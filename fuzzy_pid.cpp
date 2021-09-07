@@ -45,6 +45,8 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     communication_established = false;
     fuzzy_raw_servo_speed = 0;
     send_fuzzy_raw_servo_speed = 0;
+    step_abs_position = 0;
+
     bessel_filter_coeffs();
 }
 void fuzzy_pid::fuzpid_thread_handler(void){
@@ -130,10 +132,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),27);
+        fcrc = crc_chk((u8*)data_array.data(),30);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[27])&&(crc_low == (u8)data_array[28])){
+        if((crc_high == (u8)data_array[30])&&(crc_low == (u8)data_array[31])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 5; i++){
@@ -161,6 +163,7 @@ void fuzzy_pid::read_parameters(void){
                 }
                 old_raw[i] = value[i];
             }
+            step_abs_position = 65536* (u8)data_array[27] + 256* (u8)data_array[28] + (u8)data_array[29];
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;

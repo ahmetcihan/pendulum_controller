@@ -292,6 +292,7 @@ public:
     u8 h_axis_radiobutton_no;
     u8 control_mode;
     u8 language_index;
+    u32 step_motor_speed;
 
     bool do_not_change_focus;
     bool return_home_bit;
