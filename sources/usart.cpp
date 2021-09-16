@@ -10,7 +10,7 @@ void fuzzy_pid::EOL(char *base_array, u8 i){
 }
 void fuzzy_pid::always_send(void){
     QByteArray data;
-    data.resize(16);
+    data.resize(22);
 
     send_data_order(data.data(),"CONV",0,3);
     data[4] = send_fuzzy_raw_servo_speed;
@@ -31,10 +31,16 @@ void fuzzy_pid::always_send(void){
     data[15] = (dcMotorPc->ui.spinBox_go_pos->value() / 256) % 256;
     data[16] = (dcMotorPc->ui.spinBox_go_pos->value()) % 256;
 
-    data[17] = ((dcMotorPc->step_motor_speed / 65536) % 256);
-    data[18] = ((dcMotorPc->step_motor_speed / 256) % 256);
-    data[19] = ((dcMotorPc->step_motor_speed) % 256);
-
+    if(step_motor_in_test == 0){
+        data[17] = ((dcMotorPc->step_motor_speed / 65536) % 256);
+        data[18] = ((dcMotorPc->step_motor_speed / 256) % 256);
+        data[19] = ((dcMotorPc->step_motor_speed) % 256);
+    }
+    else{
+        data[17] = ((dcMotorPc->ui.spinBox_step_motor_speed->value() / 65536) % 256);
+        data[18] = ((dcMotorPc->ui.spinBox_step_motor_speed->value() / 256) % 256);
+        data[19] = ((dcMotorPc->ui.spinBox_step_motor_speed->value()) % 256);
+    }
 
     EOL(data.data(),20);
 
@@ -45,6 +51,7 @@ void fuzzy_pid::always_send(void){
     dcMotorPc->servo.up = 0;
 
     pSerial->write(data);
+
 }
 
 void DC_Motor_PC::send_data_order(char *base_array, const char *array, u8 first_index, u8 last_index){

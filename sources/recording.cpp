@@ -111,11 +111,6 @@ void DC_Motor_PC::writeAppSettings(){
     settings.setValue(QStringLiteral("downward_ramp_time"),ui.spinBox_downward_ramp_time->value());
     settings.setValue(QStringLiteral("motor_RPM"),ui.doubleSpinBox_motor_rpm->value());
     settings.setValue(QStringLiteral("displacement_speed"),ui.doubleSpinBox_displ_speed->value());
-    settings.setValue(QStringLiteral("region_limit_1"),ui.doubleSpinBox_region_1_limit->value());
-    settings.setValue(QStringLiteral("region_limit_2"),ui.doubleSpinBox_region_2_limit->value());
-    settings.setValue(QStringLiteral("factor_1"),ui.doubleSpinBox_factor_1->value());
-    settings.setValue(QStringLiteral("factor_2"),ui.doubleSpinBox_factor_2->value());
-    settings.setValue(QStringLiteral("factor_3"),ui.doubleSpinBox_factor_3->value());
     settings.setValue(QStringLiteral("protect_specimen"),ui.doubleSpinBox_protect_specimen->value());
     settings.setValue(QStringLiteral("ip_address"),ui.lineEdit_ip_address->text());
     settings.setValue(QStringLiteral("netmask"),ui.lineEdit_ip_mask->text());
@@ -322,11 +317,6 @@ void DC_Motor_PC::readAppSettings(){
     ui.spinBox_downward_ramp_time->setValue(settings.value("common/downward_ramp_time").toInt());
     ui.doubleSpinBox_motor_rpm->setValue(settings.value("common/motor_RPM").toDouble());
     ui.doubleSpinBox_displ_speed->setValue(settings.value("common/displacement_speed").toDouble());
-    ui.doubleSpinBox_region_1_limit->setValue(settings.value("common/region_limit_1").toDouble());
-    ui.doubleSpinBox_region_2_limit->setValue(settings.value("common/region_limit_2").toDouble());
-    ui.doubleSpinBox_factor_1->setValue(settings.value("common/factor_1").toDouble());
-    ui.doubleSpinBox_factor_2->setValue(settings.value("common/factor_2").toDouble());
-    ui.doubleSpinBox_factor_3->setValue(settings.value("common/factor_3").toDouble());
     ui.doubleSpinBox_protect_specimen->setValue(settings.value("common/protect_specimen").toDouble());
     ui.lineEdit_ip_address->setText(settings.value("common/ip_address").toString());
     ui.lineEdit_ip_mask->setText(settings.value("common/netmask").toString());

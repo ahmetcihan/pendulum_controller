@@ -191,8 +191,6 @@ void DC_Motor_PC::unit_system_handler(void){
 
     //admin
     ui.label_unit_disp_speed->setText(trUtf8("%1/min").arg(unit_system.length_label));
-    ui.label_unit_disp_speed_2->setText(trUtf8("%1/min").arg(unit_system.length_label));
-    ui.label_unit_disp_speed_3->setText(trUtf8("%1/min").arg(unit_system.length_label));
 
     //multipliers
     unit_system.load_multiplier = 1;
@@ -284,8 +282,6 @@ void DC_Motor_PC::unit_system_handler(void){
 
     //admin->speed_tune
     ui.doubleSpinBox_displ_speed->setValue(ui.doubleSpinBox_displ_speed->value() * unit_system.length_multiplier);
-    ui.doubleSpinBox_region_1_limit->setValue(ui.doubleSpinBox_region_1_limit->value() * unit_system.length_multiplier);
-    ui.doubleSpinBox_region_2_limit->setValue(ui.doubleSpinBox_region_2_limit->value() * unit_system.length_multiplier);
 
     ui.doubleSpinBox_briquette_t->setValue(ui.doubleSpinBox_briquette_t->value() * unit_system.length_multiplier);
 

@@ -4,14 +4,15 @@
 
 
 void fuzzy_pid::step_run_left(void){
+    step_motor_in_test = 1;
     step_motor_command = STEPPER_COMMAND_RUN_LEFT;
-    dcMotorPc->step_motor_speed = dcMotorPc->ui.spinBox_step_motor_speed->value();
 }
 void fuzzy_pid::step_run_right(void){
+    step_motor_in_test = 1;
     step_motor_command = STEPPER_COMMAND_RUN_RIGHT;
-    dcMotorPc->step_motor_speed = dcMotorPc->ui.spinBox_step_motor_speed->value();
 }
 void fuzzy_pid::step_stop(void){
+    step_motor_in_test = 0;
     step_motor_command = STEPPER_COMMAND_STOP;
 }
 void fuzzy_pid::step_pos_reset(void){

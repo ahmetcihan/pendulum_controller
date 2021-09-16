@@ -46,6 +46,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     fuzzy_raw_servo_speed = 0;
     send_fuzzy_raw_servo_speed = 0;
     step_abs_position = 0;
+    step_motor_in_test = 0;
 
     bessel_filter_coeffs();
 }
@@ -106,7 +107,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(29);
+    data_array.resize(32);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;

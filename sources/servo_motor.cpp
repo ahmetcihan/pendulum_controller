@@ -3,17 +3,6 @@
 double DC_Motor_PC::speed_correction(double val){
     double multiplier = 1;
 
-    if(val < ui.doubleSpinBox_region_1_limit->value()){
-        multiplier = ui.doubleSpinBox_factor_1->value();
-    }
-    else if(val < ui.doubleSpinBox_region_2_limit->value()){
-        multiplier = ui.doubleSpinBox_factor_2->value();
-    }
-    else{
-        multiplier = ui.doubleSpinBox_factor_3->value();
-    }
-    //qDebug() << "servo speed" << fuzpid->fuzzy_raw_servo_speed << "val" << val;
-
     fuzpid->fuzzy_raw_servo_speed = multiplier *(1350000.0 / (((double) ui.doubleSpinBox_motor_rpm->value() / (double) ui.doubleSpinBox_displ_speed->value() * val)));
     fuzpid->send_fuzzy_raw_servo_speed = 1;
     return fuzpid->fuzzy_raw_servo_speed;

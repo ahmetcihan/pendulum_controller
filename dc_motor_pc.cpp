@@ -117,6 +117,9 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
 
     QTimer::singleShot(20000,this,SLOT(check_the_storage()));
 
+    connect(this->ui.horizontalSlider_step_motor_speed,SIGNAL(valueChanged(int)),this->ui.spinBox_step_motor_speed,SLOT(setValue(int)));
+    connect(this->ui.spinBox_step_motor_speed,SIGNAL(valueChanged(int)),this->ui.horizontalSlider_step_motor_speed,SLOT(setValue(int)));
+
 }
 void DC_Motor_PC::check_the_storage(void){
     QProcess p;

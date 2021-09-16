@@ -66,6 +66,7 @@ public:
     bool communication_established;
     bool PID_first_in;
     u8 step_motor_command;
+    u8 step_motor_in_test;
     u32 step_abs_position;
 
     struct _cal{
