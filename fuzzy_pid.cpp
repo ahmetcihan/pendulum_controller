@@ -43,8 +43,6 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     current_displacement_rate = 0;
     PID_first_in = true;
     communication_established = false;
-    fuzzy_raw_servo_speed = 0;
-    send_fuzzy_raw_servo_speed = 0;
     step_abs_position = 0;
     step_motor_in_test = 0;
 

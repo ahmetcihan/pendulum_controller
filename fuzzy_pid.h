@@ -12,8 +12,8 @@
 #include "macros.h"
 
 
-#define STEPPER_COMMAND_RUN_LEFT    1
-#define STEPPER_COMMAND_RUN_RIGHT   2
+#define STEPPER_COMMAND_RUN_DOWN    1
+#define STEPPER_COMMAND_RUN_UP      2
 #define STEPPER_COMMAND_STOP        3
 #define STEPPER_COMMAND_POS_RESET   4
 #define STEPPER_COMMAND_GO_POS      5
@@ -34,7 +34,6 @@ public:
     void send_data_order(char *base_array,const char *array, u8 first_index, u8 last_index);
 
     double ax[3], by[3];
-    double fuzzy_raw_servo_speed;
     double usart_pace_rate;
     double usart_displacement_rate;
     double tared_val;
@@ -55,7 +54,6 @@ public:
     u8 test_status;
     u8 relay_auto_man;
     u8 relay_start_stop;
-    bool send_fuzzy_raw_servo_speed;
     bool command_silencer;
     bool test_finished;
     bool test_label_status;
@@ -129,8 +127,8 @@ public slots:
     void slope_calculation(u8 no);
     double evaluate_calibrated_values_ascending(u8 no);
 
-    void step_run_left(void);
-    void step_run_right(void);
+    void step_run_up(void);
+    void step_run_down(void);
     void step_stop(void);
     void step_pos_reset(void);
     void step_go_pos(void);

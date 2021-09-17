@@ -8,6 +8,7 @@ void DC_Motor_PC::handle_JOG_down_button(){
         fuzpid->error.go_home_load = false;
         ui.label_alert_status->setText(trUtf8("NO ALERT"));
     }
+    fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
 
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
@@ -19,6 +20,7 @@ void DC_Motor_PC::release_JOG_down_button(){
 
     servo.stop = 1;
     JOG.up = false;
+    fuzpid->step_stop();
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
 #endif
@@ -31,6 +33,8 @@ void DC_Motor_PC::handle_JOG_up_button(){
         fuzpid->error.go_home_load = false;
         ui.label_alert_status->setText(trUtf8("NO ALERT"));
     }
+    fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
+
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
 #endif
@@ -40,6 +44,7 @@ void DC_Motor_PC::release_JOG_up_button(){
     QTimer::singleShot(100,this,SLOT(keyboard_delayed_operation()));
     servo.stop = 1;
     JOG.down = false;
+    fuzpid->step_stop();
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
 #endif

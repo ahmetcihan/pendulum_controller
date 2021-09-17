@@ -1,11 +1,8 @@
 #include "dc_motor_pc.h"
 
 double DC_Motor_PC::speed_correction(double val){
-    double multiplier = 1;
-
-    fuzpid->fuzzy_raw_servo_speed = multiplier *(1350000.0 / (((double) ui.doubleSpinBox_motor_rpm->value() / (double) ui.doubleSpinBox_displ_speed->value() * val)));
-    fuzpid->send_fuzzy_raw_servo_speed = 1;
-    return fuzpid->fuzzy_raw_servo_speed;
+    step_motor_speed = ((double) ui.doubleSpinBox_motor_rpm->value() * val)/ (double) ui.doubleSpinBox_displ_speed->value();
+    return step_motor_speed;
 }
 void DC_Motor_PC::motor_go_test_direction(void){
     static u8 tmp = 0;

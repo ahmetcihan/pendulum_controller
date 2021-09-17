@@ -56,8 +56,8 @@ void DC_Motor_PC::init_RADIOBUTTONs(void){
     connect(this->ui.radioButton_protect_specimen_off,SIGNAL(clicked()),this,SLOT(specimen_protection_handler()));
 }
 void DC_Motor_PC::init_PUSHBUTTONs(void){
-    connect(ui.pushButton_step_run_left,SIGNAL(clicked()),fuzpid,SLOT(step_run_left()));
-    connect(ui.pushButton_step_run_right,SIGNAL(clicked()),fuzpid,SLOT(step_run_right()));
+    connect(ui.pushButton_step_run_up,SIGNAL(clicked()),fuzpid,SLOT(step_run_up()));
+    connect(ui.pushButton_step_run_down,SIGNAL(clicked()),fuzpid,SLOT(step_run_down()));
     connect(ui.pushButton_step_stop,SIGNAL(clicked()),fuzpid,SLOT(step_stop()));
     connect(ui.pushButton_step_reset_pos,SIGNAL(clicked()),fuzpid,SLOT(step_pos_reset()));
     connect(ui.pushButton_step_go_pos,SIGNAL(clicked()),fuzpid,SLOT(step_go_pos()));

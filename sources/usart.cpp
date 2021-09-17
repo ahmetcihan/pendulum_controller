@@ -13,10 +13,10 @@ void fuzzy_pid::always_send(void){
     data.resize(22);
 
     send_data_order(data.data(),"CONV",0,3);
-    data[4] = send_fuzzy_raw_servo_speed;
-    data[5] = (((u32)fuzzy_raw_servo_speed) / 65536) % 256;
-    data[6] = (((u32)fuzzy_raw_servo_speed) / 256) % 256;
-    data[7] = (((u32)fuzzy_raw_servo_speed) / 1) % 256;
+    data[4] = 0;
+    data[5] = 0;
+    data[6] = 0;
+    data[7] = 0;
 
     data[8] = relay_auto_man;
     data[9] = relay_start_stop;
@@ -44,13 +44,13 @@ void fuzzy_pid::always_send(void){
 
     EOL(data.data(),20);
 
-    send_fuzzy_raw_servo_speed = 0;
     dcMotorPc->servo.start = 0;
     dcMotorPc->servo.stop = 0;
     dcMotorPc->servo.down = 0;
     dcMotorPc->servo.up = 0;
 
     pSerial->write(data);
+
 
 }
 
