@@ -50,6 +50,7 @@ void DC_Motor_PC::go_load_operation(void){
         switch (go_load_tmp) {
         case 0:
             servo.down = 1;
+            fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
             go_load_tmp++;
             speed_correction(parameters[test_type].go_to_load_speed);
             start_load = fuzpid->load_value;
@@ -61,6 +62,7 @@ void DC_Motor_PC::go_load_operation(void){
         case 2:
             if(fuzpid->load_value > (start_load+(float)0.2)){
                 servo.stop = 1;
+                fuzpid->step_stop();
                 go_load_tmp = 0;
                 go_load_bit = false;
                 ui.pushButton_start_test->setEnabled(1);
@@ -113,6 +115,7 @@ void DC_Motor_PC::return_home_operation(void){
             }
             else{
                 servo.up = 1;
+                fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
                 return_home_tmp++;
                 speed_correction(approximation_speed);
             }
@@ -133,6 +136,7 @@ void DC_Motor_PC::return_home_operation(void){
             }
             if(fuzpid->displacement_value <= (float)0.02){
                 servo.stop = 1;
+                fuzpid->step_stop();
                 return_home_tmp = 0;
                 return_home_bit = false;
                 ui.pushButton_start_test->setEnabled(1);
@@ -146,6 +150,7 @@ void DC_Motor_PC::return_home_operation(void){
             }
             if(fuzpid->load_value > initial_load + 0.2){    //load error
                 servo.stop = 1;
+                fuzpid->step_stop();
                 return_home_tmp = 0;
                 return_home_bit = false;
                 ui.pushButton_start_test->setEnabled(1);

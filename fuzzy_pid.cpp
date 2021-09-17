@@ -323,6 +323,7 @@ void fuzzy_pid::read_parameters(void){
                 relay_start_stop = RELAY_OFF;
                 PID_first_in = true;
                 dcMotorPc->servo.stop = 1;
+                step_stop();
 
                 if((test_status == TEST_RUNNING)||(test_status == TEST_PAUSED)){
                     test_status = TEST_JUST_FINISHED;

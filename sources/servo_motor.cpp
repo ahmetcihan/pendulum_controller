@@ -67,6 +67,7 @@ void DC_Motor_PC::motor_go_test_direction(void){
                                                     "border-image: url(:stop_button.jpg);"
                                                     "border-width: 0px ;");
         servo.down = 1;
+        fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
         break;
     case 2:
         QTimer::singleShot(150,this,SLOT(motor_go_test_direction()));
@@ -119,6 +120,7 @@ void DC_Motor_PC::pause_test(void){
         ui.label_test_status->setText(trUtf8("TEST is PAUSED"));
         ui.label_test_status_cbr->setText(trUtf8("TEST is PAUSED"));
         servo.stop = 1;
+        fuzpid->step_stop();
     }
 }
 void DC_Motor_PC::motor_stop(void){
@@ -128,6 +130,7 @@ void DC_Motor_PC::motor_stop(void){
         }
         else{
             servo.stop = 1;
+            fuzpid->step_stop();
             go_load_tmp = 0;
             go_load_bit = false;
             ui.pushButton_start_test->setEnabled(1);
@@ -142,6 +145,7 @@ void DC_Motor_PC::motor_stop(void){
     }
     else{
         servo.stop = 1;
+        fuzpid->step_stop();
         return_home_tmp = 0;
         return_home_bit = false;
         ui.pushButton_start_test->setEnabled(1);

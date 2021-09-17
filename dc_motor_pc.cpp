@@ -72,6 +72,8 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
 
     servo.start = 0;
     servo.stop = 0;
+    fuzpid->step_stop();
+
     servo.down = 0;
     servo.up = 0;
     JOG.speed = 0;

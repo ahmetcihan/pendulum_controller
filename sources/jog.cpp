@@ -78,6 +78,7 @@ void DC_Motor_PC::JOG_operation(){
                 if(qAbs(fuzpid->load_value) >= (ui.doubleSpinBox_protect_specimen->value())){
                     JOG.error = true;
                     servo.stop = 1;
+                    fuzpid->step_stop();
                     up_tmp = 0;
                     _100_msec_counter_up = 0;
                     speed_correction(0);
@@ -125,6 +126,7 @@ void DC_Motor_PC::JOG_operation(){
                 if(qAbs(fuzpid->load_value) >= (ui.doubleSpinBox_protect_specimen->value())){
                     JOG.error = true;
                     servo.stop = 1;
+                    fuzpid->step_stop();
                     down_tmp = 0;
                     _100_msec_counter_down = 0;
                     speed_correction(0);
