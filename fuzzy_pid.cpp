@@ -45,6 +45,8 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     communication_established = false;
     step_abs_position = 0;
     step_motor_in_test = 0;
+    LS_up_error = 0;
+    LS_down_error = 0;
 
     bessel_filter_coeffs();
 }
@@ -212,11 +214,40 @@ void fuzzy_pid::read_parameters(void){
                 current_displacement_rate = bessel_filter(usart_displacement_rate);
                 current_pace_rate = 0;
             }
+            to_gui.input_status[0] = (u8)data_array[19] - 0x30;
+            to_gui.input_status[1] = (u8)data_array[20] - 0x30;
+            to_gui.input_status[2] = (u8)data_array[21] - 0x30;
+            to_gui.input_status[3] = (u8)data_array[22] - 0x30;
+
+            if(LS_down_error == 0){
+                if(to_gui.input_status[1] == 1){
+                    LS_down_error = 1;
+                    hard_stop = 1;
+                }
+            }
+            else{
+                if(to_gui.input_status[1] == 0){
+                    LS_down_error = 0;
+                }
+            }
+
+            if(LS_up_error == 0){
+                if(to_gui.input_status[0] == 1){
+                    LS_up_error = 1;
+                    hard_stop = 1;
+                }
+            }
+            else{
+                if(to_gui.input_status[0] == 0){
+                    LS_up_error = 0;
+                }
+            }
 
             to_gui.ch_polarity[0] = (u8)data_array[23] - 0x30;
             to_gui.ch_polarity[1] = (u8)data_array[24] - 0x30;
             to_gui.ch_polarity[2] = (u8)data_array[25] - 0x30;
             to_gui.ch_polarity[3] = (u8)data_array[26] - 0x30;
+
             //current_pace_rate = IIR_Filter(&usart_pace_rate,12);
             //double fir_pace_rate = classic_MA(&usart_pace_rate,12);
             //double wma = WMA(&usart_pace_rate,12);

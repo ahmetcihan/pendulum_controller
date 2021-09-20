@@ -65,8 +65,10 @@ void fuzzy_pid::step_response(void){
 
     switch (step_tmp) {
     case 0:
-        step_motor_command = STEPPER_COMMAND_RUN_UP;
-        step_tmp++;
+        if(LS_up_error == 0){
+            step_motor_command = STEPPER_COMMAND_RUN_UP;
+            step_tmp++;
+        }
         break;
     case 1:
         relay_start_stop = RELAY_ON;

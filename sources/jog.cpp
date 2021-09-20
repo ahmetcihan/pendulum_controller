@@ -2,12 +2,14 @@
 
 void DC_Motor_PC::handle_JOG_down_button(){
     do_not_change_focus = true;
-    JOG.up = true;
     if(fuzpid->error.go_home_load){
         fuzpid->error.go_home_load = false;
         ui.label_alert_status->setText(trUtf8("NO ALERT"));
     }
-    fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
+    if(fuzpid->LS_down_error == 0){
+        fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
+        JOG.up = true;
+    }
 
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
@@ -25,12 +27,14 @@ void DC_Motor_PC::release_JOG_down_button(){
 }
 void DC_Motor_PC::handle_JOG_up_button(){
     do_not_change_focus = true;
-    JOG.down = true;
     if(fuzpid->error.go_home_load){
         fuzpid->error.go_home_load = false;
         ui.label_alert_status->setText(trUtf8("NO ALERT"));
     }
-    fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
+    if(fuzpid->LS_up_error == 0){
+        fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
+        JOG.down = true;
+    }
 
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);

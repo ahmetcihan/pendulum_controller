@@ -66,6 +66,8 @@ public:
     u8 step_motor_command;
     u8 step_motor_in_test;
     u32 step_abs_position;
+    bool LS_up_error;
+    bool LS_down_error;
 
     struct _cal{
         double slope[7];
@@ -96,6 +98,7 @@ public:
         u8 gain[5];
         s32 signed_raw[5];
         bool test_finished;
+        u8 input_status[4];
     };
     struct _to_gui to_gui;
 

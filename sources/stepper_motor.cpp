@@ -4,12 +4,16 @@
 
 
 void fuzzy_pid::step_run_up(void){
-    step_motor_in_test = 1;
-    step_motor_command = STEPPER_COMMAND_RUN_UP;
+    if(LS_up_error == 0){
+        step_motor_in_test = 1;
+        step_motor_command = STEPPER_COMMAND_RUN_UP;
+    }
 }
 void fuzzy_pid::step_run_down(void){
-    step_motor_in_test = 1;
-    step_motor_command = STEPPER_COMMAND_RUN_DOWN;
+    if(LS_down_error == 0){
+        step_motor_in_test = 1;
+        step_motor_command = STEPPER_COMMAND_RUN_DOWN;
+    }
 }
 void fuzzy_pid::step_stop(void){
     step_motor_in_test = 0;

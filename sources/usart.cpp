@@ -10,39 +10,28 @@ void fuzzy_pid::EOL(char *base_array, u8 i){
 }
 void fuzzy_pid::always_send(void){
     QByteArray data;
-    data.resize(22);
+    data.resize(14);
 
     send_data_order(data.data(),"CONV",0,3);
-    data[4] = 0;
-    data[5] = 0;
-    data[6] = 0;
-    data[7] = 0;
+    data[4] = relay_auto_man;
+    data[5] = relay_start_stop;
+    data[6] = step_motor_command;
 
-    data[8] = relay_auto_man;
-    data[9] = relay_start_stop;
-
-    data[10] = 0;
-    data[11] = 0;
-    data[12] = 0;
-    data[13] = 0;
-
-    data[14] = step_motor_command;
-
-    data[15] = (dcMotorPc->ui.spinBox_go_pos->value() / 256) % 256;
-    data[16] = (dcMotorPc->ui.spinBox_go_pos->value()) % 256;
+    data[7] = (dcMotorPc->ui.spinBox_go_pos->value() / 256) % 256;
+    data[8] = (dcMotorPc->ui.spinBox_go_pos->value()) % 256;
 
     if(step_motor_in_test == 0){
-        data[17] = ((dcMotorPc->step_motor_speed / 65536) % 256);
-        data[18] = ((dcMotorPc->step_motor_speed / 256) % 256);
-        data[19] = ((dcMotorPc->step_motor_speed) % 256);
+        data[9] = ((dcMotorPc->step_motor_speed / 65536) % 256);
+        data[10] = ((dcMotorPc->step_motor_speed / 256) % 256);
+        data[11] = ((dcMotorPc->step_motor_speed) % 256);
     }
     else{
-        data[17] = ((dcMotorPc->ui.spinBox_step_motor_speed->value() / 65536) % 256);
-        data[18] = ((dcMotorPc->ui.spinBox_step_motor_speed->value() / 256) % 256);
-        data[19] = ((dcMotorPc->ui.spinBox_step_motor_speed->value()) % 256);
+        data[9] = ((dcMotorPc->ui.spinBox_step_motor_speed->value() / 65536) % 256);
+        data[10] = ((dcMotorPc->ui.spinBox_step_motor_speed->value() / 256) % 256);
+        data[11] = ((dcMotorPc->ui.spinBox_step_motor_speed->value()) % 256);
     }
 
-    EOL(data.data(),20);
+    EOL(data.data(),12);
 
     pSerial->write(data);
 

@@ -49,10 +49,12 @@ void DC_Motor_PC::go_load_operation(void){
     if(go_load_bit == true){
         switch (go_load_tmp) {
         case 0:
-            fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
-            go_load_tmp++;
-            speed_correction(parameters[test_type].go_to_load_speed);
-            start_load = fuzpid->load_value;
+            if(fuzpid->LS_up_error == 0){
+                fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
+                go_load_tmp++;
+                speed_correction(parameters[test_type].go_to_load_speed);
+                start_load = fuzpid->load_value;
+            }
             break;
         case 1:
             go_load_tmp++;
@@ -111,9 +113,11 @@ void DC_Motor_PC::return_home_operation(void){
                                                             "border-width: 0px ;");
             }
             else{
-                fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
-                return_home_tmp++;
-                speed_correction(approximation_speed);
+                if(fuzpid->LS_down_error == 0){
+                    fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
+                    return_home_tmp++;
+                    speed_correction(approximation_speed);
+                }
             }
             break;
         case 1:
