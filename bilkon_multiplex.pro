@@ -20,7 +20,6 @@ SOURCES += sources/plot.cpp \
 	sources/calibration.cpp \
 	main.cpp \
 	dc_motor_pc.cpp \
-	sources/servo_motor.cpp \
 	sources/filter.cpp \
 	keyboard.cpp \
 	remoteconsole.cpp \
