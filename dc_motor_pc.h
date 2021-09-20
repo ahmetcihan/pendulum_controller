@@ -106,14 +106,6 @@ public:
     };
     _jog JOG;
 
-    struct _servo{
-        bool start;
-        bool stop;
-        bool down;
-        bool up;
-    };
-    _servo servo;
-
     struct chan {
         QwtPlotCurve *cSin;
         QwtPlotCurve *cCos;

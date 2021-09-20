@@ -70,12 +70,7 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     connect(fuzpid,SIGNAL(zero_suppression_exceeded_marshall()),this,SLOT(marshall_zero_suppression_exceeded()));
     connect(fuzpid,SIGNAL(cbr_process(double,double)),this,SLOT(cbr_process(double,double)));
 
-    servo.start = 0;
-    servo.stop = 0;
     fuzpid->step_stop();
-
-    servo.down = 0;
-    servo.up = 0;
     JOG.speed = 0;
     JOG.up = false;
     JOG.down = false;

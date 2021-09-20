@@ -13,7 +13,6 @@ void DC_Motor_PC::step_response_handle(void){
         step_response_status = false;
         speed_correction(0);
         pace_graphic_timer->stop();
-        servo.stop = 1;
         fuzpid->step_stop();
         fuzpid->test_status = TEST_STOPPED;
         ui.pushButton_step_response->setText(trUtf8("START AUTOTUNING"));
@@ -66,7 +65,6 @@ void fuzzy_pid::step_response(void){
 
     switch (step_tmp) {
     case 0:
-        dcMotorPc->servo.down = 1;
         step_motor_command = STEPPER_COMMAND_RUN_UP;
         step_tmp++;
         break;
@@ -76,7 +74,6 @@ void fuzzy_pid::step_response(void){
         step_tmp++;
         break;
     case 2:
-        dcMotorPc->servo.start = 1;
         step_tmp++;
         break;
     case 3:

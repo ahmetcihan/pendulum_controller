@@ -49,19 +49,16 @@ void DC_Motor_PC::go_load_operation(void){
     if(go_load_bit == true){
         switch (go_load_tmp) {
         case 0:
-            servo.down = 1;
             fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
             go_load_tmp++;
             speed_correction(parameters[test_type].go_to_load_speed);
             start_load = fuzpid->load_value;
             break;
         case 1:
-            servo.start = 1;
             go_load_tmp++;
             break;
         case 2:
             if(fuzpid->load_value > (start_load+(float)0.2)){
-                servo.stop = 1;
                 fuzpid->step_stop();
                 go_load_tmp = 0;
                 go_load_bit = false;
@@ -114,7 +111,6 @@ void DC_Motor_PC::return_home_operation(void){
                                                             "border-width: 0px ;");
             }
             else{
-                servo.up = 1;
                 fuzpid->step_motor_command = STEPPER_COMMAND_RUN_DOWN;
                 return_home_tmp++;
                 speed_correction(approximation_speed);
@@ -124,7 +120,6 @@ void DC_Motor_PC::return_home_operation(void){
             fuzpid->error.go_home_load = false;
             ui.label_alert_status->setText(trUtf8("NO ALERT"));
             initial_load = fuzpid->load_value;
-            servo.start = 1;
             return_home_tmp++;
             break;
         case 2:
@@ -135,7 +130,6 @@ void DC_Motor_PC::return_home_operation(void){
                 speed_correction(approximation_speed);
             }
             if(fuzpid->displacement_value <= (float)0.02){
-                servo.stop = 1;
                 fuzpid->step_stop();
                 return_home_tmp = 0;
                 return_home_bit = false;
@@ -149,7 +143,6 @@ void DC_Motor_PC::return_home_operation(void){
                                                             "border-width: 0px ;");
             }
             if(fuzpid->load_value > initial_load + 0.2){    //load error
-                servo.stop = 1;
                 fuzpid->step_stop();
                 return_home_tmp = 0;
                 return_home_bit = false;

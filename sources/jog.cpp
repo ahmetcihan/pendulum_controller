@@ -2,7 +2,6 @@
 
 void DC_Motor_PC::handle_JOG_down_button(){
     do_not_change_focus = true;
-    servo.up = 1;
     JOG.up = true;
     if(fuzpid->error.go_home_load){
         fuzpid->error.go_home_load = false;
@@ -18,7 +17,6 @@ void DC_Motor_PC::release_JOG_down_button(){
     do_not_change_focus = false;
     QTimer::singleShot(100,this,SLOT(keyboard_delayed_operation()));
 
-    servo.stop = 1;
     JOG.up = false;
     fuzpid->step_stop();
 #ifdef CONFIG_x86
@@ -27,7 +25,6 @@ void DC_Motor_PC::release_JOG_down_button(){
 }
 void DC_Motor_PC::handle_JOG_up_button(){
     do_not_change_focus = true;
-    servo.down = 1;
     JOG.down = true;
     if(fuzpid->error.go_home_load){
         fuzpid->error.go_home_load = false;
@@ -42,7 +39,6 @@ void DC_Motor_PC::handle_JOG_up_button(){
 void DC_Motor_PC::release_JOG_up_button(){
     do_not_change_focus = false;
     QTimer::singleShot(100,this,SLOT(keyboard_delayed_operation()));
-    servo.stop = 1;
     JOG.down = false;
     fuzpid->step_stop();
 #ifdef CONFIG_x86
@@ -63,7 +59,6 @@ void DC_Motor_PC::JOG_operation(){
             up_tmp++;
             break;
         case 1:
-            servo.start = 1;
             up_tmp++;
             break;
         case 2:
@@ -77,7 +72,6 @@ void DC_Motor_PC::JOG_operation(){
             if(ui.radioButton_protect_specimen_on->isChecked()){
                 if(qAbs(fuzpid->load_value) >= (ui.doubleSpinBox_protect_specimen->value())){
                     JOG.error = true;
-                    servo.stop = 1;
                     fuzpid->step_stop();
                     up_tmp = 0;
                     _100_msec_counter_up = 0;
@@ -111,7 +105,6 @@ void DC_Motor_PC::JOG_operation(){
             down_tmp++;
             break;
         case 1:
-            servo.start = 1;
             down_tmp++;
             break;
         case 2:
@@ -125,7 +118,6 @@ void DC_Motor_PC::JOG_operation(){
             if(ui.radioButton_protect_specimen_on->isChecked()){
                 if(qAbs(fuzpid->load_value) >= (ui.doubleSpinBox_protect_specimen->value())){
                     JOG.error = true;
-                    servo.stop = 1;
                     fuzpid->step_stop();
                     down_tmp = 0;
                     _100_msec_counter_down = 0;

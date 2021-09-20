@@ -21,10 +21,10 @@ void fuzzy_pid::always_send(void){
     data[8] = relay_auto_man;
     data[9] = relay_start_stop;
 
-    data[10] = dcMotorPc->servo.stop;
-    data[11] = dcMotorPc->servo.start;
-    data[12] = dcMotorPc->servo.down;
-    data[13] = dcMotorPc->servo.up;
+    data[10] = 0;
+    data[11] = 0;
+    data[12] = 0;
+    data[13] = 0;
 
     data[14] = step_motor_command;
 
@@ -43,11 +43,6 @@ void fuzzy_pid::always_send(void){
     }
 
     EOL(data.data(),20);
-
-    dcMotorPc->servo.start = 0;
-    dcMotorPc->servo.stop = 0;
-    dcMotorPc->servo.down = 0;
-    dcMotorPc->servo.up = 0;
 
     pSerial->write(data);
 
