@@ -402,7 +402,7 @@ private slots:
     void cal_channel_change(const QString & text);
     void serial_port_setup(void);
     void cal_assignment(int);
-    void send_calibration_values(void);
+    void hold_calibration_values(void);
     void cal_points_signalmapper(void);
     void usart_signalmapper(void);
     void rearrange_object_names(void);

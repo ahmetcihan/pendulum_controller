@@ -396,7 +396,7 @@ int DC_Motor_PC::setSettingEthernet(const QString &setting, const QString &value
     else if (setting == "cal.point_no")     ui.comboBox_cal_point_number->setCurrentIndex(value.toInt() - 2);
     else if (setting == "cal.channel")      ui.comboBox_channel_no->setCurrentIndex(value.toInt());
 
-    else if (setting == "memory.save.calibration") send_calibration_values();
+    else if (setting == "memory.save.calibration") hold_calibration_values();
     else if (setting == "memory.save")  writeAppSettings();
 
     else if (setting == "results.prepare"){

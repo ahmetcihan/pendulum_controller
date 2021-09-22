@@ -73,7 +73,7 @@ void DC_Motor_PC::cal_channel_change(const QString & text){
         break;
     }
 }
-void DC_Motor_PC::send_calibration_values(void){
+void DC_Motor_PC::hold_calibration_values(void){
     for(u8 i = 0; i < 8; i++){
         fuzpid->cal[current_cal_channel].real_val[i] = spinBox_cal_raw_value[i]->value();
         fuzpid->cal[current_cal_channel].assigned_val[i] = doubleSpinBox_cal_point_value[i]->value();

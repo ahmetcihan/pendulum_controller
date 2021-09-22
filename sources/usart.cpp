@@ -61,13 +61,13 @@ void DC_Motor_PC::command_sending_protection(void){
             fuzpid->tare_channel(usart_signalmapper_no - 44);
         }
         else if(usart_signalmapper_no < 54){
-            fuzpid->channel_polarity(usart_signalmapper_no - 50, 0);
+            fuzpid->send_channel_polarity(usart_signalmapper_no - 50, 0);
         }
         else if(usart_signalmapper_no < 58){
-            fuzpid->channel_polarity(usart_signalmapper_no - 54, 1);
+            fuzpid->send_channel_polarity(usart_signalmapper_no - 54, 1);
         }
         else if(usart_signalmapper_no == 60){
-            send_calibration_values();
+            hold_calibration_values();
         }
         tmp++;
         break;
@@ -82,7 +82,7 @@ void DC_Motor_PC::command_sending_protection(void){
         break;
     }
 }
-void fuzzy_pid::channel_polarity(u8 channel, u8 polarity){
+void fuzzy_pid::send_channel_polarity(u8 channel, u8 polarity){
     QByteArray data;
     data.resize(10);
 
@@ -100,7 +100,7 @@ void fuzzy_pid::channel_polarity(u8 channel, u8 polarity){
 #endif
 
 }
-void fuzzy_pid::send_gains(void){
+void fuzzy_pid::send_gains_and_polarities(void){
     static u8 tmp = 0;
 
     switch(tmp){
@@ -127,19 +127,19 @@ void fuzzy_pid::send_gains(void){
         tmp++;
         break;
     case 6:
-        channel_polarity(0,ch_polarity[0]);    //polarity_load
+        send_channel_polarity(0,ch_polarity[0]);    //polarity_load
         tmp++;
         break;
     case 7:
-        channel_polarity(1,ch_polarity[1]);    //polarity_load
+        send_channel_polarity(1,ch_polarity[1]);    //polarity_load
         tmp++;
         break;
     case 8:
-        channel_polarity(2,ch_polarity[2]);    //polarity_load
+        send_channel_polarity(2,ch_polarity[2]);    //polarity_load
         tmp++;
         break;
     case 9:
-        channel_polarity(3,ch_polarity[3]);    //polarity_load
+        send_channel_polarity(3,ch_polarity[3]);    //polarity_load
         tmp++;
         break;
     case 10:

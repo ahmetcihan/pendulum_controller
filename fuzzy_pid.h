@@ -124,9 +124,9 @@ public slots:
     void bessel_filter_coeffs(void);
     double bessel_filter(double input);
     void send_gain(int _gain);
-    void send_gains(void);
+    void send_gains_and_polarities(void);
     void tare_channel(u8 channel);
-    void channel_polarity(u8 channel, u8 polar);
+    void send_channel_polarity(u8 channel, u8 polar);
     void slope_calculation(u8 no);
     double evaluate_calibrated_values_ascending(u8 no);
 

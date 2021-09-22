@@ -409,7 +409,7 @@ void DC_Motor_PC::init_TIMERs(void){
     connect(_100_msec_timer, SIGNAL(timeout()),this,SLOT(_100_msec_handler()));
     connect(sserver, SIGNAL(dataReady(QString)), SLOT(handleTcpMessage(QString)));
     connect(command_send_protection_wait_timer, SIGNAL(timeout()),this,SLOT(command_sending_protection()));
-    connect(gain_send_timer, SIGNAL(timeout()),fuzpid,SLOT(send_gains()));
+    connect(gain_send_timer, SIGNAL(timeout()),fuzpid,SLOT(send_gains_and_polarities()));
     connect(load_graphic_timer, SIGNAL(timeout()),this,SLOT(draw_load_graphic()));
     connect(pace_graphic_timer, SIGNAL(timeout()),this,SLOT(draw_pace_graphic()));
 
