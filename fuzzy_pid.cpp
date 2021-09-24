@@ -107,7 +107,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(32);
+    data_array.resize(36);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -119,12 +119,9 @@ void fuzzy_pid::read_parameters(void){
     u32 fcrc;
     u8 crc_low,crc_high;
     static u8 opening_stabilization_counter = 10;
-    s32 value[5];
-    static s32 old_raw[5] = {0};
     static float old_load = 0;
     static double old_displacement = 0;
     static bool plot_graphics = false;
-    char raw_sign;
 
 #ifdef MATLAB_RECORDINGS
     static u32 counter = 0;
@@ -133,38 +130,21 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),30);
+        fcrc = crc_chk((u8*)data_array.data(),34);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[30])&&(crc_low == (u8)data_array[31])){
+        if((crc_high == (u8)data_array[34])&&(crc_low == (u8)data_array[35])){
             communication_established = true;
             read++;
-            for (u8 i = 0; i < 5; i++){
-                value[i] = 256*256*(u8)data_array[3+4*i] + 256*(u8)data_array[4+4*i] + (u8)data_array[5+4*i];
-                if(i < 4) value[i] = value[i]/divide;
-                if(abs(value[i] - old_raw[i]) < 60000){
-                    to_gui.signed_raw[i] = value[i];
-                    to_gui.gain[i] = ((u8)data_array[6+4*i] & 0x0F);
-//                    if(i == 1){
-//                        raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '-' : '+';
-//                    }
-//                    else{
-//                        raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '+' : '-';
-//                    }
-                    raw_sign = ((((u8)data_array[6+4*i]) & 0x10) == 0x10) ? '+' : '-';
-
-                    if(raw_sign == '-'){
-                        to_gui.signed_raw[i] = -1*to_gui.signed_raw[i];
-                    }
-                }
-                else{
-                    #ifdef CONFIG_x86
-                    qDebug() << QString("raw error channel %1").arg(i);
-                    #endif
-                }
-                old_raw[i] = value[i];
+            for (u8 i = 0; i < 4; i++){
+                char_to_f.s8_val[0] = (u8)data_array[5*i + 3];
+                char_to_f.s8_val[1] = (u8)data_array[5*i + 4];
+                char_to_f.s8_val[2] = (u8)data_array[5*i + 5];
+                char_to_f.s8_val[3] = (u8)data_array[5*i + 6];
+                to_gui.gain[i] = (u8)data_array[5*i + 7];
+                to_gui.signed_raw[i] = char_to_f.int_val/(s32)divide;
             }
-            step_abs_position = 65536* (u8)data_array[27] + 256* (u8)data_array[28] + (u8)data_array[29];
+            step_abs_position = 65536* (u8)data_array[31] + 256* (u8)data_array[32] + (u8)data_array[33];
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;
@@ -214,10 +194,10 @@ void fuzzy_pid::read_parameters(void){
                 current_displacement_rate = bessel_filter(usart_displacement_rate);
                 current_pace_rate = 0;
             }
-            to_gui.input_status[0] = (u8)data_array[19] - 0x30;
-            to_gui.input_status[1] = (u8)data_array[20] - 0x30;
-            to_gui.input_status[2] = (u8)data_array[21] - 0x30;
-            to_gui.input_status[3] = (u8)data_array[22] - 0x30;
+            to_gui.input_status[0] = (u8)data_array[23] - 0x30;
+            to_gui.input_status[1] = (u8)data_array[24] - 0x30;
+            to_gui.input_status[2] = (u8)data_array[25] - 0x30;
+            to_gui.input_status[3] = (u8)data_array[26] - 0x30;
 
             if(LS_down_error == 0){
                 if(to_gui.input_status[1] == 1){
@@ -243,10 +223,10 @@ void fuzzy_pid::read_parameters(void){
                 }
             }
 
-            to_gui.ch_polarity[0] = (u8)data_array[23] - 0x30;
-            to_gui.ch_polarity[1] = (u8)data_array[24] - 0x30;
-            to_gui.ch_polarity[2] = (u8)data_array[25] - 0x30;
-            to_gui.ch_polarity[3] = (u8)data_array[26] - 0x30;
+            to_gui.ch_polarity[0] = (u8)data_array[27] - 0x30;
+            to_gui.ch_polarity[1] = (u8)data_array[28] - 0x30;
+            to_gui.ch_polarity[2] = (u8)data_array[29] - 0x30;
+            to_gui.ch_polarity[3] = (u8)data_array[30] - 0x30;
 
             //current_pace_rate = IIR_Filter(&usart_pace_rate,12);
             //double fir_pace_rate = classic_MA(&usart_pace_rate,12);

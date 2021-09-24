@@ -143,6 +143,15 @@ private:
     QTimer* thread_timer;
     QTime   pid_delta_t_dac;
 
+    union 	_char_to_f {
+        float float_val;
+        u8 u8_val[4];
+        s8 s8_val[4];
+        s32 int_val;
+    };
+    union _char_to_f char_to_f;
+
+
 private slots:
     u8 read_data_order(QByteArray base_array,const char *array, u8 first_index, u8 last_index);
     u32 crc_chk(u8* data, u8 length);
