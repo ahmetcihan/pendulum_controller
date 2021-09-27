@@ -85,6 +85,25 @@ void DC_Motor_PC::hold_calibration_values(void){
 #endif
     write_calibration();
     fuzpid->slope_calculation(current_cal_channel);
+
+    switch(current_cal_channel){
+    case 0: //load
+    case 1: //load
+    case 2: //load
+        fuzpid->send_calibration(0);
+        break;
+    case 3: //displacement
+        fuzpid->send_calibration(1);
+        break;
+    case 4: //ch3
+        fuzpid->send_calibration(2);
+        break;
+    case 5: //ch4
+        fuzpid->send_calibration(3);
+        break;
+    case 6: //enc
+        break;
+    }
 }
 void fuzzy_pid::slope_calculation(u8 no){
     u8 validation_1 = 0xFF;

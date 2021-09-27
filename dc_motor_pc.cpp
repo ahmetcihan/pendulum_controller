@@ -779,7 +779,7 @@ void DC_Motor_PC::_100_msec_handler(){
     //qDebug() << "pushbutton_focus" ;
     if(do_at_the_opening){
         if(fuzpid->communication_established){
-            gain_send_timer->start();
+            fuzpid->send_gains_and_polarities();
             fuzpid->command_silencer = true;
             do_at_the_opening = false;
         }

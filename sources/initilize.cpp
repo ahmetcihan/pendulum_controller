@@ -395,21 +395,18 @@ void DC_Motor_PC::init_PIXMAPs(void){
 void DC_Motor_PC::init_TIMERs(void){
     _100_msec_timer = new QTimer(this);
     command_send_protection_wait_timer= new QTimer(this);
-    gain_send_timer = new QTimer(this);
     load_graphic_timer = new QTimer(this);
     pace_graphic_timer = new QTimer(this);
 
     _100_msec_timer->setInterval(100);
     _100_msec_timer->start();
     command_send_protection_wait_timer->setInterval(100);
-    gain_send_timer->setInterval(200);
     load_graphic_timer->setInterval(200);
     pace_graphic_timer->setInterval(50);
 
     connect(_100_msec_timer, SIGNAL(timeout()),this,SLOT(_100_msec_handler()));
     connect(sserver, SIGNAL(dataReady(QString)), SLOT(handleTcpMessage(QString)));
     connect(command_send_protection_wait_timer, SIGNAL(timeout()),this,SLOT(command_sending_protection()));
-    connect(gain_send_timer, SIGNAL(timeout()),fuzpid,SLOT(send_gains_and_polarities()));
     connect(load_graphic_timer, SIGNAL(timeout()),this,SLOT(draw_load_graphic()));
     connect(pace_graphic_timer, SIGNAL(timeout()),this,SLOT(draw_pace_graphic()));
 

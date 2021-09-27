@@ -243,7 +243,6 @@ public:
     QTimer *pace_graphic_timer;
     QTimer *_100_msec_timer;
     QTimer *command_send_protection_wait_timer;
-    QTimer *gain_send_timer;
     QTime   forbid_pace_recalculate_timer;
     QTime   block_double_click;
     QSignalMapper *signalMapper_cal;

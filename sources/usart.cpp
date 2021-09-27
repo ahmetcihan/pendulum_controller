@@ -103,62 +103,76 @@ void fuzzy_pid::send_gains_and_polarities(void){
 
     switch(tmp){
     case 0:
+        command_silencer = true;
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         tmp++;
         break;
     case 1:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         tmp++;
         break;
     case 2:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_gain(gain[0]);
         tmp++;
         break;
     case 3:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_gain(11 + gain[1]);
         tmp++;
         break;
     case 4:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_gain(22 + gain[2]);
         tmp++;
         break;
     case 5:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_gain(33 + gain[3]);
         tmp++;
         break;
     case 6:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_channel_polarity(0,ch_polarity[0]);
         tmp++;
         break;
     case 7:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_channel_polarity(1,ch_polarity[1]);
         tmp++;
         break;
     case 8:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_channel_polarity(2,ch_polarity[2]);
         tmp++;
         break;
     case 9:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_channel_polarity(3,ch_polarity[3]);
         tmp++;
         break;
     case 10:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_calibration(0);
         tmp++;
         break;
     case 11:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_calibration(1);
         tmp++;
         break;
     case 12:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_calibration(2);
         tmp++;
         break;
     case 13:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
         send_calibration(3);
         tmp++;
         break;
     case 14:
         tmp = 0;
-        dcMotorPc->gain_send_timer->stop();
         command_silencer = false;
         break;
     }
