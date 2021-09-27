@@ -42,7 +42,7 @@ void fuzzy_pid::send_calibration(u8 ch){
         no = dcMotorPc->load_calibration_channel;
     }
     else{
-        no = ch + 3;
+        no = ch + 2;
     }
 
     send_data_order(data.data(),"CALSEND",0,6);
