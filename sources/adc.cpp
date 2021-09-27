@@ -78,37 +78,26 @@ void fuzzy_pid::send_calibration(u8 ch){
 }
 
 void fuzzy_pid::tare_channel(u8 channel){
+    QByteArray data;
+    data.resize(7);
     u8 chn = 0;
 
-    switch(channel){
-    case 0: //load
-        switch(dcMotorPc->load_calibration_channel){
-        case LOAD_1:
-            chn = 0;
-            break;
-        case LOAD_2:
-            chn = 1;
-            break;
-        case LOAD_3:
-            chn = 2;
-            break;
-        }
-        break;
-    case 1: //displacement
-        chn = 3;
-        break;
-    case 2: //ch3
-        chn = 4;
-        break;
-    case 3: //ch4
-        chn = 5;
-        break;
-    case 4: //encoder
-        chn = 6;
-        break;
+    if(channel == 0){
+        chn = dcMotorPc->load_calibration_channel;
+    }
+    else{
+        chn = channel + 2;
     }
 
     cal[chn].tare_val = cal[chn].absolute_calibrated;
+
+    send_data_order(data.data(),"TARE",0,3);
+    data[4] = channel;
+    EOL(data.data(),5);
+
+    pSerial->write(data);
+
+
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);
 #endif
