@@ -8,6 +8,8 @@ typedef signed int s32;
 
 //#define MATLAB_RECORDINGS
 
+#define RAW_DATA_DIVIDER        32
+
 #define TEST_STOPPED            0
 #define TEST_RUNNING            1
 #define TEST_PAUSED             2

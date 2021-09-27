@@ -33,6 +33,50 @@ void fuzzy_pid::send_gain(int _gain){
     qDebug(__FUNCTION__);
 #endif
 }
+void fuzzy_pid::send_calibration(u8 ch){
+    u8 no,i;
+    QByteArray data;
+    data.resize(75);
+
+    if(ch == 0){
+        no = dcMotorPc->load_calibration_channel;
+    }
+    else{
+        no = ch + 3;
+    }
+
+    send_data_order(data.data(),"CALSEND",0,6);
+
+    data[7] = ch;
+    data[8] = cal[no].point_no;
+
+    for (i = 0; i < 8; i++){
+        char_to_f.int_val = cal[no].real_val[i] * RAW_DATA_DIVIDER;
+
+        data[9 + 4*i] = char_to_f.u8_val[0];
+        data[10 + 4*i] = char_to_f.u8_val[1];
+        data[11 + 4*i] = char_to_f.u8_val[2];
+        data[12 + 4*i] = char_to_f.u8_val[3];
+    }
+    //last index is 40
+    for (i = 0; i < 8; i++){
+        char_to_f.float_val = cal[no].assigned_val[i];
+
+        data[41 + 4*i] = char_to_f.u8_val[0];
+        data[42 + 4*i] = char_to_f.u8_val[1];
+        data[43 + 4*i] = char_to_f.u8_val[2];
+        data[44 + 4*i] = char_to_f.u8_val[3];
+    }
+    //last index is 72
+
+    EOL(data.data(),73);
+
+    pSerial->write(data);
+#ifdef CONFIG_x86
+    qDebug(__FUNCTION__);
+#endif
+}
+
 void fuzzy_pid::tare_channel(u8 channel){
     u8 chn = 0;
 

@@ -34,8 +34,6 @@ void fuzzy_pid::always_send(void){
     EOL(data.data(),12);
 
     pSerial->write(data);
-
-
 }
 
 void DC_Motor_PC::send_data_order(char *base_array, const char *array, u8 first_index, u8 last_index){
@@ -111,38 +109,54 @@ void fuzzy_pid::send_gains_and_polarities(void){
         tmp++;
         break;
     case 2:
-        send_gain(gain[0]);    //gain_load
+        send_gain(gain[0]);
         tmp++;
         break;
     case 3:
-        send_gain(11 + gain[1]);    //gain_ch2
+        send_gain(11 + gain[1]);
         tmp++;
         break;
     case 4:
-        send_gain(22 + gain[2]);    //gain_ch3
+        send_gain(22 + gain[2]);
         tmp++;
         break;
     case 5:
-        send_gain(33 + gain[3]);    //gain_ch4
+        send_gain(33 + gain[3]);
         tmp++;
         break;
     case 6:
-        send_channel_polarity(0,ch_polarity[0]);    //polarity_load
+        send_channel_polarity(0,ch_polarity[0]);
         tmp++;
         break;
     case 7:
-        send_channel_polarity(1,ch_polarity[1]);    //polarity_load
+        send_channel_polarity(1,ch_polarity[1]);
         tmp++;
         break;
     case 8:
-        send_channel_polarity(2,ch_polarity[2]);    //polarity_load
+        send_channel_polarity(2,ch_polarity[2]);
         tmp++;
         break;
     case 9:
-        send_channel_polarity(3,ch_polarity[3]);    //polarity_load
+        send_channel_polarity(3,ch_polarity[3]);
         tmp++;
         break;
     case 10:
+        send_calibration(0);
+        tmp++;
+        break;
+    case 11:
+        send_calibration(1);
+        tmp++;
+        break;
+    case 12:
+        send_calibration(2);
+        tmp++;
+        break;
+    case 13:
+        send_calibration(3);
+        tmp++;
+        break;
+    case 14:
         tmp = 0;
         dcMotorPc->gain_send_timer->stop();
         command_silencer = false;

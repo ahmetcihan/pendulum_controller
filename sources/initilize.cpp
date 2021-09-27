@@ -402,7 +402,7 @@ void DC_Motor_PC::init_TIMERs(void){
     _100_msec_timer->setInterval(100);
     _100_msec_timer->start();
     command_send_protection_wait_timer->setInterval(100);
-    gain_send_timer->setInterval(100);
+    gain_send_timer->setInterval(200);
     load_graphic_timer->setInterval(200);
     pace_graphic_timer->setInterval(50);
 

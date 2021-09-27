@@ -11,7 +11,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
 
     QThread* thread_1 = new QThread(this);
     thread_timer = new QTimer(0); //parent must be null
-    thread_timer->setInterval(5);
+    thread_timer->setInterval(8);
     thread_timer->moveToThread(thread_1);
     connect(thread_timer, SIGNAL(timeout()), SLOT(fuzpid_thread_handler()), Qt::DirectConnection);
     QObject::connect(thread_1, SIGNAL(started()), thread_timer, SLOT(start()));
@@ -107,7 +107,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(36);
+    data_array.resize(53);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -115,9 +115,9 @@ void fuzzy_pid::read_parameters(void){
     static u32 read = 0;
     static QTime pace_timer;
     static QTime displacement_timer;
-    u32 divide = 32;
     u32 fcrc;
     u8 crc_low,crc_high;
+    float calibrated[4];
     static u8 opening_stabilization_counter = 10;
     static float old_load = 0;
     static double old_displacement = 0;
@@ -130,10 +130,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),34);
+        fcrc = crc_chk((u8*)data_array.data(),51);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[34])&&(crc_low == (u8)data_array[35])){
+        if((crc_high == (u8)data_array[51])&&(crc_low == (u8)data_array[52])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -142,9 +142,20 @@ void fuzzy_pid::read_parameters(void){
                 char_to_f.s8_val[2] = (u8)data_array[5*i + 5];
                 char_to_f.s8_val[3] = (u8)data_array[5*i + 6];
                 to_gui.gain[i] = (u8)data_array[5*i + 7];
-                to_gui.signed_raw[i] = char_to_f.int_val/(s32)divide;
+                to_gui.signed_raw[i] = char_to_f.int_val/(s32)RAW_DATA_DIVIDER;
             }
             step_abs_position = 65536* (u8)data_array[31] + 256* (u8)data_array[32] + (u8)data_array[33];
+
+            for (u8 i = 0; i < 4; i++){
+                char_to_f.s8_val[0] = (u8)data_array[4*i + 34];
+                char_to_f.s8_val[1] = (u8)data_array[4*i + 35];
+                char_to_f.s8_val[2] = (u8)data_array[4*i + 36];
+                char_to_f.s8_val[3] = (u8)data_array[4*i + 37];
+                calibrated[i] = char_to_f.float_val;
+                qDebug() << "cal : " << calibrated[i];
+            }
+
+            //qDebug() << "usart_debugger" << (u8)data_array[50];
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;
