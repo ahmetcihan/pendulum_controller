@@ -80,6 +80,64 @@ void DC_Motor_PC::command_sending_protection(void){
         break;
     }
 }
+void fuzzy_pid::send_all_parameters(void){
+    static u8 tmp = 0;
+    QByteArray data;
+    data.resize(23);
+
+    switch(tmp){
+    case 0:
+        command_silencer = true;
+        QTimer::singleShot(150,this,SLOT(send_all_parameters()));
+        tmp++;
+        break;
+    case 1:
+        QTimer::singleShot(150,this,SLOT(send_all_parameters()));
+        tmp++;
+        send_data_order(data.data(),"PRMT",0,3);
+        char_to_f.float_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
+        data[4] = char_to_f.u8_val[0];
+        data[5] = char_to_f.u8_val[1];
+        data[6] = char_to_f.u8_val[2];
+        data[7] = char_to_f.u8_val[3];
+
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_load_threshold->value();
+        data[8] = char_to_f.u8_val[0];
+        data[9] = char_to_f.u8_val[1];
+        data[10] = char_to_f.u8_val[2];
+        data[11] = char_to_f.u8_val[3];
+
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_zero_suppression->value();
+        data[12] = char_to_f.u8_val[0];
+        data[13] = char_to_f.u8_val[1];
+        data[14] = char_to_f.u8_val[2];
+        data[15] = char_to_f.u8_val[3];
+
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pace_rate->value();
+        data[16] = char_to_f.u8_val[0];
+        data[17] = char_to_f.u8_val[1];
+        data[18] = char_to_f.u8_val[2];
+        data[19] = char_to_f.u8_val[3];
+
+        data[20] = dcMotorPc->ui.spinBox_break_percentage->value();
+
+        EOL(data.data(),21);
+
+        pSerial->write(data);
+        break;
+    case 2:
+        tmp = 0;
+        command_silencer = false;
+        break;
+    }
+
+
+
+#ifdef CONFIG_x86
+    qDebug(__FUNCTION__);
+#endif
+
+}
 void fuzzy_pid::send_channel_polarity(u8 channel, u8 polarity){
     QByteArray data;
     data.resize(10);

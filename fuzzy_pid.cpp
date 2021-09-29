@@ -11,7 +11,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
 
     QThread* thread_1 = new QThread(this);
     thread_timer = new QTimer(0); //parent must be null
-    thread_timer->setInterval(8);
+    thread_timer->setInterval(5);
     thread_timer->moveToThread(thread_1);
     connect(thread_timer, SIGNAL(timeout()), SLOT(fuzpid_thread_handler()), Qt::DirectConnection);
     QObject::connect(thread_1, SIGNAL(started()), thread_timer, SLOT(start()));
@@ -115,6 +115,7 @@ void fuzzy_pid::read_parameters(void){
     static u32 read = 0;
     static QTime pace_timer;
     static QTime displacement_timer;
+    float tmc_pace_rate;
     u32 fcrc;
     u8 crc_low,crc_high;
     float calibrated[4];
@@ -130,10 +131,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),51);
+        fcrc = crc_chk((u8*)data_array.data(),55);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[51])&&(crc_low == (u8)data_array[52])){
+        if((crc_high == (u8)data_array[55])&&(crc_low == (u8)data_array[56])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -152,10 +153,16 @@ void fuzzy_pid::read_parameters(void){
                 char_to_f.s8_val[2] = (u8)data_array[4*i + 36];
                 char_to_f.s8_val[3] = (u8)data_array[4*i + 37];
                 calibrated[i] = char_to_f.float_val;
-                qDebug() << "cal : " << calibrated[i];
+                //qDebug() << "cal : " << calibrated[i];
             }
+            char_to_f.u8_val[0] = (u8)data_array[51];
+            char_to_f.u8_val[1] = (u8)data_array[52];
+            char_to_f.u8_val[2] = (u8)data_array[53];
+            char_to_f.u8_val[3] = (u8)data_array[54];
+            tmc_pace_rate = char_to_f.float_val;
 
             //qDebug() << "usart_debugger" << (u8)data_array[50];
+            qDebug() << "TMC Pace Rate" << tmc_pace_rate << "PC Pace Rate" << usart_pace_rate;
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;
@@ -248,14 +255,12 @@ void fuzzy_pid::read_parameters(void){
 #ifdef MATLAB_RECORDINGS
             if(counter == 0){
                 log << "counter" << "," << "usart_pace_rate" << "," << "current_pace_rate" << ","
-                    << "unfiltered_load" << "," << "load_value" << "," << "value[0]" << ","
-                    << "encoder" << "," << "value[4]" << ","
-                    << "value[1]" << "," << "value[2]" << "," << "value[3]" << "\n";
+                    << "unfiltered_load" << "," << "load_value" << "," << "TMC_LOAD" << ","
+                    << "TMC Pace Rate" << "\n";
             }
             log << counter++ << "," << usart_pace_rate << "," << current_pace_rate << ","
-                << unfiltered_load << "," << load_value << "," << value[0] << ","
-                << encoder << "," << value[4] << ","
-                << value[1] << "," << value[2] << "," << value[3] << "\n";
+                << unfiltered_load << "," << load_value << "," << calibrated[0] << ","
+                << tmc_pace_rate << "\n";
 #endif
 
             if(hard_stop){
