@@ -47,6 +47,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     step_motor_in_test = 0;
     LS_up_error = 0;
     LS_down_error = 0;
+    TMC_command = TMC_STOP;
 
     bessel_filter_coeffs();
 }
@@ -143,7 +144,7 @@ void fuzzy_pid::read_parameters(void){
                 char_to_f.s8_val[2] = (u8)data_array[5*i + 5];
                 char_to_f.s8_val[3] = (u8)data_array[5*i + 6];
                 to_gui.gain[i] = (u8)data_array[5*i + 7];
-                to_gui.signed_raw[i] = char_to_f.int_val/(s32)RAW_DATA_DIVIDER;
+                to_gui.signed_raw[i] = char_to_f.s32_val/(s32)RAW_DATA_DIVIDER;
             }
             step_abs_position = 65536* (u8)data_array[31] + 256* (u8)data_array[32] + (u8)data_array[33];
 
@@ -161,8 +162,8 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[3] = (u8)data_array[54];
             tmc_pace_rate = char_to_f.float_val;
 
-            //qDebug() << "usart_debugger" << (u8)data_array[50];
-            qDebug() << "TMC Pace Rate" << tmc_pace_rate << "PC Pace Rate" << usart_pace_rate;
+            qDebug() << "usart_debugger" << (u8)data_array[50];
+            //qDebug() << "TMC Pace Rate" << tmc_pace_rate << "PC Pace Rate" << usart_pace_rate;
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;

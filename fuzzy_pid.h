@@ -11,13 +11,6 @@
 #include <qextserialport.h>
 #include "macros.h"
 
-
-#define STEPPER_COMMAND_RUN_DOWN    1
-#define STEPPER_COMMAND_RUN_UP      2
-#define STEPPER_COMMAND_STOP        3
-#define STEPPER_COMMAND_POS_RESET   4
-#define STEPPER_COMMAND_GO_POS      5
-
 namespace Ui {
     class fuzzy_pid;
 }
@@ -68,6 +61,7 @@ public:
     u32 step_abs_position;
     bool LS_up_error;
     bool LS_down_error;
+    u8 TMC_command;
 
     struct _cal{
         double slope[7];
@@ -112,6 +106,8 @@ signals:
     void cbr_process(double l_val, double d_val);
 
 public slots:
+    void TMC_operation(void);
+
     void read_parameters(void);
     double IIR_Filter(double* raw_signal,u8 filter_coefficient);
     double classic_MA(double *raw_signal,u8 filter_coefficient);
@@ -149,10 +145,10 @@ private:
         float float_val;
         u8 u8_val[4];
         s8 s8_val[4];
-        s32 int_val;
+        s32 s32_val;
+        u32 u32_val;
     };
     union _char_to_f char_to_f;
-
 
 private slots:
     u8 read_data_order(QByteArray base_array,const char *array, u8 first_index, u8 last_index);

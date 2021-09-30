@@ -6,7 +6,7 @@ typedef unsigned char u8;
 typedef unsigned int u32;
 typedef signed int s32;
 
-#define MATLAB_RECORDINGS
+//#define MATLAB_RECORDINGS
 
 #define RAW_DATA_DIVIDER        32
 
@@ -87,5 +87,14 @@ typedef signed int s32;
 
 #define UP          0
 #define DOWN        1
+
+#define STEPPER_COMMAND_RUN_DOWN    1
+#define STEPPER_COMMAND_RUN_UP      2
+#define STEPPER_COMMAND_STOP        3
+#define STEPPER_COMMAND_POS_RESET   4
+#define STEPPER_COMMAND_GO_POS      5
+
+#define TMC_STOP    0
+#define TMC_RUN     1
 
 #endif // MACROS_H

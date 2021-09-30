@@ -10,7 +10,7 @@ void fuzzy_pid::EOL(char *base_array, u8 i){
 }
 void fuzzy_pid::always_send(void){
     QByteArray data;
-    data.resize(14);
+    data.resize(15);
 
     send_data_order(data.data(),"CONV",0,3);
     data[4] = relay_auto_man;
@@ -31,7 +31,9 @@ void fuzzy_pid::always_send(void){
         data[11] = ((dcMotorPc->ui.spinBox_step_motor_speed->value()) % 256);
     }
 
-    EOL(data.data(),12);
+    data[12] = TMC_command;
+
+    EOL(data.data(),13);
 
     pSerial->write(data);
 }
@@ -95,7 +97,7 @@ void fuzzy_pid::send_all_parameters(void){
         QTimer::singleShot(150,this,SLOT(send_all_parameters()));
         tmp++;
         send_data_order(data.data(),"PRMT",0,3);
-        char_to_f.float_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
+        char_to_f.u32_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
         data[4] = char_to_f.u8_val[0];
         data[5] = char_to_f.u8_val[1];
         data[6] = char_to_f.u8_val[2];

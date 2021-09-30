@@ -313,7 +313,7 @@ private:
     void main_screen_arrangements(void);
 
 public slots:
-    double speed_correction(double val);
+    u32 speed_correction(double val);
     void step_response_handle(void);
     void motor_stop(void);
     void return_home(void);

@@ -51,7 +51,7 @@ void fuzzy_pid::send_calibration(u8 ch){
     data[8] = cal[no].point_no;
 
     for (i = 0; i < 8; i++){
-        char_to_f.int_val = cal[no].real_val[i] * RAW_DATA_DIVIDER;
+        char_to_f.s32_val = cal[no].real_val[i] * RAW_DATA_DIVIDER;
 
         data[9 + 4*i] = char_to_f.u8_val[0];
         data[10 + 4*i] = char_to_f.u8_val[1];

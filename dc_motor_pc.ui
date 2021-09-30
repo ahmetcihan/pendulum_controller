@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <property name="iconSize">
      <size>
@@ -1124,6 +1124,19 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_TMC">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>410</y>
+        <width>84</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>START</string>
       </property>
      </widget>
     </widget>

@@ -26,7 +26,10 @@ void fuzzy_pid::step_pos_reset(void){
 void fuzzy_pid::step_go_pos(void){
     step_motor_command = STEPPER_COMMAND_GO_POS;
 }
-double DC_Motor_PC::speed_correction(double val){
+u32 DC_Motor_PC::speed_correction(double val){
     step_motor_speed = ((double) ui.doubleSpinBox_motor_rpm->value() * val)/ (double) ui.doubleSpinBox_displ_speed->value();
     return step_motor_speed;
+}
+void fuzzy_pid::TMC_operation(void){
+    TMC_command = TMC_RUN;
 }
