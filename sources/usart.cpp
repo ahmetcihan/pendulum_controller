@@ -232,6 +232,11 @@ void fuzzy_pid::send_gains_and_polarities(void){
         tmp++;
         break;
     case 14:
+        QTimer::singleShot(150,this,SLOT(send_gains_and_polarities()));
+        send_all_parameters();
+        tmp++;
+        break;
+    case 15:
         tmp = 0;
         command_silencer = false;
         break;

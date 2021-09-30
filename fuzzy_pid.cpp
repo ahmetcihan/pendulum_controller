@@ -108,7 +108,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(53);
+    data_array.resize(65);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -116,14 +116,17 @@ void fuzzy_pid::read_parameters(void){
     static u32 read = 0;
     static QTime pace_timer;
     static QTime displacement_timer;
-    float tmc_pace_rate;
-    u32 fcrc;
-    u8 crc_low,crc_high;
-    float calibrated[4];
     static u8 opening_stabilization_counter = 10;
     static float old_load = 0;
     static double old_displacement = 0;
     static bool plot_graphics = false;
+    float tmc_pace_rate;
+    u32 fcrc;
+    u8 crc_low,crc_high;
+    float calibrated[4];
+    u8 usart_debugger_u8;
+    u32 usart_debugger_u32;
+    float usart_debugger_float;
 
 #ifdef MATLAB_RECORDINGS
     static u32 counter = 0;
@@ -132,10 +135,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),55);
+        fcrc = crc_chk((u8*)data_array.data(),63);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[55])&&(crc_low == (u8)data_array[56])){
+        if((crc_high == (u8)data_array[63])&&(crc_low == (u8)data_array[64])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -162,7 +165,21 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[3] = (u8)data_array[54];
             tmc_pace_rate = char_to_f.float_val;
 
-            qDebug() << "usart_debugger" << (u8)data_array[50];
+            usart_debugger_u8 = (u8)data_array[50];
+
+            char_to_f.u8_val[0] = (u8)data_array[55];
+            char_to_f.u8_val[1] = (u8)data_array[56];
+            char_to_f.u8_val[2] = (u8)data_array[57];
+            char_to_f.u8_val[3] = (u8)data_array[58];
+            usart_debugger_u32 = char_to_f.u32_val;
+
+            char_to_f.u8_val[0] = (u8)data_array[59];
+            char_to_f.u8_val[1] = (u8)data_array[60];
+            char_to_f.u8_val[2] = (u8)data_array[61];
+            char_to_f.u8_val[3] = (u8)data_array[62];
+            usart_debugger_float = char_to_f.float_val;
+
+            qDebug() << "d_u8" << usart_debugger_u8 << "d_u32" << usart_debugger_u32 << "d_float" << usart_debugger_float;
             //qDebug() << "TMC Pace Rate" << tmc_pace_rate << "PC Pace Rate" << usart_pace_rate;
 
             if(opening_stabilization_counter > 0){
@@ -273,6 +290,13 @@ void fuzzy_pid::read_parameters(void){
             if(from_gui.test_type == CBR){
                 if(run_cbr == true){
                     emit cbr_process(load_value,displacement_value);
+                }
+            }
+
+            if(plot_graphics == false){
+                if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
+                    plot_graphics = true;
+                    dcMotorPc->load_graphic_timer->start();
                 }
             }
 
