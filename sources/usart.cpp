@@ -85,7 +85,7 @@ void DC_Motor_PC::command_sending_protection(void){
 void fuzzy_pid::send_all_parameters(void){
     static u8 tmp = 0;
     QByteArray data;
-    data.resize(23);
+    data.resize(32);
 
     switch(tmp){
     case 0:
@@ -123,7 +123,21 @@ void fuzzy_pid::send_all_parameters(void){
 
         data[20] = dcMotorPc->ui.spinBox_break_percentage->value();
 
-        EOL(data.data(),21);
+        char_to_f.u32_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_step_first_speed->value());
+        data[21] = char_to_f.u8_val[0];
+        data[22] = char_to_f.u8_val[1];
+        data[23] = char_to_f.u8_val[2];
+        data[24] = char_to_f.u8_val[3];
+
+        char_to_f.u32_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_step_second_speed->value());
+        data[25] = char_to_f.u8_val[0];
+        data[26] = char_to_f.u8_val[1];
+        data[27] = char_to_f.u8_val[2];
+        data[28] = char_to_f.u8_val[3];
+
+        data[29] = dcMotorPc->ui.spinBox_step_transition_time->value();
+
+        EOL(data.data(),30);
 
         pSerial->write(data);
         break;
@@ -132,8 +146,6 @@ void fuzzy_pid::send_all_parameters(void){
         command_silencer = false;
         break;
     }
-
-
 
 #ifdef CONFIG_x86
     qDebug(__FUNCTION__);

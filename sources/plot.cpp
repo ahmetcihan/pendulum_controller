@@ -205,7 +205,7 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
     }
     else{
         cycle++;
-        if(cycle == 11){
+        if(cycle == 33){
             if(test_type == LOAD_CONTROL){
                 if(h_axis_radiobutton_no == H_AXIS_TIME){
                     if(v_axis_radiobutton_no != V_AXIS_DISPLACEMENT){

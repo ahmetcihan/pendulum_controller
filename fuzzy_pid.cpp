@@ -11,7 +11,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
 
     QThread* thread_1 = new QThread(this);
     thread_timer = new QTimer(0); //parent must be null
-    thread_timer->setInterval(5);
+    thread_timer->setInterval(8);
     thread_timer->moveToThread(thread_1);
     connect(thread_timer, SIGNAL(timeout()), SLOT(fuzpid_thread_handler()), Qt::DirectConnection);
     QObject::connect(thread_1, SIGNAL(started()), thread_timer, SLOT(start()));
@@ -108,7 +108,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(65);
+    data_array.resize(73);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -126,7 +126,7 @@ void fuzzy_pid::read_parameters(void){
     float calibrated[4];
     u8 usart_debugger_u8;
     u32 usart_debugger_u32;
-    float usart_debugger_float;
+    float usart_debugger_float[3];
 
 #ifdef MATLAB_RECORDINGS
     static u32 counter = 0;
@@ -135,10 +135,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),63);
+        fcrc = crc_chk((u8*)data_array.data(),71);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[63])&&(crc_low == (u8)data_array[64])){
+        if((crc_high == (u8)data_array[71])&&(crc_low == (u8)data_array[72])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -177,9 +177,20 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[1] = (u8)data_array[60];
             char_to_f.u8_val[2] = (u8)data_array[61];
             char_to_f.u8_val[3] = (u8)data_array[62];
-            usart_debugger_float = char_to_f.float_val;
+            usart_debugger_float[0] = char_to_f.float_val;
+            char_to_f.u8_val[0] = (u8)data_array[63];
+            char_to_f.u8_val[1] = (u8)data_array[64];
+            char_to_f.u8_val[2] = (u8)data_array[65];
+            char_to_f.u8_val[3] = (u8)data_array[66];
+            usart_debugger_float[1] = char_to_f.float_val;
+            char_to_f.u8_val[0] = (u8)data_array[67];
+            char_to_f.u8_val[1] = (u8)data_array[68];
+            char_to_f.u8_val[2] = (u8)data_array[69];
+            char_to_f.u8_val[3] = (u8)data_array[70];
+            usart_debugger_float[2] = char_to_f.float_val;
 
-            qDebug() << "d_u8" << usart_debugger_u8 << "d_u32" << usart_debugger_u32 << "d_float" << usart_debugger_float;
+            qDebug() << "d_u8" << usart_debugger_u8 << "d_u32" << usart_debugger_u32 << "d_float_0" << usart_debugger_float[0]
+                        << "d_float_1" << usart_debugger_float[1] << "d_float_2" << usart_debugger_float[2];
             //qDebug() << "TMC Pace Rate" << tmc_pace_rate << "PC Pace Rate" << usart_pace_rate;
 
             if(opening_stabilization_counter > 0){
@@ -296,6 +307,7 @@ void fuzzy_pid::read_parameters(void){
             if(plot_graphics == false){
                 if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
                     plot_graphics = true;
+                    dcMotorPc->PLOT_first_in = true;
                     dcMotorPc->load_graphic_timer->start();
                 }
             }

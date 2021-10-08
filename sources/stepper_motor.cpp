@@ -33,3 +33,6 @@ u32 DC_Motor_PC::speed_correction(double val){
 void fuzzy_pid::TMC_operation(void){
     TMC_command = TMC_RUN;
 }
+void fuzzy_pid::TMC_autotuning(void){
+    TMC_command = TMC_AUTOTUNING;
+}
