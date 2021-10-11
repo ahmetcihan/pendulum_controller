@@ -505,7 +505,7 @@ void DC_Motor_PC::clean_storage_confirmation(){
 void DC_Motor_PC::write_calibration(void){
     QSettings calibration("test_results/calibration.ini",QSettings::IniFormat);
 
-    for(u8 j = 0; j < 7; j++){
+    for(u8 j = 0; j < 6; j++){
         calibration.beginGroup(calibration_channel_names[j]);
         calibration.setValue(QStringLiteral("Points"),fuzpid->cal[j].point_no);
         for(u8 i = 0; i < 8; i++){
@@ -521,14 +521,11 @@ void DC_Motor_PC::write_calibration(void){
 void DC_Motor_PC::read_calibration(void){
     QSettings calibration("test_results/calibration.ini",QSettings::IniFormat);
 
-    for(u8 j = 0; j < 7; j++){
+    for(u8 j = 0; j < 6; j++){
         fuzpid->cal[j].point_no = calibration.value(calibration_channel_names[j] + QStringLiteral("/Points")).toInt();
         for(u8 i = 0; i < 8; i++){
             fuzpid->cal[j].real_val[i] = calibration.value(calibration_channel_names[j] + QStringLiteral("/Raw_%1").arg(i)).toDouble();
             fuzpid->cal[j].assigned_val[i] = calibration.value(calibration_channel_names[j] + QStringLiteral("/Value_%1").arg(i)).toDouble();
         }
-    }
-    for(u8 j = 0; j < 7; j++){
-        fuzpid->slope_calculation(j);
     }
 }

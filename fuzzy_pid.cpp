@@ -159,6 +159,7 @@ void fuzzy_pid::read_parameters(void){
                 calibrated[i] = char_to_f.float_val;
                 //qDebug() << "cal : " << calibrated[i];
             }
+
             char_to_f.u8_val[0] = (u8)data_array[51];
             char_to_f.u8_val[1] = (u8)data_array[52];
             char_to_f.u8_val[2] = (u8)data_array[53];
@@ -198,31 +199,13 @@ void fuzzy_pid::read_parameters(void){
                 return;
             }
 
-            switch(dcMotorPc->load_calibration_channel){
-            case LOAD_1:
-                load_value          = evaluate_calibrated_values_ascending(0);  //load
-                break;
-            case LOAD_2:
-                load_value          = evaluate_calibrated_values_ascending(1);  //load
-                break;
-            case LOAD_3:
-                load_value          = evaluate_calibrated_values_ascending(2);  //load
-                break;
-            }
+            load_value = calibrated[0];
 
             double unfiltered_load = load_value;
-            double unfiltered_displacement;
+            double unfiltered_displacement = calibrated[1];
 
-            if(from_gui.test_type == MARSHALL){
-                //unfiltered_displacement  = -evaluate_calibrated_values_ascending(3);  //ch2
-                unfiltered_displacement  = evaluate_calibrated_values_ascending(3);  //ch2
-            }
-            else{
-                unfiltered_displacement  = evaluate_calibrated_values_ascending(3);  //ch2
-            }
-            ch3_value           = evaluate_calibrated_values_ascending(4);  //ch3
-            ch4_value           = evaluate_calibrated_values_ascending(5);  //ch4
-            encoder             = evaluate_calibrated_values_ascending(6);  //displ
+            ch3_value           = calibrated[2];
+            ch4_value           = calibrated[3];
 
             load_value = EMA(&unfiltered_load,8);
             displacement_value = EMA_displacement(&unfiltered_displacement,32);

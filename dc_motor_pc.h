@@ -43,13 +43,12 @@
 #include <QSpacerItem>
 #include <QGridLayout>
 
-const QString calibration_channel_names[7] = {"LOAD_1",
+const QString calibration_channel_names[6] = {"LOAD_1",
                                             "LOAD_2",
                                             "LOAD_3",
                                             "DISPLACEMENT",
                                             "CHANNEL_3",
-                                            "CHANNEL_4",
-                                            "ENCODER"
+                                            "CHANNEL_4"
                                              };
 
 

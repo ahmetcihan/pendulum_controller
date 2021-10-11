@@ -423,7 +423,7 @@ void DC_Motor_PC::ethernet_periodic_sending(void){
     dataStream->addData(fuzpid->displacement_value, 22);
     dataStream->addData(fuzpid->ch3_value, 26);
     dataStream->addData(fuzpid->ch4_value, 30);
-    dataStream->addData(fuzpid->encoder, 34);
+    dataStream->addData(0, 34);
 
     if (rcon->isStreamEnabled())
         rcon->send(dataStream->getData(), dataStream->getDataLen());

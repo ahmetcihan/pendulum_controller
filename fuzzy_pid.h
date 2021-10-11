@@ -34,7 +34,6 @@ public:
     float displacement_value;
     float ch3_value;
     float ch4_value;
-    float encoder;
     float stress;
     float max_load_value;
     float peak_load;
@@ -72,7 +71,7 @@ public:
         u8 point_no;
         char type;
     };
-    _cal cal[7];
+    _cal cal[6];
 
     struct _from_gui{
         u8 current_tab_index;
@@ -88,9 +87,9 @@ public:
     _error error;
 
     struct _to_gui{
-        u8 ch_polarity[5];
-        u8 gain[5];
-        s32 signed_raw[5];
+        u8 ch_polarity[4];
+        u8 gain[4];
+        s32 signed_raw[4];
         bool test_finished;
         u8 input_status[4];
     };
@@ -126,8 +125,6 @@ public slots:
     void send_all_parameters(void);
     void tare_channel(u8 channel);
     void send_channel_polarity(u8 channel, u8 polar);
-    void slope_calculation(u8 no);
-    double evaluate_calibrated_values_ascending(u8 no);
 
     void step_run_up(void);
     void step_run_down(void);

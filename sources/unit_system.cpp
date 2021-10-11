@@ -19,26 +19,22 @@ void DC_Motor_PC::unit_system_calibration_handler(void){
         tmp++;
         break;
     case 2:
-        fuzpid->slope_calculation(0);
         ui.comboBox_channel_no->setCurrentIndex(1);
         QTimer::singleShot(100,this,SLOT(unit_system_calibration_handler()));
         tmp++;
         break;
     case 3:
         ui.comboBox_channel_no->setCurrentIndex(2);
-        fuzpid->slope_calculation(1);
         QTimer::singleShot(100,this,SLOT(unit_system_calibration_handler()));
         tmp++;
         break;
     case 4:
-        fuzpid->slope_calculation(2);
         ui.comboBox_channel_no->setCurrentIndex(3);
         QTimer::singleShot(100,this,SLOT(unit_system_calibration_handler()));
         tmp++;
         break;
     case 5:
         ui.comboBox_channel_no->setCurrentIndex(0);
-        fuzpid->slope_calculation(3);
         QTimer::singleShot(100,this,SLOT(unit_system_calibration_handler()));
         tmp++;
         break;
@@ -174,9 +170,6 @@ void DC_Motor_PC::unit_system_handler(void){
         break;
     case 5: //ch4
         ui.groupBox_cal_value->setTitle(trUtf8("VALUE (%1)").arg(ui.label_main_ch4_unit->text()));
-        break;
-    case 6: //encoder
-        ui.groupBox_cal_value->setTitle(trUtf8("VALUE (%1)").arg(unit_system.length_label));
         break;
     }
     //cbr

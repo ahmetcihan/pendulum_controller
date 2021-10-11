@@ -326,7 +326,6 @@ void DC_Motor_PC::init_CALIBRATIONs(void){
     ui.comboBox_channel_no->addItem(QStringLiteral("DISP"));
     ui.comboBox_channel_no->addItem(QStringLiteral("CH3"));
     ui.comboBox_channel_no->addItem(QStringLiteral("CH4"));
-    ui.comboBox_channel_no->addItem(QStringLiteral("ENC"));
     ui.comboBox_channel_no->setCurrentIndex(0);
     current_cal_channel = 0;
     connect(this->ui.comboBox_channel_no,SIGNAL(currentIndexChanged( const QString)),this,SLOT(cal_channel_change(const QString)));
@@ -456,7 +455,6 @@ void DC_Motor_PC::init_GUI(void){
     fuzpid->cal[3].tare_val = 0;
     fuzpid->cal[4].tare_val = 0;
     fuzpid->cal[5].tare_val = 0;
-    fuzpid->cal[6].tare_val = 0;
 
     switch (zoom_radiobutton_no) {
     case FIXED_AXES:

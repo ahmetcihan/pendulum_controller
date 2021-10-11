@@ -633,37 +633,30 @@ void DC_Motor_PC::update_gui(){
         ui.label_displacement->setText(QString::number(fuzpid->displacement_value,'f',dp.displacement));
     }
     if(current_tab_index == TAB_CALIBRATION){
-        double aux;
-        aux = fuzpid->evaluate_calibrated_values_ascending(current_cal_channel);
-
         switch (current_cal_channel) {  //TODO:assign calculated values
             case 0:
-                ui.label_calibrated->setText(QString::number(aux,'f',dp.load_1));
+                ui.label_calibrated->setText(QString::number(fuzpid->load_value,'f',dp.load_1));
                 current_channel_data = fuzpid->to_gui.signed_raw[0];
                 break;
             case 1:
-                ui.label_calibrated->setText(QString::number(aux,'f',dp.load_2));
+                ui.label_calibrated->setText(QString::number(fuzpid->load_value,'f',dp.load_2));
                 current_channel_data = fuzpid->to_gui.signed_raw[0];
                 break;
             case 2:
-                ui.label_calibrated->setText(QString::number(aux,'f',dp.load_3));
+                ui.label_calibrated->setText(QString::number(fuzpid->load_value,'f',dp.load_3));
                 current_channel_data = fuzpid->to_gui.signed_raw[0];
                 break;
             case 3:
-                ui.label_calibrated->setText(QString::number(aux,'f',dp.displacement));
+                ui.label_calibrated->setText(QString::number(fuzpid->displacement_value,'f',dp.displacement));
                 current_channel_data = fuzpid->to_gui.signed_raw[1];
                 break;
             case 4:
-                ui.label_calibrated->setText(QString::number(aux,'f',ch3.dp));
+                ui.label_calibrated->setText(QString::number(fuzpid->ch3_value,'f',ch3.dp));
                 current_channel_data = fuzpid->to_gui.signed_raw[2];
                 break;
             case 5:
-                ui.label_calibrated->setText(QString::number(aux,'f',ch4.dp));
+                ui.label_calibrated->setText(QString::number(fuzpid->ch4_value,'f',ch4.dp));
                 current_channel_data = fuzpid->to_gui.signed_raw[3];
-                break;
-            case 6:
-                ui.label_calibrated->setText(QString::number(aux,'f',3));
-                current_channel_data = fuzpid->to_gui.signed_raw[4];
                 break;
             default:
                 break;
