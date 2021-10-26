@@ -402,7 +402,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -425,7 +425,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>18</pointsize>
+         <pointsize>16</pointsize>
         </font>
        </property>
        <property name="text">
@@ -488,7 +488,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -511,7 +511,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>16</pointsize>
         </font>
        </property>
        <property name="text">
@@ -787,7 +787,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -810,7 +810,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>16</pointsize>
         </font>
        </property>
        <property name="text">
@@ -936,7 +936,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -959,7 +959,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>16</pointsize>
         </font>
        </property>
        <property name="text">
@@ -1040,7 +1040,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
+         <pointsize>16</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -1063,7 +1063,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>16</pointsize>
         </font>
        </property>
        <property name="text">

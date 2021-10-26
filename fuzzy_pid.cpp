@@ -125,7 +125,7 @@ void fuzzy_pid::read_parameters(void){
     u8 crc_low,crc_high;
     float calibrated[4];
     u8 usart_debugger_u8;
-    u32 usart_debugger_u32;
+    s32 usart_debugger_s32;
     float usart_debugger_float[3];
 
 #ifdef MATLAB_RECORDINGS
@@ -172,7 +172,7 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[1] = (u8)data_array[56];
             char_to_f.u8_val[2] = (u8)data_array[57];
             char_to_f.u8_val[3] = (u8)data_array[58];
-            usart_debugger_u32 = char_to_f.u32_val;
+            usart_debugger_s32 = char_to_f.s32_val;
 
             char_to_f.u8_val[0] = (u8)data_array[59];
             char_to_f.u8_val[1] = (u8)data_array[60];
@@ -193,8 +193,8 @@ void fuzzy_pid::read_parameters(void){
 //            qDebug() << "step_tmp :" << usart_debugger_u8 << "step_timer :" << usart_debugger_u32 << "average_last_step : " << usart_debugger_float[0]
 //                     << "meta_count" << usart_debugger_float[1] << "filtered_pace_rate" << usart_debugger_float[2] ;
 
-            qDebug() << "PID_delta_t :" << usart_debugger_u8 << "output :" << usart_debugger_u32 << "error : " << usart_debugger_float[0]
-                     << "filtered_pace_rate" << usart_debugger_float[1] << "parameters_pace_rate" << usart_debugger_float[2] ;
+            qDebug() << "PID_delta_t :" << usart_debugger_u8 << "output :" << usart_debugger_s32 << "error : " << usart_debugger_float[0]
+                     << "filtered_pace_rate" << usart_debugger_float[1] << "parameters.pace_rate" << usart_debugger_float[2] ;
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;
