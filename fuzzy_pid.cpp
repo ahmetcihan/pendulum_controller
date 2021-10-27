@@ -193,8 +193,8 @@ void fuzzy_pid::read_parameters(void){
 //            qDebug() << "step_tmp :" << usart_debugger_u8 << "step_timer :" << usart_debugger_u32 << "average_last_step : " << usart_debugger_float[0]
 //                     << "meta_count" << usart_debugger_float[1] << "filtered_pace_rate" << usart_debugger_float[2] ;
 
-            qDebug() << "PID_delta_t :" << usart_debugger_u8 << "output :" << usart_debugger_s32 << "error : " << usart_debugger_float[0]
-                     << "filtered_pace_rate" << usart_debugger_float[1] << "parameters.pace_rate" << usart_debugger_float[2] ;
+            qDebug() << "0 :" << usart_debugger_u8 << "0 :" << usart_debugger_s32 << "raw : " << usart_debugger_float[0]
+                     << "unfiltered pace" << usart_debugger_float[1] << "filtered pace" << usart_debugger_float[2] ;
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;
@@ -268,11 +268,10 @@ void fuzzy_pid::read_parameters(void){
 
 #ifdef MATLAB_RECORDINGS
             if(counter == 0){
-                log << "counter" << "," << "unfiltered pace" << "," << "filtered pace" << ","
-                    << "usart_pace_rate" << "," << "current_pace_rate"  << "\n";
+                log << "counter" << "," << "unfiltered" << "," << "bessel" << "," << "SMA" << "," << "alpha-beta"  << "\n";
             }
-            log << counter++ << "," << usart_debugger_float[0] << "," << usart_debugger_float[2] << ","
-                << usart_pace_rate << "," << current_pace_rate << "\n";
+            log << counter++ << "," << usart_debugger_s32 << "," << usart_debugger_float[0] << ","
+                << usart_debugger_float[1] << "," << usart_debugger_float[2] << "\n";
 #endif
 
             if(hard_stop){
