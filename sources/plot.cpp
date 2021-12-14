@@ -155,26 +155,21 @@ void DC_Motor_PC::plot_prepare_pace(QwtPlot *plot, QwtPlotCurve *cSin, QString s
     plot->setAxisTitle(plot->yLeft, str_y);
     plot->setAxisScale(plot->yLeft, 0, 1.0);
 
-    plot->setAutoFillBackground(false);
-    plot->setPalette(QPalette(QColor(165,193,228)));
-
-    plot->canvas()->setLineWidth(1);
-    plot->canvas()->setBorderRadius(15);
+    plot->canvas()->setLineWidth(0);
+    plot->canvas()->setBorderRadius(0);
     plot->canvas()->setFrameStyle( QFrame::Box | QFrame::Plain );
-    plot->setCanvasBackground(Qt::white);
+
+    QString eSheet("background: white;");
+    plot->canvas()->setStyleSheet(eSheet);
+
+    QString bSheet("background: rgb(0,206,209);");
+    plot->setStyleSheet(bSheet);
 
     // Insert new curves
     cSin->setRenderHint(QwtPlotItem::RenderAntialiased);
-    cSin->setPen(QPen(Qt::blue,3));
+    cSin->setPen(QPen(Qt::blue,2,Qt::SolidLine));
     cSin->attach(plot);
 
-    //  ...a horizontal line at y = 0...
-    QwtPlotMarker *mY_ch1 = new QwtPlotMarker();
-    mY_ch1->setLabel(QString::fromLatin1("y = 0"));
-    mY_ch1->setLabelAlignment(Qt::AlignRight|Qt::AlignTop);
-    mY_ch1->setLineStyle(QwtPlotMarker::HLine);
-    mY_ch1->setYValue(0.0);
-    mY_ch1->attach(plot);
 }
 void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *cCos, QwtPlotCurve *cTan, QwtPlotCurve *cCot,
         double value_x, double value_y,
