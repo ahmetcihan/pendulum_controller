@@ -61,9 +61,9 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
     init_PIXMAPs();
     init_GUI();
 
-    connect(fuzpid,SIGNAL(cohen_coon_kp(QString)),this->ui.label_step_resp_CC_KP,SLOT(setText(QString)));
-    connect(fuzpid,SIGNAL(cohen_coon_ki(QString)),this->ui.label_step_resp_CC_Ki,SLOT(setText(QString)));
-    connect(fuzpid,SIGNAL(cohen_coon_kd(QString)),this->ui.label_step_resp_CC_Kd,SLOT(setText(QString)));
+    connect(fuzpid,SIGNAL(cohen_coon_kp(QString)),this->ui.label_tmc_step_resp_KP,SLOT(setText(QString)));
+    connect(fuzpid,SIGNAL(cohen_coon_ki(QString)),this->ui.label_tmc_step_resp_Ki,SLOT(setText(QString)));
+    connect(fuzpid,SIGNAL(cohen_coon_kd(QString)),this->ui.label_tmc_step_resp_Kd,SLOT(setText(QString)));
     connect(fuzpid,SIGNAL(let_step_response()),this,SLOT(step_response_handle()));
 
     connect(fuzpid,SIGNAL(zero_suppression_exceeded_cbr()),this,SLOT(cbr_zero_suppression_exceeded()));

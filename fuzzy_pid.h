@@ -52,7 +52,6 @@ public:
     bool run_pid;
     bool run_cbr;
     bool hard_stop;
-    bool step_response_first_in;
     bool communication_established;
     bool PID_first_in;
     u8 step_motor_command;
@@ -61,6 +60,7 @@ public:
     bool LS_up_error;
     bool LS_down_error;
     u8 TMC_command;
+    u8 tmc_autotuning_in_operation;
 
     struct _cal{
         double slope[7];
@@ -153,7 +153,6 @@ private slots:
     u32 crc_chk(u8* data, u8 length);
 
     void EOL(char *base_array, u8 i);
-    void step_response(void);
 
 };
 

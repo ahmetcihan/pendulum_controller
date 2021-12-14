@@ -58,7 +58,8 @@ void DC_Motor_PC::init_RADIOBUTTONs(void){
 void DC_Motor_PC::init_PUSHBUTTONs(void){
     connect(ui.pushButton_autotuning,SIGNAL(clicked()),fuzpid,SLOT(TMC_autotuning()));
     connect(ui.pushButton_TMC,SIGNAL(clicked()),fuzpid,SLOT(TMC_operation()));
-    connect(ui.pushButton_write_parameters,SIGNAL(clicked()),fuzpid,SLOT(send_all_parameters()));
+    connect(ui.pushButton_memorize_parameters,SIGNAL(clicked()),fuzpid,SLOT(send_all_parameters()));
+    connect(ui.pushButton_memorize_parameters_2,SIGNAL(clicked()),fuzpid,SLOT(send_all_parameters()));
 
     connect(ui.pushButton_step_run_up,SIGNAL(clicked()),fuzpid,SLOT(step_run_up()));
     connect(ui.pushButton_step_run_down,SIGNAL(clicked()),fuzpid,SLOT(step_run_down()));

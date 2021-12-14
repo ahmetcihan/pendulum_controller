@@ -108,7 +108,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(73);
+    data_array.resize(74);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -117,6 +117,7 @@ void fuzzy_pid::read_parameters(void){
     static QTime pace_timer;
     static QTime displacement_timer;
     static u8 opening_stabilization_counter = 10;
+    static u8 tmc_autotuning_tmp = 0;
     static float old_load = 0;
     static double old_displacement = 0;
     static bool plot_graphics = false;
@@ -135,10 +136,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),71);
+        fcrc = crc_chk((u8*)data_array.data(),72);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[71])&&(crc_low == (u8)data_array[72])){
+        if((crc_high == (u8)data_array[72])&&(crc_low == (u8)data_array[73])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -195,6 +196,26 @@ void fuzzy_pid::read_parameters(void){
 
             qDebug() << "0 :" << usart_debugger_u8 << "0 :" << usart_debugger_s32 << "raw : " << usart_debugger_float[0]
                      << "unfiltered pace" << usart_debugger_float[1] << "filtered pace" << usart_debugger_float[2] ;
+
+            tmc_autotuning_in_operation = (u8)data_array[71];
+            qDebug() << "tmc_autotuning_in_operation" << tmc_autotuning_in_operation;
+
+            switch(tmc_autotuning_tmp){
+            case 0:
+                if(tmc_autotuning_in_operation == 1){
+                    tmc_autotuning_tmp = 1;
+                }
+                break;
+            case 1:
+                if(tmc_autotuning_in_operation == 0){
+                    tmc_autotuning_tmp = 0;
+                    emit cohen_coon_kp(QString::number(usart_debugger_float[0],'f',3));
+                    emit cohen_coon_ki(QString::number(usart_debugger_float[1],'f',3));
+                    emit cohen_coon_kd(QString::number(usart_debugger_float[2],'f',3));
+                    dcMotorPc->step_response_handle();
+                }
+                break;
+            }
 
             if(opening_stabilization_counter > 0){
                 opening_stabilization_counter--;
@@ -286,15 +307,14 @@ void fuzzy_pid::read_parameters(void){
                 }
             }
 
-            if(plot_graphics == false){
-                if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
-                    plot_graphics = true;
-                    dcMotorPc->PLOT_first_in = true;
-                    dcMotorPc->load_graphic_timer->start();
-                }
-            }
-
             if((test_status == TEST_RUNNING)||(test_status == TEST_PAUSED)){
+                if(plot_graphics == false){
+                    if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
+                        plot_graphics = true;
+                        dcMotorPc->PLOT_first_in = true;
+                        dcMotorPc->load_graphic_timer->start();
+                    }
+                }
                 if(dcMotorPc->step_response_status == false){
                     if(plot_graphics == false){
                         if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
@@ -352,7 +372,7 @@ void fuzzy_pid::read_parameters(void){
                     }
                 }
                 else{
-                    step_response();
+                    //step_response();
                 }
             }
             else{   // if test_status is STOPPED
