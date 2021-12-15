@@ -355,7 +355,8 @@ private slots:
     void JOG_operation(void);
     void create_backup_file(void);
     void load_backup_file(void);
-    void reset_plot(void);
+    void reset_plot_load(void);
+    void reset_plot_pace(void);
     void refresh_button_handler(void);
     void load_factory_settings(void);
     void read_test_results_from_file(void);

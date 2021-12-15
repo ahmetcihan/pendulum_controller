@@ -4,6 +4,7 @@ void DC_Motor_PC::step_response_handle(void){
     if(prevent_double_click()) return;
     if(step_response_status == false){
         step_response_status = true;
+        reset_plot_pace();
         ui.pushButton_step_response->setText(trUtf8("STOP AUTOTUNING"));
         //fuzpid->test_status = TEST_RUNNING;
         pace_graphic_timer->start();

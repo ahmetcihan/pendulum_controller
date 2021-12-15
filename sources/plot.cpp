@@ -6,7 +6,7 @@ void DC_Motor_PC::reset_zoom(void){
     plot_ch[0].zoomer->setZoomStack(plot_ch[0].zoomer->zoomStack(),0);
     zoom_out_button->hide();
 }
-void DC_Motor_PC::reset_plot(void){
+void DC_Motor_PC::reset_plot_load(void){
     static double ccos_y[2] = {0};
     static double ccos_x[2] = {0};
     static double ctan_y[2] = {0};
@@ -14,23 +14,26 @@ void DC_Motor_PC::reset_plot(void){
     static double ccot_y[2] = {0};
     static double ccot_x[2] = {0};
 
-    for(u8 i = 0; i < 2; i++){
-        ccos_x[i] = 0;
-        ccos_y[i] = 0;
-        ctan_x[i] = 0;
-        ctan_y[i] = 0;
-        ccot_x[i] = 0;
-        ccot_y[i] = 0;
-        plot_ch[i].max_value_x = 0;
-        plot_ch[i].min_value_x = 0xFFFFFF;
-        plot_ch[i].max_value_y = 0;
-        plot_ch[i].min_value_y = 0xFFFFFF;
-        plot_ch[i].counter = 0;
-        for(u32 j = 0; j < 1200; j++){
-            plot_ch[i].xval[j] = 0;
-            plot_ch[i].yval[j] = 0;
-        }
+    ccos_x[0] = 0;
+    ccos_y[0] = 0;
+
+    ctan_x[0] = 0;
+    ctan_y[0] = 0;
+
+    ccot_x[0] = 0;
+    ccot_y[0] = 0;
+
+    plot_ch[0].max_value_x = 0;
+    plot_ch[0].min_value_x = 0xFFFFFF;
+    plot_ch[0].max_value_y = 0;
+    plot_ch[0].min_value_y = 0xFFFFFF;
+    plot_ch[0].counter = 0;
+
+    for(u32 j = 0; j < 1200; j++){
+        plot_ch[0].xval[j] = 0;
+        plot_ch[0].yval[j] = 0;
     }
+
     plot_ch[0].cSin->setRawSamples(plot_ch[0].xval,plot_ch[0].yval,1200);
     plot_ch[0].cCos->setRawSamples(ccos_x,ccos_y,2);
     plot_ch[0].cTan->setRawSamples(ctan_x,ctan_y,2);
@@ -44,8 +47,24 @@ void DC_Motor_PC::reset_plot(void){
     marshall.y_axis_line->detach();
 
     plot_ch[0].plot->replot();
-
 }
+void DC_Motor_PC::reset_plot_pace(void){
+    plot_ch[1].max_value_x = 0;
+    plot_ch[1].min_value_x = 0xFFFFFF;
+    plot_ch[1].max_value_y = 0;
+    plot_ch[1].min_value_y = 0xFFFFFF;
+    plot_ch[1].counter = 0;
+
+    for(u32 j = 0; j < 1200; j++){
+        plot_ch[1].xval[j] = 0;
+        plot_ch[1].yval[j] = 0;
+    }
+
+    plot_ch[1].cSin->setRawSamples(plot_ch[1].xval,plot_ch[1].yval,1200);
+
+    plot_ch[1].plot->replot();
+}
+
 void DC_Motor_PC::set_plotter(void){
     plot_ch[0].plot = new QwtPlot(ui.widget_graphic);
     plot_ch[0].cSin = new QwtPlotCurve();

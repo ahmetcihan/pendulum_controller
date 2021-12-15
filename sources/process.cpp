@@ -260,7 +260,7 @@ void DC_Motor_PC::motor_go_test_direction(void){
                 ui.label_alert_status->setText(trUtf8("NO ALERT"));
             }
             if(running_after_pause == false){
-                reset_plot();
+                reset_plot_load();
                 marshall.latest_x = 0;
             }
             results.starting_date_time = QDate::currentDate().toString("dd.MM.yyyy") + " " + QTime::currentTime().toString();
