@@ -19,6 +19,7 @@ void fuzzy_pid::step_stop(void){
     step_motor_in_test = 0;
     dcMotorPc->step_motor_speed = 0;
     step_motor_command = STEPPER_COMMAND_STOP;
+    TMC_command = TMC_STOP;
 }
 void fuzzy_pid::step_pos_reset(void){
     step_motor_command = STEPPER_COMMAND_POS_RESET;

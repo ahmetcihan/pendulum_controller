@@ -316,6 +316,8 @@ void DC_Motor_PC::motor_go_test_direction(void){
         break;
     case 3:
         fuzpid->test_status  = TEST_RUNNING;
+        fuzpid->TMC_command = TMC_RUN;
+
         tmp = 0;
         if(running_after_pause == false){
             current_test_no++;
