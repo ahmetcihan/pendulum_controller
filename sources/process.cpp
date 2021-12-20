@@ -269,6 +269,11 @@ void DC_Motor_PC::motor_go_test_direction(void){
         }
         break;
     case 1:
+        fuzpid->send_all_parameters();
+        QTimer::singleShot(750,this,SLOT(motor_go_test_direction()));
+        tmp++;
+        break;
+    case 2:
         QTimer::singleShot(150,this,SLOT(motor_go_test_direction()));
         tmp++;
 
@@ -309,12 +314,12 @@ void DC_Motor_PC::motor_go_test_direction(void){
                                                     "border-width: 0px ;");
         fuzpid->step_motor_command = STEPPER_COMMAND_RUN_UP;
         break;
-    case 2:
+    case 3:
         QTimer::singleShot(150,this,SLOT(motor_go_test_direction()));
         speed_correction(ui.doubleSpinBox_test_start_speed->value());
         tmp++;
         break;
-    case 3:
+    case 4:
         fuzpid->test_status  = TEST_RUNNING;
         fuzpid->TMC_command = TMC_RUN;
 
