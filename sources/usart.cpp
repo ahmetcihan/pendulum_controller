@@ -85,7 +85,7 @@ void DC_Motor_PC::command_sending_protection(void){
 void fuzzy_pid::send_all_parameters(void){
     static u8 tmp = 0;
     QByteArray data;
-    data.resize(32);
+    data.resize(44);
 
     switch(tmp){
     case 0:
@@ -94,7 +94,7 @@ void fuzzy_pid::send_all_parameters(void){
         tmp++;
         break;
     case 1:
-        QTimer::singleShot(150,this,SLOT(send_all_parameters()));
+        QTimer::singleShot(300,this,SLOT(send_all_parameters()));
         tmp++;
         send_data_order(data.data(),"PRMT",0,3);
         char_to_f.u32_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
@@ -137,7 +137,23 @@ void fuzzy_pid::send_all_parameters(void){
 
         data[29] = dcMotorPc->ui.spinBox_step_transition_time->value();
 
-        EOL(data.data(),30);
+        char_to_f.float_val = dcMotorPc->pid[from_gui.test_type].Kp;
+        data[30] = char_to_f.u8_val[0];
+        data[31] = char_to_f.u8_val[1];
+        data[32] = char_to_f.u8_val[2];
+        data[33] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->pid[from_gui.test_type].Ki;
+        data[34] = char_to_f.u8_val[0];
+        data[35] = char_to_f.u8_val[1];
+        data[36] = char_to_f.u8_val[2];
+        data[37] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->pid[from_gui.test_type].Kd;
+        data[38] = char_to_f.u8_val[0];
+        data[39] = char_to_f.u8_val[1];
+        data[40] = char_to_f.u8_val[2];
+        data[41] = char_to_f.u8_val[3];
+
+        EOL(data.data(),42);
 
         pSerial->write(data);
         break;
