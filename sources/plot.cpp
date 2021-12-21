@@ -29,12 +29,12 @@ void DC_Motor_PC::reset_plot_load(void){
     plot_ch[0].min_value_y = 0xFFFFFF;
     plot_ch[0].counter = 0;
 
-    for(u32 j = 0; j < 1200; j++){
+    for(u32 j = 0; j < 4000; j++){
         plot_ch[0].xval[j] = 0;
         plot_ch[0].yval[j] = 0;
     }
 
-    plot_ch[0].cSin->setRawSamples(plot_ch[0].xval,plot_ch[0].yval,1200);
+    plot_ch[0].cSin->setRawSamples(plot_ch[0].xval,plot_ch[0].yval,4000);
     plot_ch[0].cCos->setRawSamples(ccos_x,ccos_y,2);
     plot_ch[0].cTan->setRawSamples(ctan_x,ctan_y,2);
     plot_ch[0].cCot->setRawSamples(ccot_x,ccot_y,2);
@@ -55,12 +55,12 @@ void DC_Motor_PC::reset_plot_pace(void){
     plot_ch[1].min_value_y = 0xFFFFFF;
     plot_ch[1].counter = 0;
 
-    for(u32 j = 0; j < 1200; j++){
+    for(u32 j = 0; j < 4000; j++){
         plot_ch[1].xval[j] = 0;
         plot_ch[1].yval[j] = 0;
     }
 
-    plot_ch[1].cSin->setRawSamples(plot_ch[1].xval,plot_ch[1].yval,1200);
+    plot_ch[1].cSin->setRawSamples(plot_ch[1].xval,plot_ch[1].yval,4000);
 
     plot_ch[1].plot->replot();
 }
@@ -81,7 +81,7 @@ void DC_Motor_PC::set_plotter(void){
         plot_ch[i].max_value_y = 0;
         plot_ch[i].min_value_y = 0xFFFFFF;
         plot_ch[i].counter = 0;
-        for(u32 j = 0; j < 1200; j++){
+        for(u32 j = 0; j < 4000; j++){
             plot_ch[i].xval[j] = 0;
             plot_ch[i].yval[j] = 0;
         }
@@ -320,7 +320,7 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
         }
 
         plot->replot();
-        if((*counter) < 1998){
+        if((*counter) < 3998){
             (*counter) = 1 + *counter;
         }
         if(test_type == MARSHALL){

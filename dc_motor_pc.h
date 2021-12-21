@@ -117,8 +117,8 @@ public:
         double min_value_x;
         double max_value_y;
         double min_value_y;
-        double xval[2000];
-        double yval[2000];
+        double xval[4004];
+        double yval[4004];
         u32 counter;
     };
     chan plot_ch[2];
