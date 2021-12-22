@@ -402,10 +402,10 @@ void DC_Motor_PC::draw_pace_graphic(void){
     float pace = 0;
 
     if(test_type == LOAD_CONTROL){
-        pace = fuzpid->current_pace_rate;
+        pace = fuzpid->tmc_pace_rate;
     }
     else{
-        pace = fuzpid->current_displacement_rate;
+        pace = fuzpid->tmc_displacement_rate;
     }
 
     pace_plotter(plot_ch[1].plot,plot_ch[1].cSin,

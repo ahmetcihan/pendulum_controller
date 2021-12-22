@@ -39,8 +39,6 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     run_cbr = false;
     relay_auto_man = RELAY_ON;
     relay_start_stop = RELAY_OFF;
-    current_pace_rate = 0;
-    current_displacement_rate = 0;
     PID_first_in = true;
     communication_established = false;
     step_abs_position = 0;
@@ -48,6 +46,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     LS_up_error = 0;
     LS_down_error = 0;
     TMC_command = TMC_STOP;
+    tmc_pace_rate = 0;
 
     bessel_filter_coeffs();
 }
@@ -114,14 +113,9 @@ void fuzzy_pid::read_parameters(void){
     static u32 missed = 0;
     static u32 unread = 0;
     static u32 read = 0;
-    static QTime pace_timer;
-    static QTime displacement_timer;
     static u8 opening_stabilization_counter = 10;
     static u8 tmc_autotuning_tmp = 0;
-    static float old_load = 0;
-    static double old_displacement = 0;
     static bool plot_graphics = false;
-    float tmc_pace_rate;
     u32 fcrc;
     u8 crc_low,crc_high;
     float calibrated[4];
@@ -223,30 +217,10 @@ void fuzzy_pid::read_parameters(void){
             }
 
             load_value = calibrated[0];
-
-            double unfiltered_load = load_value;
-            double unfiltered_displacement = calibrated[1];
-
+            displacement_value = calibrated[0];
             ch3_value           = calibrated[2];
             ch4_value           = calibrated[3];
 
-            load_value = EMA(&unfiltered_load,8);
-            displacement_value = EMA_displacement(&unfiltered_displacement,32);
-
-            if(from_gui.test_type == LOAD_CONTROL){
-                usart_pace_rate = ((double)1000 * (load_value - old_load)) / (double)pace_timer.elapsed();
-                pace_timer.restart();
-                old_load = load_value;
-                current_pace_rate = bessel_filter(usart_pace_rate);
-                current_displacement_rate = 0;
-            }
-            else{
-                usart_displacement_rate = (((double)60000 * (displacement_value - old_displacement)) / (double)displacement_timer.elapsed());
-                displacement_timer.restart();
-                old_displacement = displacement_value;
-                current_displacement_rate = bessel_filter(usart_displacement_rate);
-                current_pace_rate = 0;
-            }
             to_gui.input_status[0] = (u8)data_array[23] - 0x30;
             to_gui.input_status[1] = (u8)data_array[24] - 0x30;
             to_gui.input_status[2] = (u8)data_array[25] - 0x30;
@@ -363,7 +337,6 @@ void fuzzy_pid::read_parameters(void){
                                 dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
                             }
                             else{
-                                dcMotorPc->speed_correction(discrete_PID_dac());
                             }
                         }
                     }

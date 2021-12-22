@@ -569,18 +569,18 @@ void DC_Motor_PC::update_gui(){
         }
         switch (load_calibration_channel) {
         case LOAD_1:
-            ui.label_pid_load_pace->setText(trUtf8("Load : ") + QString::number(fuzpid->load_value,'f',dp.load_1) + trUtf8("\tPace : ") + QString::number(fuzpid->current_pace_rate,'f',3));
+            ui.label_pid_load_pace->setText(trUtf8("Load : ") + QString::number(fuzpid->load_value,'f',dp.load_1) + trUtf8("\tPace : ") + QString::number(fuzpid->tmc_pace_rate,'f',3));
             break;
         case LOAD_2:
-            ui.label_pid_load_pace->setText(trUtf8("Load : ") + QString::number(fuzpid->load_value,'f',dp.load_2) + trUtf8("\tPace : ") + QString::number(fuzpid->current_pace_rate,'f',3));
+            ui.label_pid_load_pace->setText(trUtf8("Load : ") + QString::number(fuzpid->load_value,'f',dp.load_2) + trUtf8("\tPace : ") + QString::number(fuzpid->tmc_pace_rate,'f',3));
             break;
         case LOAD_3:
-            ui.label_pid_load_pace->setText(trUtf8("Load : ") + QString::number(fuzpid->load_value,'f',dp.load_3) + trUtf8("\tPace : ") + QString::number(fuzpid->current_pace_rate,'f',3));
+            ui.label_pid_load_pace->setText(trUtf8("Load : ") + QString::number(fuzpid->load_value,'f',dp.load_3) + trUtf8("\tPace : ") + QString::number(fuzpid->tmc_pace_rate,'f',3));
             break;
         default:
             break;
         }
-        ui.label_pid_load_pace_2->setText(trUtf8("Displacement : ") + QString::number(fuzpid->displacement_value,'f',dp.displacement) + trUtf8("\tPace : ") + QString::number(fuzpid->current_displacement_rate,'f',3));
+        ui.label_pid_load_pace_2->setText(trUtf8("Displacement : ") + QString::number(fuzpid->displacement_value,'f',dp.displacement) + trUtf8("\tPace : ") + QString::number(fuzpid->tmc_displacement_rate,'f',3));
 
         if(fuzpid->to_gui.ch_polarity[0] == 0){
             ui.label_polarity_load->setText("0/+");

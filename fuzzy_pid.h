@@ -27,8 +27,6 @@ public:
     void send_data_order(char *base_array,const char *array, u8 first_index, u8 last_index);
 
     double ax[3], by[3];
-    double usart_pace_rate;
-    double usart_displacement_rate;
     double tared_val;
     float load_value;
     float displacement_value;
@@ -38,8 +36,9 @@ public:
     float max_load_value;
     float peak_load;
     float peak_stress;
-    float current_pace_rate;
-    float current_displacement_rate;
+    float tmc_pace_rate;
+    float tmc_displacement_rate;
+
     u8 ch_polarity[4];
     u8 gain[4];
     u8 breaking_case;
@@ -114,7 +113,6 @@ public slots:
     double WMA(double *raw_signal,u8 filter_coefficient);
     double EMA(double *raw_signal,u8 filter_coefficient);
     double EMA_displacement(double *raw_signal,u8 filter_coefficient);
-    double discrete_PID_dac(void);
     void always_send(void);
     void fuzpid_thread_handler(void);
     void bessel_filter_coeffs(void);
