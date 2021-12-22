@@ -11,7 +11,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
 
     QThread* thread_1 = new QThread(this);
     thread_timer = new QTimer(0); //parent must be null
-    thread_timer->setInterval(8);
+    thread_timer->setInterval(25);
     thread_timer->moveToThread(thread_1);
     connect(thread_timer, SIGNAL(timeout()), SLOT(fuzpid_thread_handler()), Qt::DirectConnection);
     QObject::connect(thread_1, SIGNAL(started()), thread_timer, SLOT(start()));
