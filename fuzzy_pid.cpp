@@ -290,13 +290,6 @@ void fuzzy_pid::read_parameters(void){
             }
 
             if((test_status == TEST_RUNNING)||(test_status == TEST_PAUSED)){
-                if(plot_graphics == false){
-                    if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
-                        plot_graphics = true;
-                        dcMotorPc->PLOT_first_in = true;
-                        dcMotorPc->load_graphic_timer->start();
-                    }
-                }
                 if(dcMotorPc->step_response_status == false){
                     if(plot_graphics == false){
                         if(load_value >= dcMotorPc->parameters[from_gui.test_type].zero_suppression){
