@@ -228,15 +228,10 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
                 }
             }
             caught_y = value_y;
-            caught_x = (double)(*counter)/5;
+            caught_x = value_x;
             first_load = caught_y - guideline_target*caught_x;
         }
-        if(h_axis_radiobutton_no == H_AXIS_TIME){
-            xval[(*counter)] = value_x/5;     //200 msec loop
-        }
-        else if(h_axis_radiobutton_no == H_AXIS_DISPLACEMENT){
-            xval[(*counter)] = value_x;
-        }
+        xval[(*counter)] = value_x;
         yval[(*counter)] = value_y;
 
         if(xval[(*counter)] > *max_value_x){
@@ -291,18 +286,18 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
                 // Top line
                 ccos_y[0] = first_load;
                 ccos_x[0] = 0;
-                ccos_y[1] = first_load + (guideline_target + guideline_target*0.01*ui.spinBox_guideline_spacing->value())*((double)(*counter)/5 + caught_x);
-                ccos_x[1] = ((double)(*counter)/5 + caught_x);
+                ccos_y[1] = first_load + (guideline_target + guideline_target*(0.01)*ui.spinBox_guideline_spacing->value())*(value_x + caught_x);
+                ccos_x[1] = (value_x + caught_x);
                 // Bottom line
                 ctan_y[0] = first_load;
                 ctan_x[0] = 0;
-                ctan_x[1] = ((double)(*counter)/5 + caught_x);
-                ctan_y[1] = first_load + (guideline_target - guideline_target*0.01*ui.spinBox_guideline_spacing->value())*((double)(*counter)/5 + caught_x);
+                ctan_y[1] = first_load + (guideline_target - guideline_target*(0.01)*ui.spinBox_guideline_spacing->value())*(value_x + caught_x);
+                ctan_x[1] = (value_x + caught_x);
                 //mid-line
                 ccot_y[0] = first_load;
                 ccot_x[0] = 0;
-                ccot_y[1] = first_load + guideline_target*((double)(*counter)/5 + caught_x);
-                ccot_x[1] = ((double)(*counter)/5 + caught_x);
+                ccot_y[1] = first_load + guideline_target*(value_x + caught_x);
+                ccot_x[1] = (value_x + caught_x);
             }
         }
         cSin->setRawSamples(xval,yval,(*counter));
@@ -326,6 +321,8 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
         if(test_type == MARSHALL){
             marshall.latest_x = *counter;
         }
+
+        qDebug() << "counter:" << (*counter) << "time:" << value_x;
     }
 
 }
@@ -385,7 +382,8 @@ void DC_Motor_PC::draw_load_graphic(void){
     }
 
     if(h_axis_radiobutton_no == H_AXIS_TIME){
-        horizontal_axis = (double)plot_ch[0].counter;
+        //horizontal_axis = (double)plot_ch[0].counter;
+        horizontal_axis = (double)fuzpid->tmc_plot_timer_1_msec/(double)1000;
     }
     else if(h_axis_radiobutton_no == H_AXIS_DISPLACEMENT){
         horizontal_axis = fuzpid->displacement_value;

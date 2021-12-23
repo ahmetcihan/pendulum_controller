@@ -47,6 +47,7 @@ fuzzy_pid::fuzzy_pid(DC_Motor_PC *master, QWidget *parent) :
     LS_down_error = 0;
     TMC_command = TMC_STOP;
     tmc_pace_rate = 0;
+    tmc_plot_timer_1_msec = 0;
 
     bessel_filter_coeffs();
 }
@@ -107,7 +108,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(74);
+    data_array.resize(78);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -130,10 +131,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),72);
+        fcrc = crc_chk((u8*)data_array.data(),76);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[72])&&(crc_low == (u8)data_array[73])){
+        if((crc_high == (u8)data_array[76])&&(crc_low == (u8)data_array[77])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -185,13 +186,20 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[3] = (u8)data_array[70];
             usart_debugger_float[2] = char_to_f.float_val;
 
+            tmc_autotuning_in_operation = (u8)data_array[71];
+
+            char_to_f.u8_val[0] = (u8)data_array[72];
+            char_to_f.u8_val[1] = (u8)data_array[73];
+            char_to_f.u8_val[2] = (u8)data_array[74];
+            char_to_f.u8_val[3] = (u8)data_array[75];
+            tmc_plot_timer_1_msec = char_to_f.u32_val;
+
 //            qDebug() << "step_tmp :" << usart_debugger_u8 << "step_timer :" << usart_debugger_u32 << "average_last_step : " << usart_debugger_float[0]
 //                     << "meta_count" << usart_debugger_float[1] << "filtered_pace_rate" << usart_debugger_float[2] ;
 
 //            qDebug() << "0 :" << usart_debugger_u8 << "0 :" << usart_debugger_s32 << "raw : " << usart_debugger_float[0]
 //                     << "unfiltered pace" << usart_debugger_float[1] << "filtered pace" << usart_debugger_float[2] ;
 
-            tmc_autotuning_in_operation = (u8)data_array[71];
 //            qDebug() << "tmc_autotuning_in_operation" << tmc_autotuning_in_operation;
 
             switch(tmc_autotuning_tmp){
@@ -216,8 +224,8 @@ void fuzzy_pid::read_parameters(void){
                 return;
             }
 
-            load_value = calibrated[0];
-            displacement_value = calibrated[0];
+            load_value          = calibrated[0];
+            displacement_value  = calibrated[1];
             ch3_value           = calibrated[2];
             ch4_value           = calibrated[3];
 

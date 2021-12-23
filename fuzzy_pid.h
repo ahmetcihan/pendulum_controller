@@ -38,6 +38,7 @@ public:
     float peak_stress;
     float tmc_pace_rate;
     float tmc_displacement_rate;
+    u32 tmc_plot_timer_1_msec;
 
     u8 ch_polarity[4];
     u8 gain[4];
