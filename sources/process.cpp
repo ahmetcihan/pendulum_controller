@@ -270,7 +270,7 @@ void DC_Motor_PC::motor_go_test_direction(void){
         break;
     case 1:
         fuzpid->send_all_parameters();
-        QTimer::singleShot(1500,this,SLOT(motor_go_test_direction()));
+        QTimer::singleShot(1000,this,SLOT(motor_go_test_direction()));
         tmp++;
         break;
     case 2:

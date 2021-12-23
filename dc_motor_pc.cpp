@@ -459,8 +459,8 @@ void DC_Motor_PC::test_finishing(){
     if(fuzpid->to_gui.test_finished){
         fuzpid->to_gui.test_finished = false;
 
-        //load_graphic_timer->stop();
-        QTimer::singleShot(500,this->load_graphic_timer,SLOT(stop()));
+        load_graphic_timer->stop();
+        //QTimer::singleShot(500,this->load_graphic_timer,SLOT(stop()));
         ui.pushButton_start_test->setEnabled(1);
         step_response_status = false;
         pace_graphic_timer->stop();
