@@ -303,9 +303,16 @@ void DC_Motor_PC::load_plotter(QwtPlot *plot, QwtPlotCurve *cSin, QwtPlotCurve *
         cSin->setRawSamples(xval,yval,(*counter));
         if(control_mode == AUTO){
             if(guideline_on){
-                cCos->setRawSamples(ccos_x,ccos_y,2);
-                cTan->setRawSamples(ctan_x,ctan_y,2);
-                cCot->setRawSamples(ccot_x,ccot_y,2);
+                if(blink == true){
+                    cCos->setRawSamples(ccos_x,ccos_y,2);
+                    cTan->setRawSamples(ctan_x,ctan_y,2);
+                    cCot->setRawSamples(ccot_x,ccot_y,2);
+                }
+                else{
+                    cCos->setRawSamples(0,0,0);
+                    cTan->setRawSamples(0,0,0);
+                    cCot->setRawSamples(0,0,0);
+                }
             }
             else{
                 cCos->setRawSamples(0,0,0);

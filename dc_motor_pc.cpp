@@ -116,7 +116,11 @@ DC_Motor_PC::DC_Motor_PC(QWidget *parent)
 
     connect(this->ui.horizontalSlider_step_motor_speed,SIGNAL(valueChanged(int)),this->ui.spinBox_step_motor_speed,SLOT(setValue(int)));
     connect(this->ui.spinBox_step_motor_speed,SIGNAL(valueChanged(int)),this->ui.horizontalSlider_step_motor_speed,SLOT(setValue(int)));
-
+    blink_op();
+}
+void DC_Motor_PC::blink_op(void){
+    QTimer::singleShot(500,this,SLOT(blink_op()));
+    blink = !blink;
 }
 void DC_Motor_PC::check_the_storage(void){
     QProcess p;

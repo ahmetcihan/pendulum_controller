@@ -283,6 +283,7 @@ public:
     u8 control_mode;
     u8 language_index;
     u32 step_motor_speed;
+    bool blink;
 
     bool do_not_change_focus;
     bool return_home_bit;
@@ -312,6 +313,7 @@ private:
     void main_screen_arrangements(void);
 
 public slots:
+    void blink_op(void);
     u32 speed_correction(double val);
     void step_response_handle(void);
     void motor_stop(void);
