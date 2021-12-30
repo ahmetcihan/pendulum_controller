@@ -234,29 +234,29 @@ void fuzzy_pid::read_parameters(void){
             to_gui.input_status[2] = (u8)data_array[25] - 0x30;
             to_gui.input_status[3] = (u8)data_array[26] - 0x30;
 
-            if(LS_down_error == 0){
-                if(to_gui.input_status[1] == 1){
-                    LS_down_error = 1;
-                    hard_stop = 1;
-                }
-            }
-            else{
-                if(to_gui.input_status[1] == 0){
-                    LS_down_error = 0;
-                }
-            }
+//            if(LS_down_error == 0){
+//                if(to_gui.input_status[1] == 1){
+//                    LS_down_error = 1;
+//                    hard_stop = 1;
+//                }
+//            }
+//            else{
+//                if(to_gui.input_status[1] == 0){
+//                    LS_down_error = 0;
+//                }
+//            }
 
-            if(LS_up_error == 0){
-                if(to_gui.input_status[0] == 1){
-                    LS_up_error = 1;
-                    hard_stop = 1;
-                }
-            }
-            else{
-                if(to_gui.input_status[0] == 0){
-                    LS_up_error = 0;
-                }
-            }
+//            if(LS_up_error == 0){
+//                if(to_gui.input_status[0] == 1){
+//                    LS_up_error = 1;
+//                    hard_stop = 1;
+//                }
+//            }
+//            else{
+//                if(to_gui.input_status[0] == 0){
+//                    LS_up_error = 0;
+//                }
+//            }
 
             to_gui.ch_polarity[0] = (u8)data_array[27] - 0x30;
             to_gui.ch_polarity[1] = (u8)data_array[28] - 0x30;
