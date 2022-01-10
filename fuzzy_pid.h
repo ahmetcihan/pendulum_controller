@@ -39,6 +39,9 @@ public:
     float tmc_pace_rate;
     float tmc_displacement_rate;
     u32 tmc_plot_timer_1_msec;
+    s32 encoder_value;
+    s32 z_count;
+
 
     u8 ch_polarity[4];
     u8 gain[4];

@@ -108,7 +108,7 @@ u32 fuzzy_pid::crc_chk(u8* data, u8 length) {
 }
 void fuzzy_pid::read_parameters(void){
     QByteArray data_array;
-    data_array.resize(78);
+    data_array.resize(86);
     data_array = pSerial->readAll();
 
     static u32 missed = 0;
@@ -131,10 +131,10 @@ void fuzzy_pid::read_parameters(void){
 #endif
 
     if(read_data_order(data_array,"ANS",0,2)){
-        fcrc = crc_chk((u8*)data_array.data(),76);
+        fcrc = crc_chk((u8*)data_array.data(),84);
         crc_high = (fcrc)%256;
         crc_low = (fcrc)/256;
-        if((crc_high == (u8)data_array[76])&&(crc_low == (u8)data_array[77])){
+        if((crc_high == (u8)data_array[84])&&(crc_low == (u8)data_array[85])){
             communication_established = true;
             read++;
             for (u8 i = 0; i < 4; i++){
@@ -193,6 +193,20 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[2] = (u8)data_array[74];
             char_to_f.u8_val[3] = (u8)data_array[75];
             tmc_plot_timer_1_msec = char_to_f.u32_val;
+
+            char_to_f.u8_val[0] = (u8)data_array[76];
+            char_to_f.u8_val[1] = (u8)data_array[77];
+            char_to_f.u8_val[2] = (u8)data_array[78];
+            char_to_f.u8_val[3] = (u8)data_array[79];
+            z_count = char_to_f.s32_val;
+
+            char_to_f.u8_val[0] = (u8)data_array[80];
+            char_to_f.u8_val[1] = (u8)data_array[81];
+            char_to_f.u8_val[2] = (u8)data_array[82];
+            char_to_f.u8_val[3] = (u8)data_array[83];
+            encoder_value = char_to_f.s32_val;
+
+            qDebug() << "encoder value : " << encoder_value << "z_count" << z_count;
 
 //            qDebug() << "step_tmp :" << usart_debugger_u8 << "step_timer :" << usart_debugger_u32 << "average_last_step : " << usart_debugger_float[0]
 //                     << "meta_count" << usart_debugger_float[1] << "filtered_pace_rate" << usart_debugger_float[2] ;
