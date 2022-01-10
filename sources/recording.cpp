@@ -159,6 +159,8 @@ void DC_Motor_PC::writeAppSettings(){
     settings.setValue(QStringLiteral("diameter_number"),marshall.diameter_number);
     settings.setValue(QStringLiteral("scb_notch"),ui.doubleSpinBox_specimen_scb_notch->value());
     settings.setValue(QStringLiteral("scb_thickness"),ui.doubleSpinBox_specimen_scb_thickness->value());
+    settings.setValue(QStringLiteral("headshake_speed"),ui.doubleSpinBox_headshake_speed->value());
+    settings.setValue(QStringLiteral("headshake_direction_timer"),ui.doubleSpinBox_headshake_direction_timer->value());
 
     for(u8 j = 0; j < 10; j++){
         settings.setValue(QStringLiteral("pid_kp_%1").arg(j),pid[j].Kp);
@@ -400,6 +402,9 @@ void DC_Motor_PC::readAppSettings(){
 
     ui.doubleSpinBox_specimen_scb_notch->setValue(settings.value(QStringLiteral("common/scb_notch")).toDouble());
     ui.doubleSpinBox_specimen_scb_thickness->setValue(settings.value(QStringLiteral("common/scb_thickness")).toDouble());
+
+    ui.doubleSpinBox_headshake_speed->setValue(settings.value(QStringLiteral("common/headshake_speed")).toDouble());
+    ui.doubleSpinBox_headshake_direction_timer->setValue(settings.value(QStringLiteral("common/headshake_direction_timer")).toDouble());
 
     for(u8 j = 0; j < 10; j++){
         pid[j].Kp = settings.value(QStringLiteral("common/pid_kp_%1").arg(j)).toDouble();
