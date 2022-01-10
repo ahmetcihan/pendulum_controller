@@ -94,8 +94,9 @@ typedef signed int s32;
 #define STEPPER_COMMAND_POS_RESET   4
 #define STEPPER_COMMAND_GO_POS      5
 
-#define TMC_STOP            0
-#define TMC_RUN             1
-#define TMC_AUTOTUNING      2
+#define TMC_STOP                0
+#define TMC_RUN                 1
+#define TMC_AUTOTUNING          2
+#define TMC_PENDULUM_HEADSHAKE  3
 
 #endif // MACROS_H

@@ -56,6 +56,10 @@ void DC_Motor_PC::init_RADIOBUTTONs(void){
     connect(this->ui.radioButton_protect_specimen_off,SIGNAL(clicked()),this,SLOT(specimen_protection_handler()));
 }
 void DC_Motor_PC::init_PUSHBUTTONs(void){
+    connect(ui.pushButton_send_pendulum_parameters,SIGNAL(clicked()),fuzpid,SLOT(send_all_parameters()));
+    connect(ui.pushButton_start_headshake,SIGNAL(clicked()),fuzpid,SLOT(TMC_headshake()));
+    connect(ui.pushButton_stop_2,SIGNAL(clicked()),fuzpid,SLOT(step_stop()));
+
     connect(ui.pushButton_autotuning,SIGNAL(clicked()),fuzpid,SLOT(TMC_autotuning()));
     connect(ui.pushButton_TMC,SIGNAL(clicked()),fuzpid,SLOT(TMC_operation()));
 

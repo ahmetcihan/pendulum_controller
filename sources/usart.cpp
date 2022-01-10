@@ -97,13 +97,14 @@ void fuzzy_pid::send_all_parameters(void){
         QTimer::singleShot(500,this,SLOT(send_all_parameters()));
         tmp++;
         send_data_order(data.data(),"PRMT",0,3);
-        char_to_f.u32_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_test_start_speed->value());
+
+        char_to_f.u32_val = dcMotorPc->ui.doubleSpinBox_headshake_speed->value();
         data[4] = char_to_f.u8_val[0];
         data[5] = char_to_f.u8_val[1];
         data[6] = char_to_f.u8_val[2];
         data[7] = char_to_f.u8_val[3];
 
-        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_load_threshold->value();
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_headshake_direction_timer->value();
         data[8] = char_to_f.u8_val[0];
         data[9] = char_to_f.u8_val[1];
         data[10] = char_to_f.u8_val[2];

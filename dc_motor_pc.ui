@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -462,16 +462,6 @@
       </property>
       <property name="autoRepeat">
        <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QWidget" name="widget_graphic" native="true">
-      <property name="geometry">
-       <rect>
-        <x>459</x>
-        <y>5</y>
-        <width>331</width>
-        <height>380</height>
-       </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_go_main_screen">
@@ -16011,6 +16001,21 @@ POSITION</string>
         <string>Auto</string>
        </property>
       </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QWidget" name="widget_graphic" native="true">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>331</width>
+        <height>380</height>
+       </rect>
+      </property>
      </widget>
     </widget>
    </widget>

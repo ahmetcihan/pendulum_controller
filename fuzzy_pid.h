@@ -110,6 +110,7 @@ signals:
 public slots:
     void TMC_operation(void);
     void TMC_autotuning(void);
+    void TMC_headshake(void);
 
     void read_parameters(void);
     double IIR_Filter(double* raw_signal,u8 filter_coefficient);

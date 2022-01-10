@@ -37,3 +37,6 @@ void fuzzy_pid::TMC_operation(void){
 void fuzzy_pid::TMC_autotuning(void){
     TMC_command = TMC_AUTOTUNING;
 }
+void fuzzy_pid::TMC_headshake(void){
+    TMC_command = TMC_PENDULUM_HEADSHAKE;
+}
