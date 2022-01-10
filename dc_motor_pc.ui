@@ -60,7 +60,7 @@
 </string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>7</number>
     </property>
     <property name="iconSize">
      <size>
@@ -356,486 +356,6 @@
      <attribute name="title">
       <string/>
      </attribute>
-     <widget class="QGroupBox" name="groupBox_main_load">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>73</y>
-        <width>240</width>
-        <height>65</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <italic>false</italic>
-        <bold>true</bold>
-        <underline>false</underline>
-        <strikeout>false</strikeout>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox{  margin-top: 0px;}
-</string>
-      </property>
-      <property name="title">
-       <string>LOAD</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-      </property>
-      <property name="flat">
-       <bool>false</bool>
-      </property>
-      <widget class="QLabel" name="label_main_load">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>101</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">--------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_load_unit">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>30</y>
-         <width>51</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">kN</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_tare_load">
-       <property name="geometry">
-        <rect>
-         <x>178</x>
-         <y>2</y>
-         <width>60</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>TARE</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_main_displacement">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>141</y>
-        <width>240</width>
-        <height>65</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox{  margin-top: 0px;}
-</string>
-      </property>
-      <property name="title">
-       <string>DISPLACEMENT</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-      </property>
-      <widget class="QLabel" name="label_main_displacement">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>101</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">--------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_displacement_unit">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>30</y>
-         <width>51</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">mm</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_tare_displacement">
-       <property name="geometry">
-        <rect>
-         <x>178</x>
-         <y>2</y>
-         <width>60</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>TARE</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_main_par_0">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>345</y>
-        <width>240</width>
-        <height>125</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QLabel" name="label_36">
-       <property name="geometry">
-        <rect>
-         <x>4</x>
-         <y>44</y>
-         <width>70</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>AREA :</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_area">
-       <property name="geometry">
-        <rect>
-         <x>75</x>
-         <y>44</y>
-         <width>105</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">-------------------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_area_unit">
-       <property name="geometry">
-        <rect>
-         <x>181</x>
-         <y>44</y>
-         <width>56</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>mm2</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_test_type_specimen">
-       <property name="geometry">
-        <rect>
-         <x>4</x>
-         <y>24</y>
-         <width>232</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>-------------------------------------------------------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_alert_status">
-       <property name="geometry">
-        <rect>
-         <x>4</x>
-         <y>4</y>
-         <width>232</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>MAX LOAD ERROR</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_test_no_main">
-       <property name="geometry">
-        <rect>
-         <x>4</x>
-         <y>64</y>
-         <width>105</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Test No : -- </string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_speed">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>64</y>
-         <width>127</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Pace : 13.5 kN/s</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_test_date_time_main">
-       <property name="geometry">
-        <rect>
-         <x>4</x>
-         <y>84</y>
-         <width>233</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">Date&amp;Time</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_test_status">
-       <property name="geometry">
-        <rect>
-         <x>4</x>
-         <y>104</y>
-         <width>185</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>TEST STATUS</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_auto_man">
-       <property name="geometry">
-        <rect>
-         <x>190</x>
-         <y>104</y>
-         <width>47</width>
-         <height>18</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Auto</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_main_ch3">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>209</y>
-        <width>240</width>
-        <height>65</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox{  margin-top: 0px;}
-</string>
-      </property>
-      <property name="title">
-       <string>CHANNEL 3</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-      </property>
-      <widget class="QLabel" name="label_main_ch3">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>101</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">--------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_ch3_unit">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>30</y>
-         <width>51</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">mm</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_tare_ch3">
-       <property name="geometry">
-        <rect>
-         <x>178</x>
-         <y>2</y>
-         <width>60</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>TARE</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="pushButton_stop_motor">
       <property name="geometry">
        <rect>
@@ -899,92 +419,6 @@
        <string/>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox_main_ch4">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>277</y>
-        <width>240</width>
-        <height>65</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox{  margin-top: 0px;}
-</string>
-      </property>
-      <property name="title">
-       <string>CHANNEL 4</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-      </property>
-      <widget class="QLabel" name="label_main_ch4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>101</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">--------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_ch4_unit">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>30</y>
-         <width>51</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">mm</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_tare_ch4">
-       <property name="geometry">
-        <rect>
-         <x>178</x>
-         <y>2</y>
-         <width>60</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>TARE</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="pushButton_refresh">
       <property name="geometry">
        <rect>
@@ -1002,74 +436,6 @@
       <property name="text">
        <string/>
       </property>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_stress">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>5</y>
-        <width>240</width>
-        <height>65</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>17</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QGroupBox{  margin-top: 0px;}
-</string>
-      </property>
-      <property name="title">
-       <string>STRESS</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-      </property>
-      <widget class="QLabel" name="label_main_stress">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>101</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">--------</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_main_stress_unit">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>30</y>
-         <width>70</width>
-         <height>30</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string notr="true">MPa</string>
-       </property>
-      </widget>
      </widget>
      <widget class="QPushButton" name="pushButton_jog">
       <property name="geometry">
@@ -15269,8 +14635,8 @@ from USB</string>
      <widget class="QPushButton" name="pushButton_start">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>100</y>
+        <x>80</x>
+        <y>410</y>
         <width>140</width>
         <height>55</height>
        </rect>
@@ -15287,8 +14653,8 @@ from USB</string>
      <widget class="QPushButton" name="pushButton_stop">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>160</y>
+        <x>390</x>
+        <y>420</y>
         <width>140</width>
         <height>55</height>
        </rect>
@@ -15488,8 +14854,8 @@ from USB</string>
      <widget class="QGroupBox" name="groupBox_main_par_marshall">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>30</y>
+        <x>270</x>
+        <y>20</y>
         <width>240</width>
         <height>201</height>
        </rect>
@@ -15631,7 +14997,7 @@ from USB</string>
        <rect>
         <x>20</x>
         <y>240</y>
-        <width>295</width>
+        <width>221</width>
         <height>165</height>
        </rect>
       </property>
@@ -15753,7 +15119,7 @@ from USB</string>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>260</x>
         <y>240</y>
         <width>211</width>
         <height>181</height>
@@ -15818,11 +15184,24 @@ POSITION</string>
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton_TMC">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>270</y>
+        <width>84</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PID START</string>
+      </property>
+     </widget>
      <widget class="QPushButton" name="pushButton_autotuning">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>270</y>
+        <x>480</x>
+        <y>300</y>
         <width>84</width>
         <height>28</height>
        </rect>
@@ -15831,18 +15210,639 @@ POSITION</string>
        <string>A.TUNING</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_TMC">
+     <widget class="QGroupBox" name="groupBox_main_ch4">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>310</y>
-        <width>84</width>
-        <height>28</height>
+        <x>550</x>
+        <y>272</y>
+        <width>240</width>
+        <height>65</height>
        </rect>
       </property>
-      <property name="text">
-       <string>PID START</string>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{  margin-top: 0px;}
+</string>
+      </property>
+      <property name="title">
+       <string>CHANNEL 4</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <widget class="QLabel" name="label_main_ch4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">--------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_ch4_unit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>51</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">mm</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_tare_ch4">
+       <property name="geometry">
+        <rect>
+         <x>178</x>
+         <y>2</y>
+         <width>60</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TARE</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_stress">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>0</y>
+        <width>240</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>17</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{  margin-top: 0px;}
+</string>
+      </property>
+      <property name="title">
+       <string>STRESS</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <widget class="QLabel" name="label_main_stress">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">--------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_stress_unit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>70</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">MPa</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_main_displacement">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>136</y>
+        <width>240</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{  margin-top: 0px;}
+</string>
+      </property>
+      <property name="title">
+       <string>DISPLACEMENT</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <widget class="QLabel" name="label_main_displacement">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">--------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_displacement_unit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>51</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">mm</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_tare_displacement">
+       <property name="geometry">
+        <rect>
+         <x>178</x>
+         <y>2</y>
+         <width>60</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TARE</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_main_ch3">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>204</y>
+        <width>240</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{  margin-top: 0px;}
+</string>
+      </property>
+      <property name="title">
+       <string>CHANNEL 3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <widget class="QLabel" name="label_main_ch3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">--------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_ch3_unit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>51</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">mm</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_tare_ch3">
+       <property name="geometry">
+        <rect>
+         <x>178</x>
+         <y>2</y>
+         <width>60</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TARE</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_main_load">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>68</y>
+        <width>240</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{  margin-top: 0px;}
+</string>
+      </property>
+      <property name="title">
+       <string>LOAD</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <widget class="QLabel" name="label_main_load">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>101</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">--------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_load_unit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>51</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">kN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_tare_load">
+       <property name="geometry">
+        <rect>
+         <x>178</x>
+         <y>2</y>
+         <width>60</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TARE</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_main_par_0">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>340</y>
+        <width>240</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>44</y>
+         <width>70</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>AREA :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_area">
+       <property name="geometry">
+        <rect>
+         <x>75</x>
+         <y>44</y>
+         <width>105</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">-------------------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_area_unit">
+       <property name="geometry">
+        <rect>
+         <x>181</x>
+         <y>44</y>
+         <width>56</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>mm2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_test_type_specimen">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>24</y>
+         <width>232</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>-------------------------------------------------------</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_alert_status">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>4</y>
+         <width>232</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>MAX LOAD ERROR</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_test_no_main">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>64</y>
+         <width>105</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Test No : -- </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_main_speed">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>64</y>
+         <width>127</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Pace : 13.5 kN/s</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_test_date_time_main">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>84</y>
+         <width>233</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">Date&amp;Time</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_test_status">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>104</y>
+         <width>185</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>TEST STATUS</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_auto_man">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>104</y>
+         <width>47</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Auto</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </widget>
