@@ -122,7 +122,7 @@ void fuzzy_pid::send_all_parameters(void){
         data[18] = char_to_f.u8_val[2];
         data[19] = char_to_f.u8_val[3];
 
-        data[20] = dcMotorPc->ui.spinBox_break_percentage->value();
+        data[20] = dcMotorPc->ui.doubleSpinBox_pendulum_tolerance->value();
 
         char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_speed_multiplier->value();
         data[21] = char_to_f.u8_val[0];
@@ -169,6 +169,38 @@ void fuzzy_pid::send_all_parameters(void){
 #endif
 
 }
+void fuzzy_pid::send_clear_encoder(void){
+    static u8 tmp = 0;
+    QByteArray data;
+    data.resize(9);
+
+    switch(tmp){
+    case 0:
+        command_silencer = true;
+        QTimer::singleShot(150,this,SLOT(send_clear_encoder()));
+        tmp++;
+        break;
+    case 1:
+        QTimer::singleShot(200,this,SLOT(send_clear_encoder()));
+        tmp++;
+        send_data_order(data.data(),"CLRENC",0,6);
+
+        EOL(data.data(),7);
+
+        pSerial->write(data);
+        break;
+    case 2:
+        tmp = 0;
+        command_silencer = false;
+        break;
+    }
+
+#ifdef CONFIG_x86
+    qDebug(__FUNCTION__);
+#endif
+
+}
+
 void fuzzy_pid::send_channel_polarity(u8 channel, u8 polarity){
     QByteArray data;
     data.resize(10);

@@ -167,6 +167,7 @@ void DC_Motor_PC::writeAppSettings(){
     settings.setValue(QStringLiteral("pendulum_kp"),ui.doubleSpinBox_pendulum_kp->value());
     settings.setValue(QStringLiteral("pendulum_ki"),ui.doubleSpinBox_pendulum_ki->value());
     settings.setValue(QStringLiteral("pendulum_kd"),ui.doubleSpinBox_pendulum_kd->value());
+    settings.setValue(QStringLiteral("pendulum_tolerance"),ui.doubleSpinBox_pendulum_tolerance->value());
 
     for(u8 j = 0; j < 10; j++){
         settings.setValue(QStringLiteral("pid_kp_%1").arg(j),pid[j].Kp);
@@ -417,6 +418,7 @@ void DC_Motor_PC::readAppSettings(){
     ui.doubleSpinBox_pendulum_kp->setValue(settings.value(QStringLiteral("common/pendulum_kp")).toDouble());
     ui.doubleSpinBox_pendulum_ki->setValue(settings.value(QStringLiteral("common/pendulum_ki")).toDouble());
     ui.doubleSpinBox_pendulum_kd->setValue(settings.value(QStringLiteral("common/pendulum_kd")).toDouble());
+    ui.doubleSpinBox_pendulum_tolerance->setValue(settings.value(QStringLiteral("common/pendulum_tolerance")).toDouble());
 
     for(u8 j = 0; j < 10; j++){
         pid[j].Kp = settings.value(QStringLiteral("common/pid_kp_%1").arg(j)).toDouble();

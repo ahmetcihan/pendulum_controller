@@ -390,8 +390,8 @@
      <widget class="QPushButton" name="pushButton_stop_2">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>260</y>
+        <x>500</x>
+        <y>340</y>
         <width>161</width>
         <height>41</height>
        </rect>
@@ -532,8 +532,8 @@
      <widget class="QPushButton" name="pushButton_send_pendulum_parameters">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>210</y>
+        <x>320</x>
+        <y>340</y>
         <width>161</width>
         <height>41</height>
        </rect>
@@ -599,7 +599,7 @@
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>50</y>
+        <y>90</y>
         <width>105</width>
         <height>35</height>
        </rect>
@@ -629,7 +629,7 @@
       <property name="geometry">
        <rect>
         <x>430</x>
-        <y>50</y>
+        <y>90</y>
         <width>231</width>
         <height>35</height>
        </rect>
@@ -678,7 +678,7 @@
       <property name="geometry">
        <rect>
         <x>430</x>
-        <y>90</y>
+        <y>130</y>
         <width>231</width>
         <height>35</height>
        </rect>
@@ -701,7 +701,7 @@
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>90</y>
+        <y>130</y>
         <width>105</width>
         <height>35</height>
        </rect>
@@ -731,7 +731,7 @@
       <property name="geometry">
        <rect>
         <x>610</x>
-        <y>140</y>
+        <y>210</y>
         <width>161</width>
         <height>41</height>
        </rect>
@@ -784,7 +784,7 @@
        <double>0.000000000000000</double>
       </property>
       <property name="maximum">
-       <double>50000.000000000000000</double>
+       <double>5000000.000000000000000</double>
       </property>
       <property name="singleStep">
        <double>1.000000000000000</double>
@@ -814,7 +814,7 @@
        <double>0.000000000000000</double>
       </property>
       <property name="maximum">
-       <double>50000.000000000000000</double>
+       <double>5000000.000000000000000</double>
       </property>
       <property name="singleStep">
        <double>1.000000000000000</double>
@@ -867,7 +867,7 @@
        <double>0.000000000000000</double>
       </property>
       <property name="maximum">
-       <double>50000.000000000000000</double>
+       <double>5000000.000000000000000</double>
       </property>
       <property name="singleStep">
        <double>1.000000000000000</double>
@@ -910,6 +910,72 @@
       </property>
       <property name="text">
        <string>Start PID</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_clear_encoder">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>140</y>
+        <width>165</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear Encoder</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_unit_displacement_speed_10">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>50</y>
+        <width>231</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Tolerance</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_pendulum_tolerance">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>50</y>
+        <width>105</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>0.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>250.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="value">
+       <double>250.000000000000000</double>
       </property>
      </widget>
     </widget>

@@ -129,6 +129,7 @@ public slots:
     void send_gains_and_polarities(void);
     void send_calibration(u8 ch);
     void send_all_parameters(void);
+    void send_clear_encoder(void);
     void tare_channel(u8 channel);
     void send_channel_polarity(u8 channel, u8 polar);
 
