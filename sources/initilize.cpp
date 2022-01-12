@@ -58,6 +58,8 @@ void DC_Motor_PC::init_RADIOBUTTONs(void){
 void DC_Motor_PC::init_PUSHBUTTONs(void){
     connect(ui.pushButton_send_pendulum_parameters,SIGNAL(clicked()),fuzpid,SLOT(send_all_parameters()));
     connect(ui.pushButton_start_headshake,SIGNAL(clicked()),fuzpid,SLOT(TMC_headshake()));
+    connect(ui.pushButton_start_plain_algorithm,SIGNAL(clicked()),fuzpid,SLOT(TMC_plain_algorithm()));
+    connect(ui.pushButton_start_pendulum_PID,SIGNAL(clicked()),fuzpid,SLOT(TMC_PID()));
     connect(ui.pushButton_stop_2,SIGNAL(clicked()),fuzpid,SLOT(step_stop()));
 
     connect(ui.pushButton_autotuning,SIGNAL(clicked()),fuzpid,SLOT(TMC_autotuning()));
@@ -71,6 +73,11 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
 
     connect(ui.pushButton_load_standard_values,SIGNAL(pressed()),this,SLOT(cbr_load_standard_values()));
     connect(ui.pushButton_show_cbr_points,SIGNAL(pressed()),this,SLOT(cbr_show_log()));
+
+    connect(ui.pushButton_go_left,SIGNAL(pressed()),this,SLOT(handle_JOG_down_button()));
+    connect(ui.pushButton_go_left,SIGNAL(released()),this,SLOT(release_JOG_down_button()));
+    connect(ui.pushButton_go_right,SIGNAL(pressed()),this,SLOT(handle_JOG_up_button()));
+    connect(ui.pushButton_go_right,SIGNAL(released()),this,SLOT(release_JOG_up_button()));
 
     connect(ui.pushButton_speed_up,SIGNAL(pressed()),this,SLOT(handle_JOG_up_button()));
     connect(ui.pushButton_speed_up,SIGNAL(released()),this,SLOT(release_JOG_up_button()));

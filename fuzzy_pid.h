@@ -40,6 +40,7 @@ public:
     float tmc_displacement_rate;
     u32 tmc_plot_timer_1_msec;
     s32 encoder_value;
+    s32 abs_encoder;
     s32 z_count;
 
 
@@ -111,6 +112,8 @@ public slots:
     void TMC_operation(void);
     void TMC_autotuning(void);
     void TMC_headshake(void);
+    void TMC_plain_algorithm(void);
+    void TMC_PID(void);
 
     void read_parameters(void);
     double IIR_Filter(double* raw_signal,u8 filter_coefficient);

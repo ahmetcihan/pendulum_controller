@@ -110,22 +110,21 @@ void fuzzy_pid::send_all_parameters(void){
         data[10] = char_to_f.u8_val[2];
         data[11] = char_to_f.u8_val[3];
 
-        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_zero_suppression->value();
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_mid_point->value();
         data[12] = char_to_f.u8_val[0];
         data[13] = char_to_f.u8_val[1];
         data[14] = char_to_f.u8_val[2];
         data[15] = char_to_f.u8_val[3];
 
-        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pace_rate->value();
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_top_boundary->value();
         data[16] = char_to_f.u8_val[0];
         data[17] = char_to_f.u8_val[1];
         data[18] = char_to_f.u8_val[2];
         data[19] = char_to_f.u8_val[3];
-        qDebug() << "pace : " << char_to_f.float_val;
 
         data[20] = dcMotorPc->ui.spinBox_break_percentage->value();
 
-        char_to_f.u32_val = dcMotorPc->speed_correction(dcMotorPc->ui.doubleSpinBox_step_first_speed->value());
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_speed_multiplier->value();
         data[21] = char_to_f.u8_val[0];
         data[22] = char_to_f.u8_val[1];
         data[23] = char_to_f.u8_val[2];
@@ -139,24 +138,21 @@ void fuzzy_pid::send_all_parameters(void){
 
         data[29] = dcMotorPc->ui.spinBox_step_transition_time->value();
 
-        char_to_f.float_val = dcMotorPc->pid[from_gui.test_type].Kp;
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_kp->value();
         data[30] = char_to_f.u8_val[0];
         data[31] = char_to_f.u8_val[1];
         data[32] = char_to_f.u8_val[2];
         data[33] = char_to_f.u8_val[3];
-        qDebug() << "kp : " << char_to_f.float_val;
-        char_to_f.float_val = dcMotorPc->pid[from_gui.test_type].Ki;
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_ki->value();
         data[34] = char_to_f.u8_val[0];
         data[35] = char_to_f.u8_val[1];
         data[36] = char_to_f.u8_val[2];
         data[37] = char_to_f.u8_val[3];
-        qDebug() << "ki : " << char_to_f.float_val;
-        char_to_f.float_val = dcMotorPc->pid[from_gui.test_type].Kd;
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_kd->value();
         data[38] = char_to_f.u8_val[0];
         data[39] = char_to_f.u8_val[1];
         data[40] = char_to_f.u8_val[2];
         data[41] = char_to_f.u8_val[3];
-        qDebug() << "kd : " << char_to_f.float_val;
 
         EOL(data.data(),42);
 

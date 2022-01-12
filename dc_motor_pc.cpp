@@ -529,7 +529,7 @@ void DC_Motor_PC::update_gui(){
     static u32 local_counter = 0;
     local_counter++;
 
-    ui.label_encoder_val->setText(QString("Encoder : ") + QString::number(fuzpid->encoder_value) + QString("    Rev : ") + QString::number(fuzpid->z_count));
+    ui.label_encoder_val->setText(QString("Enc.: ") + QString::number(fuzpid->encoder_value) + QString(" Rev: ") + QString::number(fuzpid->z_count) + QString(" AbsEnc: ") + QString::number(fuzpid->abs_encoder));
 
     if(current_tab_index == TAB_ADMIN){
         ui.label_adc_channel_1->setText(QString::number(fuzpid->to_gui.signed_raw[0]));

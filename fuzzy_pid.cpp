@@ -160,7 +160,7 @@ void fuzzy_pid::read_parameters(void){
             char_to_f.u8_val[1] = (u8)data_array[52];
             char_to_f.u8_val[2] = (u8)data_array[53];
             char_to_f.u8_val[3] = (u8)data_array[54];
-            tmc_pace_rate = char_to_f.float_val;
+            abs_encoder = char_to_f.s32_val;
 
             usart_debugger_u8 = (u8)data_array[50];
 
@@ -208,8 +208,8 @@ void fuzzy_pid::read_parameters(void){
 
             //qDebug() << "encoder value : " << encoder_value << "z_count" << z_count;
 
-//            qDebug() << "step_tmp :" << usart_debugger_u8 << "step_timer :" << usart_debugger_u32 << "average_last_step : " << usart_debugger_float[0]
-//                     << "meta_count" << usart_debugger_float[1] << "filtered_pace_rate" << usart_debugger_float[2] ;
+            qDebug() << "PID Delta t :" << usart_debugger_u8 << "nothing :" << usart_debugger_s32 << "error : " << usart_debugger_float[0]
+                     << "plain_speed" << usart_debugger_float[1] << "output" << usart_debugger_float[2] ;
 
 //            qDebug() << "0 :" << usart_debugger_u8 << "0 :" << usart_debugger_s32 << "raw : " << usart_debugger_float[0]
 //                     << "unfiltered pace" << usart_debugger_float[1] << "filtered pace" << usart_debugger_float[2] ;
