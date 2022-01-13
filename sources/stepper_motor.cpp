@@ -46,3 +46,6 @@ void fuzzy_pid::TMC_plain_algorithm(void){
 void fuzzy_pid::TMC_PID(void){
     TMC_command = TMC_PENDULUM_PID;
 }
+void fuzzy_pid::TMC_HeadUp(void){
+    TMC_command = TMC_PENDULUM_HEADUP;
+}

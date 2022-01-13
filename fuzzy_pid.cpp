@@ -208,8 +208,8 @@ void fuzzy_pid::read_parameters(void){
 
             //qDebug() << "encoder value : " << encoder_value << "z_count" << z_count;
 
-            qDebug() << "PID Delta t :" << usart_debugger_u8 << "filtered_enc :" << usart_debugger_s32 << "error : " << usart_debugger_float[0]
-                     << "plain_speed" << usart_debugger_float[1] << "output" << usart_debugger_float[2] ;
+//            qDebug() << "PID Delta t :" << usart_debugger_u8 << "filtered_enc :" << usart_debugger_s32 << "error : " << usart_debugger_float[0]
+//                     << "plain_speed" << usart_debugger_float[1] << "output" << usart_debugger_float[2] ;
 
 //            qDebug() << "0 :" << usart_debugger_u8 << "0 :" << usart_debugger_s32 << "raw : " << usart_debugger_float[0]
 //                     << "unfiltered pace" << usart_debugger_float[1] << "filtered pace" << usart_debugger_float[2] ;

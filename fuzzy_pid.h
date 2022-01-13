@@ -114,6 +114,7 @@ public slots:
     void TMC_headshake(void);
     void TMC_plain_algorithm(void);
     void TMC_PID(void);
+    void TMC_HeadUp(void);
 
     void read_parameters(void);
     double IIR_Filter(double* raw_signal,u8 filter_coefficient);

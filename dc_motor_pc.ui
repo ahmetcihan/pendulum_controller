@@ -421,7 +421,7 @@
        <double>0.000000000000000</double>
       </property>
       <property name="maximum">
-       <double>50000.000000000000000</double>
+       <double>500000.000000000000000</double>
       </property>
       <property name="singleStep">
        <double>1.000000000000000</double>
@@ -500,7 +500,7 @@
        <double>50000.000000000000000</double>
       </property>
       <property name="singleStep">
-       <double>1.000000000000000</double>
+       <double>2.000000000000000</double>
       </property>
       <property name="value">
        <double>50000.000000000000000</double>
@@ -976,6 +976,19 @@
       </property>
       <property name="value">
        <double>250.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_start_pendulum_head_up">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>330</y>
+        <width>165</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start Head-UP</string>
       </property>
      </widget>
     </widget>
