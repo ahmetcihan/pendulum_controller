@@ -991,6 +991,78 @@
        <string>Start Head-UP</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_mid_point_up">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>280</y>
+        <width>165</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Mid Point UP</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_mid_point_down">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>330</y>
+        <width>165</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Mid Point DOWN</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_unit_displacement_speed_11">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>280</y>
+        <width>170</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sola dönüyorsa</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_unit_displacement_speed_12">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>330</y>
+        <width>170</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sağa dönüyorsa</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_main_parameters">
      <attribute name="title">

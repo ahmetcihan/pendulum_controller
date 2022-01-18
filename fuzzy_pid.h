@@ -133,6 +133,8 @@ public slots:
     void send_clear_encoder(void);
     void tare_channel(u8 channel);
     void send_channel_polarity(u8 channel, u8 polar);
+    void send_mid_up(void);
+    void send_mid_down(void);
 
     void step_run_up(void);
     void step_run_down(void);

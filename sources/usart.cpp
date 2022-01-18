@@ -169,6 +169,65 @@ void fuzzy_pid::send_all_parameters(void){
 #endif
 
 }
+void fuzzy_pid::send_mid_up(void){
+    static u8 tmp = 0;
+    QByteArray data;
+    data.resize(8);
+
+    switch(tmp){
+    case 0:
+        command_silencer = true;
+        QTimer::singleShot(150,this,SLOT(send_mid_up()));
+        tmp++;
+        break;
+    case 1:
+        QTimer::singleShot(200,this,SLOT(send_mid_up()));
+        tmp++;
+        send_data_order(data.data(),"MIDUP",0,5);
+
+        EOL(data.data(),6);
+
+        pSerial->write(data);
+        break;
+    case 2:
+        tmp = 0;
+        command_silencer = false;
+        break;
+    }
+#ifdef CONFIG_x86
+    qDebug(__FUNCTION__);
+#endif
+}
+void fuzzy_pid::send_mid_down(void){
+    static u8 tmp = 0;
+    QByteArray data;
+    data.resize(8);
+
+    switch(tmp){
+    case 0:
+        command_silencer = true;
+        QTimer::singleShot(150,this,SLOT(send_mid_down()));
+        tmp++;
+        break;
+    case 1:
+        QTimer::singleShot(200,this,SLOT(send_mid_down()));
+        tmp++;
+        send_data_order(data.data(),"MIDDN",0,5);
+
+        EOL(data.data(),6);
+
+        pSerial->write(data);
+        break;
+    case 2:
+        tmp = 0;
+        command_silencer = false;
+        break;
+    }
+#ifdef CONFIG_x86
+    qDebug(__FUNCTION__);
+#endif
+}
+
 void fuzzy_pid::send_clear_encoder(void){
     static u8 tmp = 0;
     QByteArray data;
