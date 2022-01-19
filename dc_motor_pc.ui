@@ -586,7 +586,7 @@
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>90</y>
+        <y>50</y>
         <width>105</width>
         <height>35</height>
        </rect>
@@ -616,7 +616,7 @@
       <property name="geometry">
        <rect>
         <x>490</x>
-        <y>90</y>
+        <y>50</y>
         <width>170</width>
         <height>35</height>
        </rect>
@@ -659,59 +659,6 @@
       </property>
       <property name="text">
        <string>Go RIGHT</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_unit_displacement_speed_6">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>130</y>
-        <width>170</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Speed Multiplier</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_pendulum_speed_multiplier">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>130</y>
-        <width>105</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="decimals">
-       <number>3</number>
-      </property>
-      <property name="minimum">
-       <double>0.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>50000.000000000000000</double>
-      </property>
-      <property name="singleStep">
-       <double>1.000000000000000</double>
-      </property>
-      <property name="value">
-       <double>50000.000000000000000</double>
       </property>
      </widget>
      <widget class="QLabel" name="label_unit_displacement_speed_7">
@@ -897,59 +844,6 @@
       </property>
       <property name="text">
        <string>Clear Encoder</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_unit_displacement_speed_10">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>50</y>
-        <width>170</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Tolerance</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_pendulum_tolerance">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>50</y>
-        <width>105</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="decimals">
-       <number>0</number>
-      </property>
-      <property name="minimum">
-       <double>0.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>250.000000000000000</double>
-      </property>
-      <property name="singleStep">
-       <double>1.000000000000000</double>
-      </property>
-      <property name="value">
-       <double>250.000000000000000</double>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_start_pendulum_head_up">

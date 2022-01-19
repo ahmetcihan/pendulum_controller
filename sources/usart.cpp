@@ -122,9 +122,9 @@ void fuzzy_pid::send_all_parameters(void){
         data[18] = char_to_f.u8_val[2];
         data[19] = char_to_f.u8_val[3];
 
-        data[20] = dcMotorPc->ui.doubleSpinBox_pendulum_tolerance->value();
+        data[20] = 0;
 
-        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_speed_multiplier->value();
+        char_to_f.float_val = 0;
         data[21] = char_to_f.u8_val[0];
         data[22] = char_to_f.u8_val[1];
         data[23] = char_to_f.u8_val[2];
