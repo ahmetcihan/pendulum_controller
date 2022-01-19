@@ -111,8 +111,6 @@ signals:
 public slots:
     void TMC_operation(void);
     void TMC_autotuning(void);
-    void TMC_headshake(void);
-    void TMC_plain_algorithm(void);
     void TMC_PID(void);
     void TMC_HeadUp(void);
 

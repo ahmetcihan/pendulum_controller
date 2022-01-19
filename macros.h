@@ -97,8 +97,6 @@ typedef signed int s32;
 #define TMC_STOP                0
 #define TMC_RUN                 1
 #define TMC_AUTOTUNING          2
-#define TMC_PENDULUM_HEADSHAKE  3
-#define TMC_PENDULUM_PLAIN_ALG  4
 #define TMC_PENDULUM_PID        5
 #define TMC_PENDULUM_HEADUP     6
 
