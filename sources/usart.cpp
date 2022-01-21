@@ -85,7 +85,7 @@ void DC_Motor_PC::command_sending_protection(void){
 void fuzzy_pid::send_all_parameters(void){
     static u8 tmp = 0;
     QByteArray data;
-    data.resize(44);
+    data.resize(56);
 
     switch(tmp){
     case 0:
@@ -154,7 +154,23 @@ void fuzzy_pid::send_all_parameters(void){
         data[40] = char_to_f.u8_val[2];
         data[41] = char_to_f.u8_val[3];
 
-        EOL(data.data(),42);
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_kp_down->value();
+        data[42] = char_to_f.u8_val[0];
+        data[43] = char_to_f.u8_val[1];
+        data[44] = char_to_f.u8_val[2];
+        data[45] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_ki_down->value();
+        data[46] = char_to_f.u8_val[0];
+        data[47] = char_to_f.u8_val[1];
+        data[48] = char_to_f.u8_val[2];
+        data[49] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_pendulum_kd_down->value();
+        data[50] = char_to_f.u8_val[0];
+        data[51] = char_to_f.u8_val[1];
+        data[52] = char_to_f.u8_val[2];
+        data[53] = char_to_f.u8_val[3];
+
+        EOL(data.data(),54);
 
         pSerial->write(data);
         break;
