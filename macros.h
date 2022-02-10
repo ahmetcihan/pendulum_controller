@@ -100,5 +100,6 @@ typedef signed int s32;
 #define TMC_PENDULUM_PID_DOWN   4
 #define TMC_PENDULUM_PID        5
 #define TMC_PENDULUM_HEADUP     6
+#define TMC_PENDULUM_LQR_DOWN   7
 
 #endif // MACROS_H

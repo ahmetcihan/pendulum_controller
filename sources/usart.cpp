@@ -85,7 +85,7 @@ void DC_Motor_PC::command_sending_protection(void){
 void fuzzy_pid::send_all_parameters(void){
     static u8 tmp = 0;
     QByteArray data;
-    data.resize(56);
+    data.resize(72);
 
     switch(tmp){
     case 0:
@@ -170,7 +170,28 @@ void fuzzy_pid::send_all_parameters(void){
         data[52] = char_to_f.u8_val[2];
         data[53] = char_to_f.u8_val[3];
 
-        EOL(data.data(),54);
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_lqr_k1->value();
+        data[54] = char_to_f.u8_val[0];
+        data[55] = char_to_f.u8_val[1];
+        data[56] = char_to_f.u8_val[2];
+        data[57] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_lqr_k2->value();
+        data[58] = char_to_f.u8_val[0];
+        data[59] = char_to_f.u8_val[1];
+        data[60] = char_to_f.u8_val[2];
+        data[61] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_lqr_k3->value();
+        data[62] = char_to_f.u8_val[0];
+        data[63] = char_to_f.u8_val[1];
+        data[64] = char_to_f.u8_val[2];
+        data[65] = char_to_f.u8_val[3];
+        char_to_f.float_val = dcMotorPc->ui.doubleSpinBox_lqr_k4->value();
+        data[66] = char_to_f.u8_val[0];
+        data[67] = char_to_f.u8_val[1];
+        data[68] = char_to_f.u8_val[2];
+        data[69] = char_to_f.u8_val[3];
+
+        EOL(data.data(),70);
 
         pSerial->write(data);
         break;

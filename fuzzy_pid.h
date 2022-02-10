@@ -113,6 +113,7 @@ public slots:
     void TMC_autotuning(void);
     void TMC_PID(void);
     void TMC_PID_DOWN(void);
+    void TMC_LQR_DOWN(void);
     void TMC_HeadUp(void);
 
     void read_parameters(void);
