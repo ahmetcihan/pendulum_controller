@@ -173,6 +173,10 @@ void DC_Motor_PC::writeAppSettings(){
     settings.setValue(QStringLiteral("lqr_k2"),ui.doubleSpinBox_lqr_k2->value());
     settings.setValue(QStringLiteral("lqr_k3"),ui.doubleSpinBox_lqr_k3->value());
     settings.setValue(QStringLiteral("lqr_k4"),ui.doubleSpinBox_lqr_k4->value());
+    settings.setValue(QStringLiteral("lqr_k1_up"),ui.doubleSpinBox_lqr_k1_up->value());
+    settings.setValue(QStringLiteral("lqr_k2_up"),ui.doubleSpinBox_lqr_k2_up->value());
+    settings.setValue(QStringLiteral("lqr_k3_up"),ui.doubleSpinBox_lqr_k3_up->value());
+    settings.setValue(QStringLiteral("lqr_k4_up"),ui.doubleSpinBox_lqr_k4_up->value());
 
     for(u8 j = 0; j < 10; j++){
         settings.setValue(QStringLiteral("pid_kp_%1").arg(j),pid[j].Kp);
@@ -429,6 +433,10 @@ void DC_Motor_PC::readAppSettings(){
     ui.doubleSpinBox_lqr_k2->setValue(settings.value(QStringLiteral("common/lqr_k2")).toDouble());
     ui.doubleSpinBox_lqr_k3->setValue(settings.value(QStringLiteral("common/lqr_k3")).toDouble());
     ui.doubleSpinBox_lqr_k4->setValue(settings.value(QStringLiteral("common/lqr_k4")).toDouble());
+    ui.doubleSpinBox_lqr_k1_up->setValue(settings.value(QStringLiteral("common/lqr_k1_up")).toDouble());
+    ui.doubleSpinBox_lqr_k2_up->setValue(settings.value(QStringLiteral("common/lqr_k2_up")).toDouble());
+    ui.doubleSpinBox_lqr_k3_up->setValue(settings.value(QStringLiteral("common/lqr_k3_up")).toDouble());
+    ui.doubleSpinBox_lqr_k4_up->setValue(settings.value(QStringLiteral("common/lqr_k4_up")).toDouble());
 
     for(u8 j = 0; j < 10; j++){
         pid[j].Kp = settings.value(QStringLiteral("common/pid_kp_%1").arg(j)).toDouble();
