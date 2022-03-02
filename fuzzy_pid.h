@@ -116,6 +116,7 @@ public slots:
     void TMC_LQR_DOWN(void);
     void TMC_LQR_UP(void);
     void TMC_HeadUp(void);
+    void TMC_LQR_HeadUp(void);
 
     void read_parameters(void);
     double IIR_Filter(double* raw_signal,u8 filter_coefficient);

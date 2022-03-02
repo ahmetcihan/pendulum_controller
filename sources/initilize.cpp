@@ -66,6 +66,7 @@ void DC_Motor_PC::init_PUSHBUTTONs(void){
     connect(ui.pushButton_start_pendulum_PID_down,SIGNAL(clicked()),fuzpid,SLOT(TMC_PID_DOWN()));
     connect(ui.pushButton_start_pendulum_LQR_down,SIGNAL(clicked()),fuzpid,SLOT(TMC_LQR_DOWN()));
     connect(ui.pushButton_start_pendulum_LQR_up,SIGNAL(clicked()),fuzpid,SLOT(TMC_LQR_UP()));
+    connect(ui.pushButton_start_pendulum_head_up_lqr,SIGNAL(clicked()),fuzpid,SLOT(TMC_LQR_HeadUp()));
     connect(ui.pushButton_stop_2,SIGNAL(clicked()),fuzpid,SLOT(step_stop()));
 
     connect(ui.pushButton_autotuning,SIGNAL(clicked()),fuzpid,SLOT(TMC_autotuning()));

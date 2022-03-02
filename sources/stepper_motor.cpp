@@ -52,3 +52,6 @@ void fuzzy_pid::TMC_LQR_DOWN(void){
 void fuzzy_pid::TMC_LQR_UP(void){
     TMC_command = TMC_PENDULUM_LQR_UP;
 }
+void fuzzy_pid::TMC_LQR_HeadUp(void){
+    TMC_command = TMC_PENDULUM_LQR_HEADUP;
+}
